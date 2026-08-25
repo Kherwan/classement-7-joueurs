@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Classement - Table des Savoirs</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .player {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            margin-bottom: 10px;
+            background: #f7f7f7;
+            border-radius: 10px;
+        }
+
+        .position {
+            font-size: 24px;
+            font-weight: bold;
+            width: 50px;
+        }
+
+        .name {
+            flex: 1;
+            font-weight: bold;
+        }
+
+        .score {
+            text-align: right;
+        }
+
+        .rank {
+            font-size: 13px;
+            color: #777;
+        }
+
+        .updated {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🏆 Classement</h1>
+
+    <div class="subtitle">
+        Table des Savoirs — Saison 8
+    </div>
+
+    <div id="players">
+        Chargement...
+    </div>
+
+    <div class="updated" id="updated">
+    </div>
+
+</div>
+
+<script>
+
+async function loadRanking() {
+
+    const playersContainer = document.getElementById("players");
+    const updated = document.getElementById("updated");
+
+    try {
+
+        const response = await fetch("classement.json");
+
+        if (!response.ok) {
+            throw new Error("Impossible de récupérer le classement");
+        }
+
+        const data = await response.json();
+
+        playersContainer.innerHTML = "";
+
+        data.players.forEach((player, index) => {
+
+            const div = document.createElement("div");
+
+            div.className = "player";
+
+            div.innerHTML = `
+                <div class="position">
+                    ${index + 1}
+                </div>
+
+                <div class="name">
+                    ${player.username}
+                </div>
+
+                <div class="score">
+                    ${player.score ?? "-"} pts
+                    <div class="rank">
+                        Classement général : #${player.rank ?? "-"}
+                    </div>
+                </div>
+            `;
+
+            playersContainer.appendChild(div);
+        });
+
+        const date = new Date(data.updated_at);
+
+        updated.textContent =
+            "Dernière mise à jour : " +
+            date.toLocaleString("fr-FR");
+
+    } catch (error) {
+
+        playersContainer.innerHTML =
+            "<p>Impossible de récupérer le classement.</p>";
+
+        console.error(error);
+    }
+}
+
+loadRanking();
+
+</script>
+
+</body>
+</html>
