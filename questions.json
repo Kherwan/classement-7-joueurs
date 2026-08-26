@@ -1,6 +1,51 @@
 {
   "days": [
     {
+      "date": "26 août 2026",
+      "questions": [
+        {
+          "question": "Quel animal est dit « à plumes » dans le nom commun du Quetzalcoatl, étant l'un des principaux dieux aztèques ?",
+          "answer": "Serpent à plumes"
+        },
+        {
+          "question": "Dans quel sport Jack Nicklaus et Arnold Palmer ont-ils entretenu une grande rivalité dans les années 1960 ?",
+          "answer": "Golf"
+        },
+        {
+          "question": "Quel jeu vidéo d'horreur sorti en 2012 et conçu par Paul Cuisset porte le même nom que l'amie rose de Sonic dans la franchise Sonic The Hedgehog ?",
+          "answer": "Amy"
+        },
+        {
+          "question": "À quel réalisateur doit-on le film « L'Odyssée » en 2026, racontant l'histoire d'Ulysse ?",
+          "answer": "Christopher Nolan"
+        },
+        {
+          "question": "Quelle expression désigne le phénomène caractérisé par l'afflux rapide de migrants attirés par une région aurifère, comme en Californie à partir de 1848 ?",
+          "answer": "Ruée vers l'or"
+        },
+        {
+          "question": "Quelle unité, nommée en l'honneur d'un scientifique français, permet de mesurer l'intensité d'un courant électrique ?",
+          "answer": "Ampère"
+        },
+        {
+          "question": "Quelle ville appelée Lapwent en créole est l’unique sous-préfecture de Guadeloupe ?",
+          "answer": "Pointe-à-Pitre"
+        },
+        {
+          "question": "Quel nom de continent en anglais est associé à « King » dans le nom de l'interprète du titre « La Bomba » en 2000 ?",
+          "answer": "Africa (King Africa)"
+        },
+        {
+          "question": "Quel oiseau échassier porte un nom homonyme de celui d'une machine de levage ?",
+          "answer": "Grue"
+        },
+        {
+          "question": "De quelle langue est issu le mot Zeitgeist ? Ce mot désigne les grandes lignes de pensées liées à une époque.",
+          "answer": "Allemand"
+        }
+      ]
+    },
+    {
       "date": "25 août 2026",
       "questions": [
         {
