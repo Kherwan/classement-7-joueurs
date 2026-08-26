@@ -17,7 +17,7 @@
         },
         {
           "question": "À quel réalisateur doit-on le film « L'Odyssée » en 2026, racontant l'histoire d'Ulysse ?",
-          "answer": "Christopher Nolan"
+          "answer": "Christopher Nolan, réalisateur d'Inception, Insterstellar, Le Prestige"
         },
         {
           "question": "Quelle expression désigne le phénomène caractérisé par l'afflux rapide de migrants attirés par une région aurifère, comme en Californie à partir de 1848 ?",
@@ -25,11 +25,11 @@
         },
         {
           "question": "Quelle unité, nommée en l'honneur d'un scientifique français, permet de mesurer l'intensité d'un courant électrique ?",
-          "answer": "Ampère"
+          "answer": "Ampère, cf station métro A à Lyon"
         },
         {
           "question": "Quelle ville appelée Lapwent en créole est l’unique sous-préfecture de Guadeloupe ?",
-          "answer": "Pointe-à-Pitre"
+          "answer": "Pointe-à-Pitre, le chef-lieu est Basse-Terre"
         },
         {
           "question": "Quel nom de continent en anglais est associé à « King » dans le nom de l'interprète du titre « La Bomba » en 2000 ?",
@@ -37,7 +37,7 @@
         },
         {
           "question": "Quel oiseau échassier porte un nom homonyme de celui d'une machine de levage ?",
-          "answer": "Grue"
+          "answer": "Grue, autres échassiers connus : héron, cigogne, flamant"
         },
         {
           "question": "De quelle langue est issu le mot Zeitgeist ? Ce mot désigne les grandes lignes de pensées liées à une époque.",
@@ -50,7 +50,7 @@
       "questions": [
         {
           "question": "Quel nom générique signifiant littéralement « bande dessinée pour jeune garçon » désigne des mangas tels que Dragon Ball, Saint Seiya ou Olive et Tom dont le public visé est effectivement des jeunes garçons ?",
-          "answer": "Shonen"
+          "answer": "Shonen -> Son d'Orelsan"
         },
         {
           "question": "Quel pays a remporté sa première coupe du monde de football en 1978, à domicile, devant les yeux du dictateur Jorge Rafael Videla ?",
@@ -62,19 +62,19 @@
         },
         {
           "question": "Quelle radio ayant eu pour premier nom « La Voix du Lézard » entre 1983 et 1986 a pour slogan « Premier sur le rap » ?",
-          "answer": "Skyrock"
+          "answer": "Skyrock, contre intuitif mais Skyrock il y a tous les freestyles des rappeurs comme l'immense freestyle de 10minutes d'OLI, ils ont un peu changé de DA depuis quelques années, "
         },
         {
           "question": "Dans quel pays eut lieu un génocide en 1994 dans lequel les Hutus ont massacré les Tutsis ? Ce génocide a vu la mort d'environ 800 000 Tutsis en 3 mois.",
-          "answer": "Rwanda"
+          "answer": "Rwanda, cf Stromae, son père est mort durant le génocide du Rwanda, cf la chanson Papaoutai et également cf Corneille, le chanteur de Parce qu'on vient de loin, qu'a failli mourir lors du génocide rwandais, toute sa famille meurt et lui il survit grâce à une coupure de courant : Il a 17 ans lors du génocide des Tutsis au Rwanda. Un groupe armé entre dans la maison familiale dans la nuit du 15 au 16 avril 1994 et assassine ses parents ainsi que ses deux frères et sa petite sœur. Corneille assiste au massacre. Il y survit miraculeusement, une coupure de courant inopinée lui permet de se cacher derrière un canapé[5]. Il s'enfuit au Zaïre à des jours de marche, et trouve ensuite un refuge en Allemagne chez un couple allemand ami de ses parents."
         },
         {
           "question": "Quelle invention est due au vétérinaire écossais John Boyd Dunlop qui eut l'idée de coller des bandes de caoutchouc sur les roues en bois du tricycle de son fils ?",
-          "answer": "Pneumatique"
+          "answer": "Pneumatique, Dunlop -> marque de pneu, concurrent de Michelin"
         },
         {
           "question": "À quel point cardinal le terme de ponant se réfère-t-il ?",
-          "answer": "Ouest"
+          "answer": "Ouest, cf Pacé la salle du Ponant"
         },
         {
           "question": "Avec qui Pomme interprète-t-elle le titre Ma Meilleure Ennemie, extrait de la série Arcane ?",
