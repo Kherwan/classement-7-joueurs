@@ -1,0 +1,49 @@
+{
+  "days": [
+    {
+      "date": "25 août 2026",
+      "questions": [
+        {
+          "question": "Quel nom générique signifiant littéralement « bande dessinée pour jeune garçon » désigne des mangas tels que Dragon Ball, Saint Seiya ou Olive et Tom dont le public visé est effectivement des jeunes garçons ?",
+          "answer": "Shonen"
+        },
+        {
+          "question": "Quel pays a remporté sa première coupe du monde de football en 1978, à domicile, devant les yeux du dictateur Jorge Rafael Videla ?",
+          "answer": "Argentine"
+        },
+        {
+          "question": "Quel pays a pour domaine d'extension de site internet le « .za » ? La Zambie a pour extension .zm.",
+          "answer": "Afrique du Sud (Zuid-Afrika)"
+        },
+        {
+          "question": "Quelle radio ayant eu pour premier nom « La Voix du Lézard » entre 1983 et 1986 a pour slogan « Premier sur le rap » ?",
+          "answer": "Skyrock"
+        },
+        {
+          "question": "Dans quel pays eut lieu un génocide en 1994 dans lequel les Hutus ont massacré les Tutsis ? Ce génocide a vu la mort d'environ 800 000 Tutsis en 3 mois.",
+          "answer": "Rwanda"
+        },
+        {
+          "question": "Quelle invention est due au vétérinaire écossais John Boyd Dunlop qui eut l'idée de coller des bandes de caoutchouc sur les roues en bois du tricycle de son fils ?",
+          "answer": "Pneumatique"
+        },
+        {
+          "question": "À quel point cardinal le terme de ponant se réfère-t-il ?",
+          "answer": "Ouest"
+        },
+        {
+          "question": "Avec qui Pomme interprète-t-elle le titre Ma Meilleure Ennemie, extrait de la série Arcane ?",
+          "answer": "Stromae"
+        },
+        {
+          "question": "Quel animal marin est surnommé « licorne de mer » du fait de la longue dent qu'il possède ?",
+          "answer": "Narval"
+        },
+        {
+          "question": "Autre que ta'miyya, quel nom désigne cette spécialité culinaire levantine constituée de boulettes de pois chiches ou de fèves ?",
+          "answer": "Falafel"
+        }
+      ]
+    }
+  ]
+}
