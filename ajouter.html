@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ajouter des questions</title>
+    <title>Ajouter les questions</title>
 
     <style>
         body {
@@ -32,8 +32,8 @@
             display: block;
             width: fit-content;
             margin: 0 auto 25px;
-            text-decoration: none;
             color: #0066cc;
+            text-decoration: none;
         }
 
         label {
@@ -53,14 +53,14 @@
         }
 
         textarea {
-            min-height: 400px;
+            min-height: 450px;
             resize: vertical;
             font-family: Arial, sans-serif;
         }
 
         button {
             display: block;
-            margin: 20px auto 0;
+            margin: 20px auto;
             padding: 13px 25px;
             border: none;
             border-radius: 8px;
@@ -76,10 +76,10 @@
         }
 
         .result {
+            display: none;
             margin-top: 20px;
             padding: 15px;
             border-radius: 8px;
-            display: none;
         }
 
         .success {
@@ -101,13 +101,13 @@
             border-radius: 10px;
         }
 
-        .question-number {
+        .number {
             font-weight: bold;
             margin-bottom: 8px;
         }
 
         .answer {
-            margin-top: 8px;
+            margin-top: 10px;
             font-weight: bold;
         }
     </style>
@@ -124,8 +124,8 @@
     <h1>📚 Ajouter les questions</h1>
 
     <p>
-        Colle ici directement le texte copié depuis
-        La Table des Savoirs.
+        Colle directement ici les questions et les réponses
+        copiées depuis La Table des Savoirs.
     </p>
 
     <label for="date">Date</label>
@@ -144,7 +144,7 @@
 
     <textarea
         id="content"
-        placeholder="Colle ici les questions et les réponses..."
+        placeholder="Colle ici le texte..."
     ></textarea>
 
     <button onclick="analyser()">
@@ -161,111 +161,133 @@
 
 function analyser() {
 
-    const content =
-        document.getElementById("content").value;
+    const texte = document.getElementById("content").value;
 
-    const result =
-        document.getElementById("result");
+    const result = document.getElementById("result");
 
-    const preview =
-        document.getElementById("preview");
+    const preview = document.getElementById("preview");
 
     result.style.display = "none";
     preview.innerHTML = "";
 
-    if (!content.trim()) {
+    if (!texte.trim()) {
 
         result.className = "result error";
         result.style.display = "block";
-
-        result.innerHTML =
-            "❌ Colle d'abord les questions et réponses.";
+        result.textContent = "❌ Aucun texte détecté.";
 
         return;
     }
 
     /*
-     * On découpe le texte autour de
-     * "Réponse attendue".
-     *
-     * Cela fonctionne même si la question
-     * contient plusieurs lignes.
+     * On normalise les retours à la ligne.
      */
 
-    const answerRegex =
-        /\*\*Réponse attendue\s*:\s*([\s\S]*?)\*\*/gi;
-
-    const answers = [];
-
-    let match;
-
-    while ((match = answerRegex.exec(content)) !== null) {
-
-        answers.push(
-            match[1]
-                .replace(/\r/g, "")
-                .trim()
-        );
-    }
-
-    /*
-     * Pour trouver les questions, on prend
-     * le texte situé avant chaque réponse.
-     */
+    const lignes = texte
+        .replace(/\r\n/g, "\n")
+        .replace(/\r/g, "\n")
+        .split("\n");
 
     const questions = [];
+    const answers = [];
 
-    const parts = content.split(
-        /\*\*Réponse attendue\s*:\s*[\s\S]*?\*\*/gi
-    );
+    /*
+     * On cherche chaque ligne :
+     *
+     * **Réponse attendue : XXXXX**
+     *
+     * et on récupère la question située
+     * juste avant "**Pas de réponse**".
+     */
 
-    for (let i = 0; i < answers.length; i++) {
+    for (let i = 0; i < lignes.length; i++) {
 
-        let part = parts[i];
+        const ligne = lignes[i].trim();
+
+        const match = ligne.match(
+            /^\*\*Réponse attendue\s*:\s*(.*?)\*\*\s*$/
+        );
+
+        if (!match) {
+            continue;
+        }
+
+        const reponse = match[1].trim();
+
+        answers.push(reponse);
 
         /*
-         * On récupère ce qui suit la question précédente.
+         * On remonte depuis la réponse.
+         *
+         * On ignore les lignes vides,
+         * puis "**Pas de réponse**",
+         * puis on cherche la question.
          */
 
-        const blocks = part
-            .split(/\n\s*\n/)
-            .map(x => x.trim())
-            .filter(Boolean);
+        let j = i - 1;
 
-        let question = "";
+        while (j >= 0 && lignes[j].trim() === "") {
+            j--;
+        }
+
+        if (
+            j >= 0 &&
+            lignes[j].trim().toLowerCase() === "**pas de réponse**"
+        ) {
+            j--;
+        }
+
+        while (j >= 0 && lignes[j].trim() === "") {
+            j--;
+        }
 
         /*
-         * On cherche le dernier bloc pertinent.
+         * La question peut être sur plusieurs lignes.
+         * Dans ton format actuel elle est sur une seule ligne,
+         * mais on prend quand même tout le bloc précédent.
          */
 
-        for (let j = blocks.length - 1; j >= 0; j--) {
+        let blocs = [];
 
-            const candidate = blocks[j];
+        while (
+            j >= 0 &&
+            lignes[j].trim() !== ""
+        ) {
+
+            const ligneQuestion = lignes[j].trim();
+
+            /*
+             * On ne veut surtout pas récupérer
+             * une éventuelle ancienne note.
+             */
 
             if (
-                !candidate.includes("Pas de réponse") &&
-                !candidate.match(/^\*\*.*\/\s*30\s*pts\*\*$/i)
+                !ligneQuestion.startsWith("**0") &&
+                !ligneQuestion.startsWith("**?") &&
+                !ligneQuestion.toLowerCase().includes("réponse attendue")
             ) {
-
-                question = candidate
-                    .replace(/\*\*/g, "")
-                    .trim();
-
-                break;
+                blocs.unshift(
+                    ligneQuestion.replace(/\*\*/g, "")
+                );
             }
+
+            j--;
         }
+
+        const question = blocs.join(" ").trim();
 
         questions.push(question);
     }
 
-    const questionCount = questions.length;
-    const answerCount = answers.length;
+    /*
+     * Affichage du résultat.
+     */
 
     result.style.display = "block";
 
     if (
-        questionCount === 10 &&
-        answerCount === 10 &&
+        questions.length === 10 &&
+        answers.length === 10 &&
         questions.every(q => q.length > 5)
     ) {
 
@@ -274,7 +296,7 @@ function analyser() {
         result.innerHTML = `
             ✅ <strong>10 questions détectées</strong><br>
             ✅ <strong>10 réponses détectées</strong><br><br>
-            Vérifie l'aperçu ci-dessous.
+            Vérifie simplement l'aperçu ci-dessous.
         `;
 
     } else {
@@ -282,31 +304,29 @@ function analyser() {
         result.className = "result error";
 
         result.innerHTML = `
-            ⚠️ <strong>Attention</strong><br><br>
-            Questions détectées : ${questionCount}<br>
-            Réponses détectées : ${answerCount}<br><br>
-            Il faut normalement 10 questions et 10 réponses.
+            ⚠️ <strong>Le résultat n'est pas encore correct.</strong><br><br>
+            Questions détectées : ${questions.length}<br>
+            Réponses détectées : ${answers.length}<br><br>
+            Nous attendons 10 questions et 10 réponses.
         `;
     }
 
     /*
-     * Affichage de l'aperçu
+     * Aperçu
      */
 
     if (questions.length > 0) {
 
-        preview.innerHTML =
-            "<h2>👀 Aperçu</h2>";
+        preview.innerHTML = "<h2>👀 Aperçu</h2>";
 
         questions.forEach((question, index) => {
 
-            const div =
-                document.createElement("div");
+            const bloc = document.createElement("div");
 
-            div.className = "question";
+            bloc.className = "question";
 
-            div.innerHTML = `
-                <div class="question-number">
+            bloc.innerHTML = `
+                <div class="number">
                     Question ${index + 1}
                 </div>
 
@@ -315,30 +335,28 @@ function analyser() {
                 </div>
 
                 <div class="answer">
-                    Réponse :
-                    ${escapeHtml(answers[index] || "?")}
+                    Réponse : ${escapeHtml(answers[index] || "")}
                 </div>
             `;
 
-            preview.appendChild(div);
+            preview.appendChild(bloc);
         });
     }
 }
 
 
 /*
- * Empêche le texte collé de pouvoir interpréter
- * du HTML dans l'aperçu.
+ * Sécurité pour l'affichage du texte collé.
  */
 
-function escapeHtml(text) {
+function escapeHtml(texte) {
 
-    const div =
-        document.createElement("div");
-
-    div.textContent = text;
-
-    return div.innerHTML;
+    return texte
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 }
 
 </script>
