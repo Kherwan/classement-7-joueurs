@@ -1,14 +1,16 @@
 {
   "season": 8,
-  "updated_at": "2026-08-27T19:21:01.807000+00:00",
+  "updated_at": "2026-08-27T19:30:06.832771+00:00",
   "players": [
     {
-      "username": "Elisa13",
-      "error": "HTTP Error 403: Forbidden"
+      "username": "Kerwan",
+      "score": 4985,
+      "rank": 9703
     },
     {
-      "username": "Kerwan",
-      "error": "HTTP Error 403: Forbidden"
+      "username": "Elisa13",
+      "score": 240,
+      "rank": 29026
     }
   ]
 }
