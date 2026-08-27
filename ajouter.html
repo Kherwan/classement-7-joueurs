@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ajouter des questions</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .back {
+            display: block;
+            width: fit-content;
+            margin: 0 auto 25px;
+            text-decoration: none;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        textarea {
+            min-height: 400px;
+            resize: vertical;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto 0;
+            padding: 13px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #0066cc;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .success {
+            background: #e8f5e9;
+        }
+
+        .error {
+            background: #ffebee;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <a href="index.html" class="back">← Retour au classement</a>
+
+    <h1>📚 Ajouter les questions</h1>
+
+    <p>
+        Colle ici directement le texte copié depuis
+        La Table des Savoirs.
+    </p>
+
+    <label for="date">Date</label>
+
+    <input
+        type="text"
+        id="date"
+        placeholder="Exemple : 27 août 2026"
+    >
+
+    <br><br>
+
+    <label for="content">
+        Questions + réponses
+    </label>
+
+    <textarea
+        id="content"
+        placeholder="Colle ici les questions et les réponses..."
+    ></textarea>
+
+    <button onclick="analyser()">
+        🔍 Analyser
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+function analyser() {
+
+    const content = document.getElementById("content").value;
+    const result = document.getElementById("result");
+
+    if (!content.trim()) {
+        result.className = "error";
+        result.style.display = "block";
+        result.textContent = "❌ Colle d'abord les questions et réponses.";
+        return;
+    }
+
+    const questions = (
+        content.match(
+            /(?:^|\n)(.+?)\n\n\*\*Pas de réponse\*\*/g
+        ) || []
+    );
+
+    const answers = (
+        content.match(
+            /\*\*Réponse attendue\s*:\s*(.+?)\*\*/g
+        ) || []
+    );
+
+    const questionCount = questions.length;
+    const answerCount = answers.length;
+
+    result.style.display = "block";
+
+    if (questionCount === 10 && answerCount === 10) {
+
+        result.className = "success";
+
+        result.innerHTML = `
+            ✅ <strong>10 questions détectées</strong><br>
+            ✅ <strong>10 réponses détectées</strong><br><br>
+            Le format semble correct.
+        `;
+
+    } else {
+
+        result.className = "error";
+
+        result.innerHTML = `
+            ⚠️ <strong>Attention</strong><br><br>
+            Questions détectées : ${questionCount}<br>
+            Réponses détectées : ${answerCount}<br><br>
+            Il faut normalement 10 questions et 10 réponses.
+        `;
+    }
+}
+
+</script>
+
+</body>
+</html>
