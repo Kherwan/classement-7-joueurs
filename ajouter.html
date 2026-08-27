@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -32,6 +33,7 @@
             width: fit-content;
             margin: 0 auto 25px;
             text-decoration: none;
+            color: #0066cc;
         }
 
         label {
@@ -40,7 +42,8 @@
             margin-bottom: 8px;
         }
 
-        input, textarea {
+        input,
+        textarea {
             width: 100%;
             box-sizing: border-box;
             padding: 12px;
@@ -52,6 +55,7 @@
         textarea {
             min-height: 400px;
             resize: vertical;
+            font-family: Arial, sans-serif;
         }
 
         button {
@@ -71,7 +75,7 @@
             opacity: 0.85;
         }
 
-        #result {
+        .result {
             margin-top: 20px;
             padding: 15px;
             border-radius: 8px;
@@ -85,6 +89,27 @@
         .error {
             background: #ffebee;
         }
+
+        .preview {
+            margin-top: 25px;
+        }
+
+        .question {
+            background: #f7f7f7;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+        }
+
+        .question-number {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .answer {
+            margin-top: 8px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -92,7 +117,9 @@
 
 <div class="container">
 
-    <a href="index.html" class="back">← Retour au classement</a>
+    <a href="index.html" class="back">
+        ← Retour au classement
+    </a>
 
     <h1>📚 Ajouter les questions</h1>
 
@@ -124,7 +151,9 @@
         🔍 Analyser
     </button>
 
-    <div id="result"></div>
+    <div id="result" class="result"></div>
+
+    <div id="preview" class="preview"></div>
 
 </div>
 
@@ -132,46 +161,125 @@
 
 function analyser() {
 
-    const content = document.getElementById("content").value;
-    const result = document.getElementById("result");
+    const content =
+        document.getElementById("content").value;
+
+    const result =
+        document.getElementById("result");
+
+    const preview =
+        document.getElementById("preview");
+
+    result.style.display = "none";
+    preview.innerHTML = "";
 
     if (!content.trim()) {
-        result.className = "error";
+
+        result.className = "result error";
         result.style.display = "block";
-        result.textContent = "❌ Colle d'abord les questions et réponses.";
+
+        result.innerHTML =
+            "❌ Colle d'abord les questions et réponses.";
+
         return;
     }
 
-    const questions = (
-        content.match(
-            /(?:^|\n)(.+?)\n\n\*\*Pas de réponse\*\*/g
-        ) || []
+    /*
+     * On découpe le texte autour de
+     * "Réponse attendue".
+     *
+     * Cela fonctionne même si la question
+     * contient plusieurs lignes.
+     */
+
+    const answerRegex =
+        /\*\*Réponse attendue\s*:\s*([\s\S]*?)\*\*/gi;
+
+    const answers = [];
+
+    let match;
+
+    while ((match = answerRegex.exec(content)) !== null) {
+
+        answers.push(
+            match[1]
+                .replace(/\r/g, "")
+                .trim()
+        );
+    }
+
+    /*
+     * Pour trouver les questions, on prend
+     * le texte situé avant chaque réponse.
+     */
+
+    const questions = [];
+
+    const parts = content.split(
+        /\*\*Réponse attendue\s*:\s*[\s\S]*?\*\*/gi
     );
 
-    const answers = (
-        content.match(
-            /\*\*Réponse attendue\s*:\s*(.+?)\*\*/g
-        ) || []
-    );
+    for (let i = 0; i < answers.length; i++) {
+
+        let part = parts[i];
+
+        /*
+         * On récupère ce qui suit la question précédente.
+         */
+
+        const blocks = part
+            .split(/\n\s*\n/)
+            .map(x => x.trim())
+            .filter(Boolean);
+
+        let question = "";
+
+        /*
+         * On cherche le dernier bloc pertinent.
+         */
+
+        for (let j = blocks.length - 1; j >= 0; j--) {
+
+            const candidate = blocks[j];
+
+            if (
+                !candidate.includes("Pas de réponse") &&
+                !candidate.match(/^\*\*.*\/\s*30\s*pts\*\*$/i)
+            ) {
+
+                question = candidate
+                    .replace(/\*\*/g, "")
+                    .trim();
+
+                break;
+            }
+        }
+
+        questions.push(question);
+    }
 
     const questionCount = questions.length;
     const answerCount = answers.length;
 
     result.style.display = "block";
 
-    if (questionCount === 10 && answerCount === 10) {
+    if (
+        questionCount === 10 &&
+        answerCount === 10 &&
+        questions.every(q => q.length > 5)
+    ) {
 
-        result.className = "success";
+        result.className = "result success";
 
         result.innerHTML = `
             ✅ <strong>10 questions détectées</strong><br>
             ✅ <strong>10 réponses détectées</strong><br><br>
-            Le format semble correct.
+            Vérifie l'aperçu ci-dessous.
         `;
 
     } else {
 
-        result.className = "error";
+        result.className = "result error";
 
         result.innerHTML = `
             ⚠️ <strong>Attention</strong><br><br>
@@ -180,9 +288,61 @@ function analyser() {
             Il faut normalement 10 questions et 10 réponses.
         `;
     }
+
+    /*
+     * Affichage de l'aperçu
+     */
+
+    if (questions.length > 0) {
+
+        preview.innerHTML =
+            "<h2>👀 Aperçu</h2>";
+
+        questions.forEach((question, index) => {
+
+            const div =
+                document.createElement("div");
+
+            div.className = "question";
+
+            div.innerHTML = `
+                <div class="question-number">
+                    Question ${index + 1}
+                </div>
+
+                <div>
+                    ${escapeHtml(question)}
+                </div>
+
+                <div class="answer">
+                    Réponse :
+                    ${escapeHtml(answers[index] || "?")}
+                </div>
+            `;
+
+            preview.appendChild(div);
+        });
+    }
+}
+
+
+/*
+ * Empêche le texte collé de pouvoir interpréter
+ * du HTML dans l'aperçu.
+ */
+
+function escapeHtml(text) {
+
+    const div =
+        document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
 }
 
 </script>
 
 </body>
 </html>
+```
