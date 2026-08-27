@@ -158,6 +158,7 @@
 </div>
 
 ```html
+```html
 <script>
 
 function analyser() {
@@ -170,21 +171,24 @@ function analyser() {
     preview.innerHTML = "";
 
     /*
-     * On cherche simplement toutes les réponses.
+     * On cherche uniquement le texte
+     * "Réponse attendue :" sans se soucier
+     * des éventuels ** autour.
      */
 
     const regex =
-        /\*\*Réponse attendue\s*:\s*([^*]+)\*\*/gi;
+        /Réponse\s+attendue\s*:\s*([^\n\r]+)/gi;
 
     const matches = [...texte.matchAll(regex)];
 
     const answers = matches.map(match =>
-        match[1].trim()
+        match[1]
+            .replace(/\*\*/g, "")
+            .trim()
     );
 
     /*
-     * Pour l'instant, on ne cherche PAS les questions.
-     * On vérifie uniquement que les 10 réponses sont trouvées.
+     * Affichage du résultat
      */
 
     if (answers.length === 10) {
@@ -193,10 +197,10 @@ function analyser() {
 
         result.innerHTML = `
             ✅ <strong>10 réponses détectées !</strong><br><br>
-            Le système fonctionne correctement pour les réponses.
+            Le format est maintenant reconnu.
         `;
 
-        preview.innerHTML = "<h2>Réponses trouvées :</h2>";
+        preview.innerHTML = "<h2>👀 Réponses trouvées</h2>";
 
         answers.forEach((answer, index) => {
 
@@ -206,7 +210,7 @@ function analyser() {
 
             div.innerHTML = `
                 <div class="number">
-                    Réponse ${index + 1}
+                    Question ${index + 1}
                 </div>
 
                 <div class="answer">
@@ -223,9 +227,36 @@ function analyser() {
 
         result.innerHTML = `
             ❌ Le détecteur trouve seulement
-            <strong>${answers.length} réponses</strong>.<br><br>
+            <strong>${answers.length} réponse(s)</strong>.<br><br>
 
             Il devrait en trouver 10.
+        `;
+
+        /*
+         * Diagnostic supplémentaire :
+         * on affiche ce que le navigateur reçoit
+         * réellement.
+         */
+
+        preview.innerHTML = `
+            <h2>🔎 Diagnostic</h2>
+
+            <p>
+                Le navigateur ne reconnaît pas les lignes
+                "Réponse attendue".
+            </p>
+
+            <p>
+                <strong>Texte reçu :</strong>
+            </p>
+
+            <pre style="
+                white-space: pre-wrap;
+                background: #f7f7f7;
+                padding: 15px;
+                border-radius: 8px;
+                overflow-x: auto;
+            ">${escapeHtml(texte.substring(0, 2000))}</pre>
         `;
     }
 }
@@ -242,6 +273,8 @@ function escapeHtml(texte) {
 }
 
 </script>
+```
+
 ```
 
 </body>
