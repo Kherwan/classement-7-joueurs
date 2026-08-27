@@ -132,10 +132,6 @@
             margin-top: 30px;
         }
 
-        .json-section h2 {
-            margin-bottom: 10px;
-        }
-
         #jsonOutput {
             min-height: 350px;
             font-family: Consolas, monospace;
@@ -163,8 +159,8 @@
     <h1>📚 Ajouter les questions</h1>
 
     <p class="description">
-        Colle directement les questions et les réponses copiées
-        depuis La Table des Savoirs.
+        Colle ici les questions copiées depuis La Table des Savoirs.
+        La page récupérera automatiquement les bonnes réponses.
     </p>
 
     <label for="date">
@@ -185,7 +181,7 @@
 
     <textarea
         id="content"
-        placeholder="Colle ici les questions et les réponses..."
+        placeholder="Colle ici le contenu du quiz..."
     ></textarea>
 
     <button onclick="analyser()">
@@ -220,6 +216,7 @@
 
 </div>
 
+
 <script>
 
 let questionsDetectees = [];
@@ -227,7 +224,9 @@ let answersDetectees = [];
 
 
 /*
- * Analyse du texte collé.
+ * =====================================================
+ * ANALYSE PRINCIPALE
+ * =====================================================
  */
 
 function analyser() {
@@ -247,17 +246,20 @@ function analyser() {
     const jsonSection =
         document.getElementById("jsonSection");
 
+
     result.style.display = "none";
     preview.innerHTML = "";
     jsonSection.style.display = "none";
 
+
     questionsDetectees = [];
     answersDetectees = [];
+
 
     if (!texte.trim()) {
 
         afficherErreur(
-            "❌ Colle d'abord les questions et les réponses."
+            "❌ Colle d'abord le contenu du quiz."
         );
 
         return;
@@ -265,41 +267,9 @@ function analyser() {
 
 
     /*
-     * --------------------------------------------------
-     * 1. DÉTECTION DES RÉPONSES
-     * --------------------------------------------------
-     *
-     * On ne dépend pas des ** autour du texte.
-     *
-     * On cherche simplement :
-     *
-     * Réponse attendue : XXXXX
-     */
-
-    const regexReponse =
-        /Réponse\s+attendue\s*:\s*([^\n\r]+)/gi;
-
-    const matches =
-        [...texte.matchAll(regexReponse)];
-
-
-    answersDetectees = matches.map(match => {
-
-        return match[1]
-            .replace(/\*\*/g, "")
-            .trim();
-
-    });
-
-
-    /*
-     * --------------------------------------------------
-     * 2. DÉTECTION DES QUESTIONS
-     * --------------------------------------------------
-     *
-     * Pour chaque réponse trouvée, on remonte
-     * dans le texte jusqu'au "Pas de réponse"
-     * correspondant.
+     * -------------------------------------------------
+     * On normalise le texte.
+     * -------------------------------------------------
      */
 
     const lignes = texte
@@ -307,6 +277,257 @@ function analyser() {
         .replace(/\r/g, "\n")
         .split("\n");
 
+
+    /*
+     * =================================================
+     * 1. NOUVEAU FORMAT
+     * =================================================
+     *
+     * Exemple :
+     *
+     * Question
+     *
+     * **Renoir**
+     *
+     * Réponse attendue : Edgar Degas
+     *
+     * 0 / 30 pts
+     *
+     * OU :
+     *
+     * Question
+     *
+     * **Tee**
+     *
+     * Bonne réponse ! (Tee)
+     *
+     * 30 / 30 pts
+     */
+
+
+    let blocs = [];
+
+    let blocActuel = [];
+
+
+    for (const ligne of lignes) {
+
+        if (ligne.trim() === "") {
+
+            if (blocActuel.length > 0) {
+
+                blocs.push(blocActuel);
+
+                blocActuel = [];
+            }
+
+        } else {
+
+            blocActuel.push(ligne);
+        }
+    }
+
+
+    if (blocActuel.length > 0) {
+        blocs.push(blocActuel);
+    }
+
+
+    /*
+     * -------------------------------------------------
+     * Chaque question est normalement constituée
+     * de plusieurs blocs séparés par des lignes vides.
+     *
+     * On repère les blocs contenant :
+     *
+     * "Réponse attendue"
+     *
+     * ou
+     *
+     * "Bonne réponse"
+     * -------------------------------------------------
+     */
+
+
+    for (let i = 0; i < blocs.length; i++) {
+
+        const bloc =
+            blocs[i].join("\n");
+
+
+        /*
+         * ---------------------------------------------
+         * CAS 1 :
+         * Réponse attendue
+         * ---------------------------------------------
+         */
+
+        const attendu =
+            bloc.match(
+                /Réponse\s+attendue\s*:\s*(.+)/i
+            );
+
+
+        /*
+         * ---------------------------------------------
+         * CAS 2 :
+         * Bonne réponse
+         * ---------------------------------------------
+         */
+
+        const bonne =
+            bloc.match(
+                /Bonne\s+réponse\s*!\s*\((.*?)\)/i
+            );
+
+
+        /*
+         * Si ce bloc ne contient aucune indication
+         * de réponse, ce n'est pas encore une question.
+         */
+
+        if (!attendu && !bonne) {
+            continue;
+        }
+
+
+        /*
+         * Bonne réponse officielle.
+         */
+
+        let answer = "";
+
+
+        if (attendu) {
+
+            answer =
+                attendu[1]
+                    .replace(/\*\*/g, "")
+                    .trim();
+
+        } else if (bonne) {
+
+            answer =
+                bonne[1]
+                    .replace(/\*\*/g, "")
+                    .trim();
+
+        }
+
+
+        /*
+         * ---------------------------------------------
+         * On cherche la question.
+         *
+         * Elle se trouve généralement dans le bloc
+         * précédent.
+         * ---------------------------------------------
+         */
+
+        let question = "";
+
+
+        /*
+         * On regarde d'abord le bloc précédent.
+         */
+
+        if (i > 0) {
+
+            question =
+                blocs[i - 1]
+                    .join(" ")
+                    .replace(/\*\*/g, "")
+                    .trim();
+        }
+
+
+        /*
+         * Si le bloc précédent correspond à une réponse
+         * utilisateur ou à un score, on remonte davantage.
+         */
+
+        let recherche = i - 1;
+
+
+        while (
+            recherche >= 0 &&
+            estBlocInutile(
+                blocs[recherche].join(" ")
+            )
+        ) {
+
+            recherche--;
+        }
+
+
+        if (recherche >= 0) {
+
+            question =
+                blocs[recherche]
+                    .join(" ")
+                    .replace(/\*\*/g, "")
+                    .trim();
+        }
+
+
+        /*
+         * Nettoyage de la question.
+         */
+
+        question =
+            nettoyerQuestion(question);
+
+
+        if (
+            question.length > 5 &&
+            answer.length > 0
+        ) {
+
+            questionsDetectees.push(question);
+
+            answersDetectees.push(answer);
+        }
+    }
+
+
+    /*
+     * =================================================
+     * 2. FALLBACK ANCIEN FORMAT
+     * =================================================
+     *
+     * Si jamais le nouveau format n'a pas fonctionné,
+     * on tente l'ancien :
+     *
+     * Réponse attendue : XXXXX
+     */
+
+
+    if (
+        questionsDetectees.length === 0 &&
+        answersDetectees.length === 0
+    ) {
+
+        analyserAncienFormat(lignes);
+    }
+
+
+    /*
+     * =================================================
+     * 3. RESULTAT
+     * =================================================
+     */
+
+    afficherResultat(date);
+}
+
+
+/*
+ * =====================================================
+ * DÉTECTION ANCIEN FORMAT
+ * =====================================================
+ */
+
+function analyserAncienFormat(lignes) {
 
     for (
         let i = 0;
@@ -318,25 +539,25 @@ function analyser() {
             lignes[i].trim();
 
 
-        /*
-         * On trouve une réponse.
-         */
+        const match =
+            ligne.match(
+                /Réponse\s+attendue\s*:\s*(.+)/i
+            );
 
-        if (
-            !ligne
-                .toLowerCase()
-                .includes("réponse attendue")
-        ) {
+
+        if (!match) {
             continue;
         }
 
 
-        /*
-         * On cherche "Pas de réponse"
-         * juste au-dessus.
-         */
+        const answer =
+            match[1]
+                .replace(/\*\*/g, "")
+                .trim();
+
 
         let j = i - 1;
+
 
         while (
             j >= 0 &&
@@ -346,31 +567,20 @@ function analyser() {
         }
 
 
+        /*
+         * Pas de réponse
+         */
+
         if (
             j >= 0 &&
             lignes[j]
-                .trim()
                 .toLowerCase()
                 .includes("pas de réponse")
         ) {
 
             j--;
-
-        } else {
-
-            /*
-             * Si "Pas de réponse" n'est pas trouvé,
-             * on continue quand même.
-             */
-
-            j = i - 1;
-
         }
 
-
-        /*
-         * On ignore les lignes vides.
-         */
 
         while (
             j >= 0 &&
@@ -380,15 +590,8 @@ function analyser() {
         }
 
 
-        /*
-         * On récupère le bloc précédent.
-         *
-         * La question est normalement sur une ligne,
-         * mais cette méthode accepte également
-         * plusieurs lignes.
-         */
+        let question = "";
 
-        const bloc = [];
 
         while (
             j >= 0 &&
@@ -399,56 +602,149 @@ function analyser() {
                 lignes[j].trim();
 
 
-            /*
-             * On ignore les lignes de score.
-             */
-
             if (
-                !/^\*\*\s*[?0-9]+\s*\/\s*30\s*pts\s*\*\*$/i
+                !/^\*\*\s*[?0-9]+\s*\/\s*30\s*pts/i
                     .test(ligneQuestion)
             ) {
 
-                bloc.unshift(
+                question =
                     ligneQuestion
                         .replace(/\*\*/g, "")
-                        .trim()
-                );
-
+                        .trim();
             }
+
 
             j--;
         }
 
 
-        const question =
-            bloc.join(" ").trim();
+        if (
+            question.length > 5 &&
+            answer.length > 0
+        ) {
+
+            questionsDetectees.push(question);
+
+            answersDetectees.push(answer);
+        }
+    }
+}
 
 
-        questionsDetectees.push(question);
+/*
+ * =====================================================
+ * IDENTIFICATION DES BLOCS INUTILES
+ * =====================================================
+ */
+
+function estBlocInutile(texte) {
+
+    const t =
+        texte
+            .toLowerCase()
+            .trim();
+
+
+    if (!t) {
+        return true;
     }
 
 
-    /*
-     * --------------------------------------------------
-     * 3. VÉRIFICATION
-     * --------------------------------------------------
-     */
+    if (
+        t.includes("réponse attendue")
+    ) {
+        return true;
+    }
+
+
+    if (
+        t.includes("bonne réponse")
+    ) {
+        return true;
+    }
+
+
+    if (
+        t.includes("contestation en cours")
+    ) {
+        return true;
+    }
+
+
+    if (
+        /^\*\*?.*\*\*?$/.test(t) &&
+        t.length < 100
+    ) {
+
+        /*
+         * Peut être la réponse donnée par
+         * l'utilisateur.
+         */
+
+        return true;
+    }
+
+
+    if (
+        /\d+\s*\/\s*\**30\s*pts/i.test(t)
+    ) {
+        return true;
+    }
+
+
+    if (
+        /\d+[,.]\d+\s*%/.test(t)
+    ) {
+        return true;
+    }
+
+
+    return false;
+}
+
+
+/*
+ * =====================================================
+ * NETTOYAGE DES QUESTIONS
+ * =====================================================
+ */
+
+function nettoyerQuestion(question) {
+
+    return question
+        .replace(/\*\*/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+
+/*
+ * =====================================================
+ * AFFICHAGE DU RESULTAT
+ * =====================================================
+ */
+
+function afficherResultat(date) {
+
+    const result =
+        document.getElementById("result");
+
+
+    result.style.display = "block";
+
 
     if (
         questionsDetectees.length === 10 &&
-        answersDetectees.length === 10 &&
-        questionsDetectees.every(q => q.length > 5)
+        answersDetectees.length === 10
     ) {
 
         result.className =
             "result success";
 
-        result.style.display =
-            "block";
 
         result.innerHTML = `
             ✅ <strong>10 questions détectées</strong><br>
-            ✅ <strong>10 réponses détectées</strong><br><br>
+            ✅ <strong>10 bonnes réponses détectées</strong><br><br>
             Vérifie l'aperçu ci-dessous.
         `;
 
@@ -456,37 +752,28 @@ function analyser() {
         afficherPreview();
 
 
-        /*
-         * Génération du JSON.
-         */
-
         genererJSON(date);
+
 
     } else {
 
         result.className =
             "result error";
 
-        result.style.display =
-            "block";
 
         result.innerHTML = `
-            ❌ <strong>Le résultat n'est pas correct.</strong><br><br>
+            ⚠️ <strong>Détection incomplète</strong><br><br>
 
             Questions détectées :
             <strong>${questionsDetectees.length}</strong><br>
 
-            Réponses détectées :
+            Bonnes réponses détectées :
             <strong>${answersDetectees.length}</strong><br><br>
 
-            Il faut normalement 10 questions et 10 réponses.
+            Il faut normalement 10 questions et
+            10 bonnes réponses.
         `;
 
-
-        /*
-         * Affiche ce qui a été détecté,
-         * même si le nombre n'est pas correct.
-         */
 
         afficherPreview();
     }
@@ -494,9 +781,9 @@ function analyser() {
 
 
 /*
- * --------------------------------------------------
- * APERÇU
- * --------------------------------------------------
+ * =====================================================
+ * APERCU
+ * =====================================================
  */
 
 function afficherPreview() {
@@ -504,9 +791,13 @@ function afficherPreview() {
     const preview =
         document.getElementById("preview");
 
-    if (questionsDetectees.length === 0) {
+
+    if (
+        questionsDetectees.length === 0
+    ) {
         return;
     }
+
 
     preview.innerHTML =
         "<h2>👀 Aperçu</h2>";
@@ -517,6 +808,7 @@ function afficherPreview() {
 
             const bloc =
                 document.createElement("div");
+
 
             bloc.className =
                 "question";
@@ -534,7 +826,7 @@ function afficherPreview() {
                 <div class="answer">
                     Réponse :
                     ${escapeHtml(
-                        answersDetectees[index] || "?"
+                        answersDetectees[index]
                     )}
                 </div>
             `;
@@ -547,9 +839,9 @@ function afficherPreview() {
 
 
 /*
- * --------------------------------------------------
- * GÉNÉRATION DU JSON
- * --------------------------------------------------
+ * =====================================================
+ * GENERATION JSON
+ * =====================================================
  */
 
 function genererJSON(date) {
@@ -557,22 +849,28 @@ function genererJSON(date) {
     const jsonSection =
         document.getElementById("jsonSection");
 
+
     const jsonOutput =
         document.getElementById("jsonOutput");
 
 
     const jour = {
 
-        date: date || "Date inconnue",
+        date:
+            date || "Date inconnue",
 
         questions:
             questionsDetectees.map(
                 (question, index) => {
 
                     return {
-                        question: question,
+
+                        question:
+                            question,
+
                         answer:
                             answersDetectees[index]
+
                     };
 
                 }
@@ -582,7 +880,11 @@ function genererJSON(date) {
 
 
     jsonOutput.value =
-        JSON.stringify(jour, null, 2);
+        JSON.stringify(
+            jour,
+            null,
+            2
+        );
 
 
     jsonSection.style.display =
@@ -591,32 +893,37 @@ function genererJSON(date) {
 
 
 /*
- * --------------------------------------------------
- * COPIER LE JSON
- * --------------------------------------------------
+ * =====================================================
+ * COPIER JSON
+ * =====================================================
  */
 
 async function copierJSON() {
 
     const json =
-        document.getElementById("jsonOutput").value;
+        document.getElementById(
+            "jsonOutput"
+        ).value;
+
 
     const message =
-        document.getElementById("copySuccess");
+        document.getElementById(
+            "copySuccess"
+        );
 
 
     try {
 
-        await navigator.clipboard.writeText(json);
+        await navigator.clipboard.writeText(
+            json
+        );
 
     } catch (error) {
 
-        /*
-         * Méthode de secours pour certains navigateurs.
-         */
-
         const textarea =
-            document.getElementById("jsonOutput");
+            document.getElementById(
+                "jsonOutput"
+            );
 
         textarea.select();
 
@@ -628,19 +935,22 @@ async function copierJSON() {
         "block";
 
 
-    setTimeout(() => {
+    setTimeout(
+        () => {
 
-        message.style.display =
-            "none";
+            message.style.display =
+                "none";
 
-    }, 2000);
+        },
+        2000
+    );
 }
 
 
 /*
- * --------------------------------------------------
- * GESTION DES ERREURS
- * --------------------------------------------------
+ * =====================================================
+ * ERREUR
+ * =====================================================
  */
 
 function afficherErreur(message) {
@@ -648,11 +958,14 @@ function afficherErreur(message) {
     const result =
         document.getElementById("result");
 
+
     result.className =
         "result error";
 
+
     result.style.display =
         "block";
+
 
     result.innerHTML =
         message;
@@ -660,9 +973,9 @@ function afficherErreur(message) {
 
 
 /*
- * --------------------------------------------------
- * SÉCURITÉ HTML
- * --------------------------------------------------
+ * =====================================================
+ * SECURITE HTML
+ * =====================================================
  */
 
 function escapeHtml(texte) {
