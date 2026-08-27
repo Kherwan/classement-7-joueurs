@@ -16,7 +16,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: auto;
             background: white;
             padding: 25px;
@@ -26,6 +26,13 @@
 
         h1 {
             text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
         }
 
         .back {
@@ -75,6 +82,10 @@
             opacity: 0.85;
         }
 
+        button.secondary {
+            background: #555;
+        }
+
         .result {
             display: none;
             margin-top: 20px;
@@ -91,7 +102,7 @@
         }
 
         .preview {
-            margin-top: 25px;
+            margin-top: 30px;
         }
 
         .question {
@@ -104,11 +115,39 @@
         .number {
             font-weight: bold;
             margin-bottom: 8px;
+            color: #555;
+        }
+
+        .question-text {
+            line-height: 1.5;
         }
 
         .answer {
             margin-top: 10px;
             font-weight: bold;
+        }
+
+        .json-section {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .json-section h2 {
+            margin-bottom: 10px;
+        }
+
+        #jsonOutput {
+            min-height: 350px;
+            font-family: Consolas, monospace;
+            font-size: 13px;
+            background: #fafafa;
+        }
+
+        .copy-success {
+            text-align: center;
+            color: #188038;
+            font-weight: bold;
+            display: none;
         }
     </style>
 </head>
@@ -123,12 +162,14 @@
 
     <h1>📚 Ajouter les questions</h1>
 
-    <p>
-        Colle directement ici les questions et les réponses
-        copiées depuis La Table des Savoirs.
+    <p class="description">
+        Colle directement les questions et les réponses copiées
+        depuis La Table des Savoirs.
     </p>
 
-    <label for="date">Date</label>
+    <label for="date">
+        Date
+    </label>
 
     <input
         type="text"
@@ -144,7 +185,7 @@
 
     <textarea
         id="content"
-        placeholder="Colle ici le texte..."
+        placeholder="Colle ici les questions et les réponses..."
     ></textarea>
 
     <button onclick="analyser()">
@@ -155,112 +196,474 @@
 
     <div id="preview" class="preview"></div>
 
+    <div id="jsonSection" class="json-section">
+
+        <h2>📄 JSON généré</h2>
+
+        <textarea
+            id="jsonOutput"
+            readonly
+        ></textarea>
+
+        <button
+            class="secondary"
+            onclick="copierJSON()"
+        >
+            📋 Copier le JSON
+        </button>
+
+        <div id="copySuccess" class="copy-success">
+            ✅ JSON copié !
+        </div>
+
+    </div>
+
 </div>
 
-```html
-```html
 <script>
+
+let questionsDetectees = [];
+let answersDetectees = [];
+
+
+/*
+ * Analyse du texte collé.
+ */
 
 function analyser() {
 
-    const texte = document.getElementById("content").value;
-    const result = document.getElementById("result");
-    const preview = document.getElementById("preview");
+    const texte =
+        document.getElementById("content").value;
 
-    result.style.display = "block";
+    const date =
+        document.getElementById("date").value.trim();
+
+    const result =
+        document.getElementById("result");
+
+    const preview =
+        document.getElementById("preview");
+
+    const jsonSection =
+        document.getElementById("jsonSection");
+
+    result.style.display = "none";
     preview.innerHTML = "";
+    jsonSection.style.display = "none";
+
+    questionsDetectees = [];
+    answersDetectees = [];
+
+    if (!texte.trim()) {
+
+        afficherErreur(
+            "❌ Colle d'abord les questions et les réponses."
+        );
+
+        return;
+    }
+
 
     /*
-     * On cherche uniquement le texte
-     * "Réponse attendue :" sans se soucier
-     * des éventuels ** autour.
+     * --------------------------------------------------
+     * 1. DÉTECTION DES RÉPONSES
+     * --------------------------------------------------
+     *
+     * On ne dépend pas des ** autour du texte.
+     *
+     * On cherche simplement :
+     *
+     * Réponse attendue : XXXXX
      */
 
-    const regex =
+    const regexReponse =
         /Réponse\s+attendue\s*:\s*([^\n\r]+)/gi;
 
-    const matches = [...texte.matchAll(regex)];
+    const matches =
+        [...texte.matchAll(regexReponse)];
 
-    const answers = matches.map(match =>
-        match[1]
+
+    answersDetectees = matches.map(match => {
+
+        return match[1]
             .replace(/\*\*/g, "")
-            .trim()
-    );
+            .trim();
+
+    });
+
 
     /*
-     * Affichage du résultat
+     * --------------------------------------------------
+     * 2. DÉTECTION DES QUESTIONS
+     * --------------------------------------------------
+     *
+     * Pour chaque réponse trouvée, on remonte
+     * dans le texte jusqu'au "Pas de réponse"
+     * correspondant.
      */
 
-    if (answers.length === 10) {
+    const lignes = texte
+        .replace(/\r\n/g, "\n")
+        .replace(/\r/g, "\n")
+        .split("\n");
 
-        result.className = "result success";
+
+    for (
+        let i = 0;
+        i < lignes.length;
+        i++
+    ) {
+
+        const ligne =
+            lignes[i].trim();
+
+
+        /*
+         * On trouve une réponse.
+         */
+
+        if (
+            !ligne
+                .toLowerCase()
+                .includes("réponse attendue")
+        ) {
+            continue;
+        }
+
+
+        /*
+         * On cherche "Pas de réponse"
+         * juste au-dessus.
+         */
+
+        let j = i - 1;
+
+        while (
+            j >= 0 &&
+            lignes[j].trim() === ""
+        ) {
+            j--;
+        }
+
+
+        if (
+            j >= 0 &&
+            lignes[j]
+                .trim()
+                .toLowerCase()
+                .includes("pas de réponse")
+        ) {
+
+            j--;
+
+        } else {
+
+            /*
+             * Si "Pas de réponse" n'est pas trouvé,
+             * on continue quand même.
+             */
+
+            j = i - 1;
+
+        }
+
+
+        /*
+         * On ignore les lignes vides.
+         */
+
+        while (
+            j >= 0 &&
+            lignes[j].trim() === ""
+        ) {
+            j--;
+        }
+
+
+        /*
+         * On récupère le bloc précédent.
+         *
+         * La question est normalement sur une ligne,
+         * mais cette méthode accepte également
+         * plusieurs lignes.
+         */
+
+        const bloc = [];
+
+        while (
+            j >= 0 &&
+            lignes[j].trim() !== ""
+        ) {
+
+            const ligneQuestion =
+                lignes[j].trim();
+
+
+            /*
+             * On ignore les lignes de score.
+             */
+
+            if (
+                !/^\*\*\s*[?0-9]+\s*\/\s*30\s*pts\s*\*\*$/i
+                    .test(ligneQuestion)
+            ) {
+
+                bloc.unshift(
+                    ligneQuestion
+                        .replace(/\*\*/g, "")
+                        .trim()
+                );
+
+            }
+
+            j--;
+        }
+
+
+        const question =
+            bloc.join(" ").trim();
+
+
+        questionsDetectees.push(question);
+    }
+
+
+    /*
+     * --------------------------------------------------
+     * 3. VÉRIFICATION
+     * --------------------------------------------------
+     */
+
+    if (
+        questionsDetectees.length === 10 &&
+        answersDetectees.length === 10 &&
+        questionsDetectees.every(q => q.length > 5)
+    ) {
+
+        result.className =
+            "result success";
+
+        result.style.display =
+            "block";
 
         result.innerHTML = `
-            ✅ <strong>10 réponses détectées !</strong><br><br>
-            Le format est maintenant reconnu.
+            ✅ <strong>10 questions détectées</strong><br>
+            ✅ <strong>10 réponses détectées</strong><br><br>
+            Vérifie l'aperçu ci-dessous.
         `;
 
-        preview.innerHTML = "<h2>👀 Réponses trouvées</h2>";
 
-        answers.forEach((answer, index) => {
+        afficherPreview();
 
-            const div = document.createElement("div");
 
-            div.className = "question";
+        /*
+         * Génération du JSON.
+         */
 
-            div.innerHTML = `
+        genererJSON(date);
+
+    } else {
+
+        result.className =
+            "result error";
+
+        result.style.display =
+            "block";
+
+        result.innerHTML = `
+            ❌ <strong>Le résultat n'est pas correct.</strong><br><br>
+
+            Questions détectées :
+            <strong>${questionsDetectees.length}</strong><br>
+
+            Réponses détectées :
+            <strong>${answersDetectees.length}</strong><br><br>
+
+            Il faut normalement 10 questions et 10 réponses.
+        `;
+
+
+        /*
+         * Affiche ce qui a été détecté,
+         * même si le nombre n'est pas correct.
+         */
+
+        afficherPreview();
+    }
+}
+
+
+/*
+ * --------------------------------------------------
+ * APERÇU
+ * --------------------------------------------------
+ */
+
+function afficherPreview() {
+
+    const preview =
+        document.getElementById("preview");
+
+    if (questionsDetectees.length === 0) {
+        return;
+    }
+
+    preview.innerHTML =
+        "<h2>👀 Aperçu</h2>";
+
+
+    questionsDetectees.forEach(
+        (question, index) => {
+
+            const bloc =
+                document.createElement("div");
+
+            bloc.className =
+                "question";
+
+
+            bloc.innerHTML = `
                 <div class="number">
                     Question ${index + 1}
                 </div>
 
+                <div class="question-text">
+                    ${escapeHtml(question)}
+                </div>
+
                 <div class="answer">
-                    ${escapeHtml(answer)}
+                    Réponse :
+                    ${escapeHtml(
+                        answersDetectees[index] || "?"
+                    )}
                 </div>
             `;
 
-            preview.appendChild(div);
-        });
 
-    } else {
-
-        result.className = "result error";
-
-        result.innerHTML = `
-            ❌ Le détecteur trouve seulement
-            <strong>${answers.length} réponse(s)</strong>.<br><br>
-
-            Il devrait en trouver 10.
-        `;
-
-        /*
-         * Diagnostic supplémentaire :
-         * on affiche ce que le navigateur reçoit
-         * réellement.
-         */
-
-        preview.innerHTML = `
-            <h2>🔎 Diagnostic</h2>
-
-            <p>
-                Le navigateur ne reconnaît pas les lignes
-                "Réponse attendue".
-            </p>
-
-            <p>
-                <strong>Texte reçu :</strong>
-            </p>
-
-            <pre style="
-                white-space: pre-wrap;
-                background: #f7f7f7;
-                padding: 15px;
-                border-radius: 8px;
-                overflow-x: auto;
-            ">${escapeHtml(texte.substring(0, 2000))}</pre>
-        `;
-    }
+            preview.appendChild(bloc);
+        }
+    );
 }
 
+
+/*
+ * --------------------------------------------------
+ * GÉNÉRATION DU JSON
+ * --------------------------------------------------
+ */
+
+function genererJSON(date) {
+
+    const jsonSection =
+        document.getElementById("jsonSection");
+
+    const jsonOutput =
+        document.getElementById("jsonOutput");
+
+
+    const jour = {
+
+        date: date || "Date inconnue",
+
+        questions:
+            questionsDetectees.map(
+                (question, index) => {
+
+                    return {
+                        question: question,
+                        answer:
+                            answersDetectees[index]
+                    };
+
+                }
+            )
+
+    };
+
+
+    jsonOutput.value =
+        JSON.stringify(jour, null, 2);
+
+
+    jsonSection.style.display =
+        "block";
+}
+
+
+/*
+ * --------------------------------------------------
+ * COPIER LE JSON
+ * --------------------------------------------------
+ */
+
+async function copierJSON() {
+
+    const json =
+        document.getElementById("jsonOutput").value;
+
+    const message =
+        document.getElementById("copySuccess");
+
+
+    try {
+
+        await navigator.clipboard.writeText(json);
+
+    } catch (error) {
+
+        /*
+         * Méthode de secours pour certains navigateurs.
+         */
+
+        const textarea =
+            document.getElementById("jsonOutput");
+
+        textarea.select();
+
+        document.execCommand("copy");
+    }
+
+
+    message.style.display =
+        "block";
+
+
+    setTimeout(() => {
+
+        message.style.display =
+            "none";
+
+    }, 2000);
+}
+
+
+/*
+ * --------------------------------------------------
+ * GESTION DES ERREURS
+ * --------------------------------------------------
+ */
+
+function afficherErreur(message) {
+
+    const result =
+        document.getElementById("result");
+
+    result.className =
+        "result error";
+
+    result.style.display =
+        "block";
+
+    result.innerHTML =
+        message;
+}
+
+
+/*
+ * --------------------------------------------------
+ * SÉCURITÉ HTML
+ * --------------------------------------------------
+ */
 
 function escapeHtml(texte) {
 
@@ -273,9 +676,6 @@ function escapeHtml(texte) {
 }
 
 </script>
-```
-
-```
 
 </body>
 </html>
