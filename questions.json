@@ -1,6 +1,51 @@
 {
   "days": [
     {
+      "date": "27 août 2026",
+      "questions": [
+        {
+          "question": "Quel écrivain né Samuel Longhorne Clemens est l'auteur des Aventures de Huckleberry Finn ainsi que de celles de Tom Sawyer ?",
+          "answer": "Mark Twain, à savoir"
+        },
+        {
+          "question": "Combien d'équipes sont présentes en première division du Championnat de France de rugby à XV chez les hommes ?",
+          "answer": "14, le nom du championnat est le TOP 14"
+        },
+        {
+          "question": "Créé en 1993 par Jean-David Blanc, quel service fournissant des informations cinématographiques en ligne appartient depuis 2013 au groupe Webedia ?",
+          "answer": "AlloCiné, site intéressant pour avoir les avis de la presse et des spectatuers (notes de 1 à 5 et avoir le casting etc)"
+        },
+        {
+          "question": "Quel nom désignant des serviteurs a été donné à ces héros apparus d'abord dans Moi, Moche et Méchant et auxquels des films ont été dédiés ensuite ?",
+          "answer": "Les Minions, mnémotechnique : initiales du film : M,M,M et Minions également qui viennent s'opposer au moche + ils sont petits et ce qui est petit est mignon"
+        },
+        {
+          "question": "Quel prénom porte la fille cachée de François Mitterrand, née en 1974 d'une union avec l'historienne de l'art et conservatrice du Louvre et Orsay, Anne Pingeot ?",
+          "answer": "Mazarine"
+        },
+        {
+          "question": "Quel nom générique désigne les fines languettes de tissus limitant les mouvements d'un organe mobile du corps ? Il y en a un sous la langue, un sur le pénis et un sur le clitoris.",
+          "answer": "Frein"
+        },
+        {
+          "question": "Quel pays sud-américain possède ce drapeau ?",
+          "answer": "Uruguay"
+        },
+        {
+          "question": "De quel instrument de musique possédant 47 cordes jouaient Harpo Marx, Alphonse Hasselmans ainsi que la française Lily Laskine ? Cet instrument à cordes pincées également l'emblème de l'Irlande.",
+          "answer": "Harpe, symbole présent sur les canettes Guiness"
+        },
+        {
+          "question": "Quel ARBRE méditerranéen étant un symbole de paix possède un fruit donnant une huile très utilisée ?",
+          "answer": "Olivier, huile d'olive -> Olivier"
+        },
+        {
+          "question": "Quel type de ruban décoratif utilisé pour ficeler les paquets-cadeaux tire son nom de la ville néerlandaise de Bois-le-Duc ?",
+          "answer": "Bolduc -> Bois-le-Duc sans le 'is' "
+        }
+      ]
+    },
+    {
       "date": "26 août 2026",
       "questions": [
         {
