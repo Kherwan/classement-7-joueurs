@@ -157,197 +157,79 @@
 
 </div>
 
+```html
 <script>
 
 function analyser() {
 
     const texte = document.getElementById("content").value;
-
     const result = document.getElementById("result");
-
     const preview = document.getElementById("preview");
 
-    result.style.display = "none";
+    result.style.display = "block";
     preview.innerHTML = "";
 
-    if (!texte.trim()) {
-
-        result.className = "result error";
-        result.style.display = "block";
-        result.textContent = "❌ Aucun texte détecté.";
-
-        return;
-    }
-
     /*
-     * On normalise les retours à la ligne.
+     * On cherche simplement toutes les réponses.
      */
 
-    const lignes = texte
-        .replace(/\r\n/g, "\n")
-        .replace(/\r/g, "\n")
-        .split("\n");
+    const regex =
+        /\*\*Réponse attendue\s*:\s*([^*]+)\*\*/gi;
 
-    const questions = [];
-    const answers = [];
+    const matches = [...texte.matchAll(regex)];
 
-    /*
-     * On cherche chaque ligne :
-     *
-     * **Réponse attendue : XXXXX**
-     *
-     * et on récupère la question située
-     * juste avant "**Pas de réponse**".
-     */
-
-    for (let i = 0; i < lignes.length; i++) {
-
-        const ligne = lignes[i].trim();
-
-        const match = ligne.match(
-            /^\*\*Réponse attendue\s*:\s*(.*?)\*\*\s*$/
-        );
-
-        if (!match) {
-            continue;
-        }
-
-        const reponse = match[1].trim();
-
-        answers.push(reponse);
-
-        /*
-         * On remonte depuis la réponse.
-         *
-         * On ignore les lignes vides,
-         * puis "**Pas de réponse**",
-         * puis on cherche la question.
-         */
-
-        let j = i - 1;
-
-        while (j >= 0 && lignes[j].trim() === "") {
-            j--;
-        }
-
-        if (
-            j >= 0 &&
-            lignes[j].trim().toLowerCase() === "**pas de réponse**"
-        ) {
-            j--;
-        }
-
-        while (j >= 0 && lignes[j].trim() === "") {
-            j--;
-        }
-
-        /*
-         * La question peut être sur plusieurs lignes.
-         * Dans ton format actuel elle est sur une seule ligne,
-         * mais on prend quand même tout le bloc précédent.
-         */
-
-        let blocs = [];
-
-        while (
-            j >= 0 &&
-            lignes[j].trim() !== ""
-        ) {
-
-            const ligneQuestion = lignes[j].trim();
-
-            /*
-             * On ne veut surtout pas récupérer
-             * une éventuelle ancienne note.
-             */
-
-            if (
-                !ligneQuestion.startsWith("**0") &&
-                !ligneQuestion.startsWith("**?") &&
-                !ligneQuestion.toLowerCase().includes("réponse attendue")
-            ) {
-                blocs.unshift(
-                    ligneQuestion.replace(/\*\*/g, "")
-                );
-            }
-
-            j--;
-        }
-
-        const question = blocs.join(" ").trim();
-
-        questions.push(question);
-    }
+    const answers = matches.map(match =>
+        match[1].trim()
+    );
 
     /*
-     * Affichage du résultat.
+     * Pour l'instant, on ne cherche PAS les questions.
+     * On vérifie uniquement que les 10 réponses sont trouvées.
      */
 
-    result.style.display = "block";
-
-    if (
-        questions.length === 10 &&
-        answers.length === 10 &&
-        questions.every(q => q.length > 5)
-    ) {
+    if (answers.length === 10) {
 
         result.className = "result success";
 
         result.innerHTML = `
-            ✅ <strong>10 questions détectées</strong><br>
-            ✅ <strong>10 réponses détectées</strong><br><br>
-            Vérifie simplement l'aperçu ci-dessous.
+            ✅ <strong>10 réponses détectées !</strong><br><br>
+            Le système fonctionne correctement pour les réponses.
         `;
+
+        preview.innerHTML = "<h2>Réponses trouvées :</h2>";
+
+        answers.forEach((answer, index) => {
+
+            const div = document.createElement("div");
+
+            div.className = "question";
+
+            div.innerHTML = `
+                <div class="number">
+                    Réponse ${index + 1}
+                </div>
+
+                <div class="answer">
+                    ${escapeHtml(answer)}
+                </div>
+            `;
+
+            preview.appendChild(div);
+        });
 
     } else {
 
         result.className = "result error";
 
         result.innerHTML = `
-            ⚠️ <strong>Le résultat n'est pas encore correct.</strong><br><br>
-            Questions détectées : ${questions.length}<br>
-            Réponses détectées : ${answers.length}<br><br>
-            Nous attendons 10 questions et 10 réponses.
+            ❌ Le détecteur trouve seulement
+            <strong>${answers.length} réponses</strong>.<br><br>
+
+            Il devrait en trouver 10.
         `;
-    }
-
-    /*
-     * Aperçu
-     */
-
-    if (questions.length > 0) {
-
-        preview.innerHTML = "<h2>👀 Aperçu</h2>";
-
-        questions.forEach((question, index) => {
-
-            const bloc = document.createElement("div");
-
-            bloc.className = "question";
-
-            bloc.innerHTML = `
-                <div class="number">
-                    Question ${index + 1}
-                </div>
-
-                <div>
-                    ${escapeHtml(question)}
-                </div>
-
-                <div class="answer">
-                    Réponse : ${escapeHtml(answers[index] || "")}
-                </div>
-            `;
-
-            preview.appendChild(bloc);
-        });
     }
 }
 
-
-/*
- * Sécurité pour l'affichage du texte collé.
- */
 
 function escapeHtml(texte) {
 
@@ -360,6 +242,7 @@ function escapeHtml(texte) {
 }
 
 </script>
+```
 
 </body>
 </html>
