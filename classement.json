@@ -1,6 +1,6 @@
 {
   "season": 8,
-  "updated_at": "2026-08-28T12:49:11.369623+00:00",
+  "updated_at": "2026-08-28T12:50:10.148888+00:00",
   "players": [
     {
       "username": "Kerwan",
@@ -8,14 +8,9 @@
       "rank": 9349
     },
     {
-      "username": "Elisa10",
-      "score": 1481,
-      "rank": 18638
-    },
-    {
-      "username": "Lroux",
-      "score": 353,
-      "rank": 26605
+      "username": "Elisa13",
+      "score": 240,
+      "rank": 29282
     }
   ]
 }
