@@ -77,6 +77,7 @@ def main():
         )
 
     print("Classement mis à jour avec succès.")
+print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
