@@ -10,7 +10,7 @@ PLAYERS = [
     "Kerwan",
     "Lroux",
 ]
-
+print("Pseudos recherchés :", PLAYERS)
 
 def fetch_player(username):
     url = API + "?q=" + urllib.parse.quote(username)
