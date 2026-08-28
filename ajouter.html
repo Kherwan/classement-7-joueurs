@@ -168,7 +168,7 @@
     <input
         type="text"
         id="date"
-        placeholder="Exemple : 27 août 2026"
+        placeholder="Exemple : 28 août 2026"
     >
 
     <br><br>
@@ -194,15 +194,9 @@
 
         <h2>📄 JSON généré</h2>
 
-        <textarea
-            id="jsonOutput"
-            readonly
-        ></textarea>
+        <textarea id="jsonOutput" readonly></textarea>
 
-        <button
-            class="secondary"
-            onclick="copierJSON()"
-        >
+        <button class="secondary" onclick="copierJSON()">
             📋 Copier le JSON
         </button>
 
@@ -222,7 +216,7 @@ let answersDetectees = [];
 
 
 /* =====================================================
-   ANALYSE
+   ANALYSE PRINCIPALE
    ===================================================== */
 
 function analyser() {
@@ -262,9 +256,7 @@ function analyser() {
 
 
     /*
-     * -------------------------------------------------
-     * NETTOYAGE DU TEXTE
-     * -------------------------------------------------
+     * On normalise le texte.
      */
 
     const lignes = texte
@@ -276,19 +268,32 @@ function analyser() {
 
     /*
      * -------------------------------------------------
-     * ON CHERCHE LES REPONSES OFFICIELLES
+     * ON PARCOURT LE TEXTE DANS L'ORDRE
      * -------------------------------------------------
      *
-     * Deux possibilités :
+     * Pour chaque question :
      *
-     * Réponse attendue : Edgar Degas
+     * QUESTION
      *
-     * Bonne réponse ! (Tee)
+     * réponse de l'utilisateur
      *
+     * Réponse attendue : XXX
+     *
+     * OU
+     *
+     * QUESTION
+     *
+     * réponse de l'utilisateur
+     *
+     * Bonne réponse ! (XXX)
+     *
+     * Le point important est que la réponse utilisateur
+     * est toujours ignorée.
      */
 
 
-    let positionsReponses = [];
+    let questionEnCours = null;
+    let reponseUtilisateurTrouvee = false;
 
 
     for (let i = 0; i < lignes.length; i++) {
@@ -296,8 +301,15 @@ function analyser() {
         const ligne = lignes[i];
 
 
+        if (!ligne) {
+            continue;
+        }
+
+
         /*
-         * Réponse attendue
+         * ---------------------------------------------
+         * 1. REPONSE ATTENDUE
+         * ---------------------------------------------
          */
 
         const attendu =
@@ -308,23 +320,30 @@ function analyser() {
 
         if (attendu) {
 
-            positionsReponses.push({
+            if (
+                questionEnCours
+            ) {
 
-                index: i,
+                questionsDetectees.push(
+                    nettoyerTexte(questionEnCours)
+                );
 
-                answer:
-                    nettoyerTexte(
-                        attendu[1]
-                    )
+                answersDetectees.push(
+                    nettoyerTexte(attendu[1])
+                );
 
-            });
+                questionEnCours = null;
+                reponseUtilisateurTrouvee = false;
+            }
 
             continue;
         }
 
 
         /*
-         * Bonne réponse
+         * ---------------------------------------------
+         * 2. BONNE REPONSE
+         * ---------------------------------------------
          */
 
         const bonne =
@@ -335,113 +354,95 @@ function analyser() {
 
         if (bonne) {
 
-            positionsReponses.push({
-
-                index: i,
-
-                answer:
-                    nettoyerTexte(
-                        bonne[1]
-                    )
-
-            });
-        }
-    }
-
-
-    /*
-     * -------------------------------------------------
-     * POUR CHAQUE REPONSE, ON REMONTE POUR TROUVER
-     * LA QUESTION CORRESPONDANTE.
-     * -------------------------------------------------
-     */
-
-
-    for (
-        let r = 0;
-        r < positionsReponses.length;
-        r++
-    ) {
-
-        const position =
-            positionsReponses[r];
-
-
-        let question = "";
-
-
-        /*
-         * On remonte depuis la réponse.
-         */
-
-        for (
-            let i = position.index - 1;
-            i >= 0;
-            i--
-        ) {
-
-            const ligne =
-                lignes[i];
-
-
-            if (!ligne) {
-                continue;
-            }
-
-
-            /*
-             * On ignore :
-             *
-             * - réponse utilisateur en gras
-             * - scores
-             * - pourcentages
-             * - contestation
-             * - bonne réponse
-             */
-
-
             if (
-                estLigneInutile(ligne)
+                questionEnCours
             ) {
 
-                continue;
+                questionsDetectees.push(
+                    nettoyerTexte(questionEnCours)
+                );
+
+                answersDetectees.push(
+                    nettoyerTexte(bonne[1])
+                );
+
+                questionEnCours = null;
+                reponseUtilisateurTrouvee = false;
             }
 
-
-            /*
-             * La première vraie ligne rencontrée
-             * est la question.
-             */
-
-            question =
-                nettoyerQuestion(ligne);
-
-            break;
+            continue;
         }
 
 
         /*
-         * Si on a trouvé une question et une réponse,
-         * on l'ajoute.
+         * ---------------------------------------------
+         * 3. LIGNE INUTILE
+         * ---------------------------------------------
          */
 
         if (
-            question &&
-            position.answer
+            estLigneInutile(ligne)
         ) {
 
-            questionsDetectees.push(question);
-
-            answersDetectees.push(
-                position.answer
-            );
+            continue;
         }
+
+
+        /*
+         * ---------------------------------------------
+         * 4. SI ON N'A PAS ENCORE DE QUESTION
+         * ---------------------------------------------
+         *
+         * Cette ligne devient la question.
+         */
+
+        if (
+            questionEnCours === null
+        ) {
+
+            questionEnCours = ligne;
+
+            continue;
+        }
+
+
+        /*
+         * ---------------------------------------------
+         * 5. SI ON A DEJA UNE QUESTION
+         * ---------------------------------------------
+         *
+         * La première ligne supplémentaire est
+         * considérée comme la réponse donnée par
+         * l'utilisateur.
+         *
+         * On l'ignore.
+         */
+
+        if (
+            !reponseUtilisateurTrouvee
+        ) {
+
+            reponseUtilisateurTrouvee = true;
+
+            continue;
+        }
+
+
+        /*
+         * Une ligne supplémentaire avant la réponse
+         * officielle peut faire partie de la question.
+         *
+         * On la rattache à la question.
+         */
+
+        questionEnCours +=
+            " " + ligne;
     }
 
 
     /*
      * -------------------------------------------------
-     * EVITER LES DOUBLONS
+     * SUPPRESSION DES DOUBLONS
      * -------------------------------------------------
      */
 
@@ -487,18 +488,12 @@ function analyser() {
         );
 
 
-    /*
-     * -------------------------------------------------
-     * AFFICHAGE
-     * -------------------------------------------------
-     */
-
     afficherResultat(date);
 }
 
 
 /* =====================================================
-   LIGNE INUTILE ?
+   DETECTION DES LIGNES A IGNORER
    ===================================================== */
 
 function estLigneInutile(ligne) {
@@ -515,10 +510,11 @@ function estLigneInutile(ligne) {
 
 
     /*
-     * Réponse utilisateur :
+     * Réponse utilisateur en gras
      *
-     * **Renoir**
-     * **Tee**
+     * **Doha**
+     * **Freddi mercurie**
+     * **Jard**
      */
 
     if (
@@ -535,21 +531,15 @@ function estLigneInutile(ligne) {
      */
 
     if (
-        /\d+\s*\/\s*\**30\s*pts/i
-            .test(texte)
+        /^\d+\s*\/\s*\**30\s*pts/i.test(texte)
     ) {
 
         return true;
     }
 
 
-    /*
-     * Scores avec 100
-     */
-
     if (
-        /\d+\s*\/\s*\**100\s*pts/i
-            .test(texte)
+        /^\d+\s*\/\s*\**100\s*pts/i.test(texte)
     ) {
 
         return true;
@@ -584,44 +574,6 @@ function estLigneInutile(ligne) {
     }
 
 
-    /*
-     * Réponse attendue
-     */
-
-    if (
-        /^Réponse\s+attendue\s*:/i
-            .test(texte)
-    ) {
-
-        return true;
-    }
-
-
-    /*
-     * Bonne réponse
-     */
-
-    if (
-        /^Bonne\s+réponse/i
-            .test(texte)
-    ) {
-
-        return true;
-    }
-
-
-    /*
-     * Pourcentage collé au reste
-     */
-
-    if (
-        /^\d+[,.]\d+\s*%/.test(texte)
-    ) {
-
-        return true;
-    }
-
-
     return false;
 }
 
@@ -639,17 +591,8 @@ function nettoyerTexte(texte) {
 }
 
 
-function nettoyerQuestion(texte) {
-
-    return texte
-        .replace(/\*\*/g, "")
-        .replace(/\s+/g, " ")
-        .trim();
-}
-
-
 /* =====================================================
-   RESULTAT
+   AFFICHAGE DU RESULTAT
    ===================================================== */
 
 function afficherResultat(date) {
@@ -662,7 +605,8 @@ function afficherResultat(date) {
 
 
     if (
-        questionsDetectees.length === 10
+        questionsDetectees.length === 10 &&
+        answersDetectees.length === 10
     ) {
 
         result.className =
@@ -672,7 +616,7 @@ function afficherResultat(date) {
         result.innerHTML = `
             ✅ <strong>10 questions détectées !</strong><br>
             ✅ <strong>10 bonnes réponses détectées !</strong><br><br>
-            Les réponses personnelles ont été ignorées.
+            Les réponses données ont été ignorées.
         `;
 
     } else {
@@ -734,9 +678,7 @@ function afficherPreview() {
         (question, index) => {
 
             const bloc =
-                document.createElement(
-                    "div"
-                );
+                document.createElement("div");
 
 
             bloc.className =
@@ -770,7 +712,7 @@ function afficherPreview() {
 
 
 /* =====================================================
-   JSON
+   GENERATION JSON
    ===================================================== */
 
 function genererJSON(date) {
@@ -779,7 +721,6 @@ function genererJSON(date) {
         document.getElementById(
             "jsonSection"
         );
-
 
     const jsonOutput =
         document.getElementById(
@@ -806,6 +747,7 @@ function genererJSON(date) {
                             answersDetectees[index]
 
                     };
+
                 }
             )
     };
@@ -825,7 +767,7 @@ function genererJSON(date) {
 
 
 /* =====================================================
-   COPIER
+   COPIER LE JSON
    ===================================================== */
 
 async function copierJSON() {
@@ -892,10 +834,8 @@ function afficherErreur(message) {
     result.className =
         "result error";
 
-
     result.style.display =
         "block";
-
 
     result.innerHTML =
         message;
@@ -903,7 +843,7 @@ function afficherErreur(message) {
 
 
 /* =====================================================
-   SECURITE
+   SECURITE HTML
    ===================================================== */
 
 function escapeHtml(texte) {
