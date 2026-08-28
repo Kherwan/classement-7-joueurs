@@ -10,7 +10,9 @@ PLAYERS = [
     "Kerwan",
     "Lroux",
 ]
+
 print("Pseudos recherchés :", PLAYERS)
+
 
 def fetch_player(username):
     url = API + "?q=" + urllib.parse.quote(username)
@@ -51,6 +53,7 @@ def main():
 
     for username in PLAYERS:
         print(f"Recherche de {username}...")
+
         player = fetch_player(username)
 
         if player["score"] is None or player["rank"] is None:
@@ -77,7 +80,9 @@ def main():
         )
 
     print("Classement mis à jour avec succès.")
-print(json.dumps(result, ensure_ascii=False, indent=2))
+
+    # Affiche le JSON dans les logs GitHub Actions
+    print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
