@@ -1,5 +1,50 @@
 {
-  "days": [
+  "days":
+  {
+  "date": "29 août 2019",
+  "questions": [
+    {
+      "question": "Quel nom est donné aux cinquante filles du roi Danaos dans la mythologie grecque, condamnées à remplir éternellement un tonneau percé ?",
+      "answer": "Danaïdes"
+    },
+    {
+      "question": "Quel nom désigne un groupe d'alpinistes attachés ensemble pour réaliser une ascension ?",
+      "answer": "Cordée"
+    },
+    {
+      "question": "Sur quel site faut-il se connecter à la chaîne \"emilien\" demain soir à partir de 20 heures, le 30 août 2026 pour regarder le live voyant s'affronter les 4 meilleurs joueurs de la dernière saison de La Table des Savoirs ? Un quiz spécial sera disponible sur La Table des Savoirs à partir de 19h30 et il aura une incidence directe sur le résultat de l'émission.",
+      "answer": "Twitch.tv/emilien"
+    },
+    {
+      "question": "Quel prénom partagent les réalisateurs français nommés Bonello, Tavernier et Blier ? Ils ont respectivement réalisé les films \"Saint Laurent\", \"Le Juge et l'Assassin\" et \"Les Valseuses\" ?",
+      "answer": "Bertrand"
+    },
+    {
+      "question": "De quel grand souverain le savant anglais Alcuin, ayant notamment dirigé l'école palatine, était-il un proche et conseiller ? On considère que c'est lui qui souffla au souverain l'idée de se faire sacrer empereur.",
+      "answer": "Charlemagne"
+    },
+    {
+      "question": "Différente des céphalées, quelle maladie chronique se caractérise par de forts maux de tête, souvent d'un seul côté du crâne, d'où son étymologie, et de nature pulsatile ?",
+      "answer": "Migraine"
+    },
+    {
+      "question": "Quelle ville, n'en étant pourtant plus la capitale administrative depuis 1983, est la capitale économique de la Côte d'Ivoire ainsi que sa ville la plus peuplée ? Elle représente 21% de la population du pays et 60% du PIB.",
+      "answer": "Abidjan"
+    },
+    {
+      "question": "Quel chanteur canadien né en 1994 apparaît avec Nicky Minaj sur le titre Beauty and a Beat ainsi qu'avec The Kid Laroi sur le titre Stay ?",
+      "answer": "Justin Bieber"
+    },
+    {
+      "question": "Quel animal a pour nom scientifique canis lupus familiaris ?",
+      "answer": "Chien"
+    },
+    {
+      "question": "Quel mot de deux lettres, fréquemment utilisé dans les mots croisés, désigne un petit cours d'eau ?",
+      "answer": "Ru"
+    }
+  ]
+}, [
     {
   "date": "28 août 2026",
   "questions": [
