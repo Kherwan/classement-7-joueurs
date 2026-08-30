@@ -1,5 +1,50 @@
 {
   "days":[
+    {
+  "date": "30 août 2026",
+  "questions": [
+    {
+      "question": "Quelle femme, la première à recevoir le prix Goncourt pour \"Le premier accroc coûte deux cents francs\" est aussi célèbre pour la relation qu'elle a entretenue avec l'écrivain Louis Aragon qui lui a dédiée des recueils ?",
+      "answer": "Elsa Triolet, c'est la muse d'Aragon, il a écrit un célèbre poème intitulé "Elsa""
+    },
+    {
+      "question": "Ayant pour devise \"Il n'y a rien de pire que l'espoir\", quel site parodique met en avant les défaites françaises dans le monde du sport ?",
+      "answer": "FFL (Fédération française de la lose -> très marrant sur Twitter notamment, ils célèbrent dès qu'un français perd (parfois ça aide à faire passer la douleur en se disant que ce n'est que du sport finalement (souvent ça n'aide pas))"
+    },
+    {
+      "question": "Quel nom porte l'application de Google alimentée par l'intelligence artificielle aidant à la reconnaissance de texte et surtout d'image, disponible depuis 2018 sur les téléphones iOS ?",
+      "answer": "Google Lens"
+    },
+    {
+      "question": "Quel jouet ayant laissé son nom à une mini-série Netflix sur le thème du braquage porte le même nom qu'un instrument optique dont fournissant ces images et réfléchissant à l'infini et en couleurs la lumière extérieure ?",
+      "answer": "Kaléidoscope"
+    },
+    {
+      "question": "De quelle couleur est la \"Rose\" dans le nom d'un réseau de résistance allemande fondé par Hans et Sophie Scholl ? Ce groupe fut actif à Munich entre juin 1942 et février 1943.",
+      "answer": "Blanche (La Rose Blanche)-> Groupe d'étudiants et leurs prohces qui dénoncent les nazis, seront arrêtés et exécutés"
+    },
+    {
+      "question": "Quelle est la seule planète du système solaire à ne posséder qu'un seul satellite naturel ?",
+      "answer": "Terre -> La Lune"
+    },
+    {
+      "question": "Quel est le nom de cette Tour, construite sur les bords du Tage par le roi Manuel Ier du Portugal pour garder l'entrée du port de Lisbonne au début du XVIe siècle ?",
+      "answer": "Tour de Belém, théorie des 1 : tour Portugal, voire tour en Europe"
+    },
+    {
+      "question": "Quelle capitale d'Europe centrale a laissé son nom à un titre de George Ezra ?",
+      "answer": "Budapest"
+    },
+    {
+      "question": "Appelé \"cheval nain\" en Louisiane, quel équidé est, selon la définition, un cheval de petite taille ?",
+      "answer": "Poney -> cf la chanson PETIT poney, PETIT poney, PETIT PETIT poney"
+    },
+    {
+      "question": "Quelle femme est la dernière française a avoir été élue Miss Univers, ce en 2016 ? Elle avait auparavant été élue Miss France et Miss Pas-de-Calais 2015 ?",
+      "answer": "Iris Mittenaere, 2e française de l'histoire a être Miss UNivers, elle a présenté le Loto et l'Eurommilions sur TF1, elle a été en couple avec Kev Adams (l'""""""humoriste"""""") et est avec Antoine Dupont (le rugbyman aujourd'hui) "
+    }
+  ]
+},
   {
   "date": "29 août 2019",
   "questions": [
