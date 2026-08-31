@@ -1,5 +1,49 @@
 {
-  "days":[
+  "days":[{
+  "date": "31 août 2026",
+  "questions": [
+    {
+      "question": "Quels animaux sont au centre d'une trilogie de Bernard Werber publiée entre 1991 et 1996 ?",
+      "answer": "Les Fourmis, pour ceux qui connaissent Gilles, c'est parmi ses livres préférés, à noter qu'il aurait pu ne jamais voir le jour, il a soumis l'idée à 12 maisons de livre avant que quelqu'un accepte de le publier"
+    },
+    {
+      "question": "Quel gardien de but détient le records de sélections en équipe de France de football chez les hommes ?",
+      "answer": "Hugo Lloris -> 145, devant Thuram (142), chiffre voué à évoluer car il y a de plus en plus de matchs internationaux, je pense que Mbappé prendra ce record à terme (actuellement 106 à 27ans)"
+    },
+    {
+      "question": "Quel mot anglais signifiant à l'origine \"se recroqueviller\" désigne un sentiment de gêne ou de honte, qualifiant une scène donnant envie de détourner le regard ?",
+      "answer": "Cringe -> mot très usité sur les réseaux, équivalent de gênant en français"
+    },
+    {
+      "question": "Quel prénom porte le frère de Zack dans une série Disney Channel dans laquelle les acteurs Cole et Dylan Sprouse vivent \"La vie de de palace\" ?",
+      "answer": "Cody (Zack et Cody) -> Chanson Macaroni de Leto, il dit 'je veux la vie d'palace comme Zack et Cody'"
+    },
+    {
+      "question": "Quel personnage célèbre de l'histoire de France fut emprisonné sur l'île du Diable, au large de la Guyane, de 1895 à 1899 ?",
+      "answer": "Alfred Dreyfus -> Affaire Dreyfus 1894-1906, cf Emile Zola J'accuse"
+    },
+    {
+      "question": "De quel scientifique le physicien Thomas Stoltz Harvey a-t-il prélevé et conservé le cerveau dans un bocal pendant plus de 40 ans après son autopsie en 1955 ?",
+      "answer": "Albert Einstein, il l'a prélevé de manière illégale, fait amusant : le cerveau était moins lourd que la moyenne"
+    },
+    {
+      "question": "Dans quel océan se trouve la fosse des Mariannes, contenant le Challenger Deep, point le plus profond des océans à près de 11 000 mètres sous la surface de l'eau ?",
+      "answer": "Océan Pacifique, on y a déjà été en 1960 et James Cameron est le premier homme a y être descendu seul, en 2012"
+    },
+    {
+      "question": "Quel groupe mené par Dan Reynolds est à l'origine des titres Demons, Thunder, Radioactive et Believer notamment ?",
+      "answer": "Imagine Dragons"
+    },
+    {
+      "question": "Quelle fleur de la famille des liliacées est représentée sur cette image ?",
+      "answer": "Tulipe, on l'associe souvent aux Pays Bas. cf la Tulipomanie -> crise de la tulipe. Au XVIIe siècle, il y a une très forte demande qui se développe pour les tulipes. Les tulipes deviennent rares.  Donc le prix de la tulipe augmente. C'est la loi de l'offre et de la demande. A tel point q'une tulipe valait 10 fois le salaire d'un paysan. Sauf qu'à un moment comme dans tout bulle, ça éclate. On peine à trouver de nouveaux acquéreurs. Le prix chute très fortement et revient à la normale. Sauf que celles et ceux qui ont acheté beaucoup de tulipes pour spéculer se retrouvent avec des dettes énormes puisqu'elles ne valent désormais plus rien.  "
+    },
+    {
+      "question": "Quel gâteau traditionnel de Noël, originaire de Milan, est souvent garni de fruits confits et de raisins secs ?",
+      "answer": "Panettone"
+    }
+  ]
+},
     {
   "date": "30 août 2026",
   "questions": [
