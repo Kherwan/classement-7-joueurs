@@ -1,5 +1,52 @@
 {
-  "days":[{
+  "days":[
+    {
+  "date": "01 septembre 2026",
+  "questions": [
+    {
+      "question": "Quelle héroïne, petite fille argentine, a été créée par Quino en 1964 ? Elle est souvent accompagnée de Manolito, le garçon le plus capitaliste de tout son pays.",
+      "answer": "Mafalda, théorie des 1 bd argentine"
+    },
+    {
+      "question": "Pour quel sport dans lequel il a eu une carrière professionnelle le journaliste franco-étasunien George Eddy commente-t-il les matchs sur Canal+ et Eurosport ?",
+      "answer": "Basket-ball -> franco-étatsunien, ça donne un indice"
+    },
+    {
+      "question": "Quelle pierre précieuse constitue le nom de la monnaie fictive des jeux vidéo The Legend of Zelda ?",
+      "answer": "Rubis"
+    },
+    {
+      "question": "-30 / 30 pts po",
+      "answer": "Po"
+    },
+    {
+      "question": "Quel prénom portait Gandhi, fille de Nehru, femme politique indienne assassinée en 1984 ?",
+      "answer": "Indira Gandhi, Première ministre de l'Inde de 1966 à 1977, puis de 19809 à 1984, assassinée par ses gardes du corps (1984), avant Marareth Thatcher c'est à elle qu'on faisait principalement référence en diant 'la dame de fer' "
+    },
+    {
+      "question": "Dans le sigle SPM désignant un syndrome constituant un ensemble de symptômes arrivant avant la période des règles, quel terme est désigné par les lettres P et M ? Le S signifie Syndrome.",
+      "answer": "Syndrome Prémenstruel"
+    },
+    {
+      "question": "Quel département français ayant Troyes pour préfecture porte un nom homonyme d'un moment de la journée ?",
+      "answer": "Aube -> l'ESTAC (le club de foot de Troyes), joue au stade de l'Aube"
+    },
+    {
+      "question": "Quel DJ français est à l'origine des titres Titanium avec Sia, Memories avec Kid Cudi, Play Hard avec Ne-Yo et Akon ?",
+      "answer": "David Guetta -> Titanium, banger, David Guetta c'est 13 millions d'albums vendus, alors que JUL c'est 7M, donc imaginez un peu"
+    },
+    {
+      "question": "Quel oiseau marin, de la famille des laridés, possède des espèces dites tridactyle et rieuse ?",
+      "answer": "Mouette -> La mouette rieuse"
+    },
+    {
+      "question": "De quel pays est originaire le chianti, vin rouge possédant une \"DOP\", dénomination d'origine protégée ?",
+      "answer": "Italie"
+    }
+  ]
+},
+    
+    {
   "date": "31 août 2026",
   "questions": [
     {
