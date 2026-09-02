@@ -6,12 +6,12 @@ on:
 
   workflow_dispatch:
 
-concurrency:
-  group: classement
-  cancel-in-progress: true
-
 permissions:
   contents: write
+
+concurrency:
+  group: mise-a-jour-classement
+  cancel-in-progress: true
 
 jobs:
   update:
@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Récupérer le dépôt
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Installer Python
         uses: actions/setup-python@v5
@@ -38,7 +40,11 @@ jobs:
 
           if git diff --cached --quiet; then
             echo "Aucune modification du classement."
-          else
-            git commit -m "Mise à jour du classement"
-            git push
+            exit 0
           fi
+
+          git commit -m "Mise à jour du classement"
+
+          git pull --rebase origin main
+
+          git push
