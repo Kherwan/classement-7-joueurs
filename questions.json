@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "02 Septembre 2026",
+  "questions": [
+    {
+      "question": "Quel nom de famille partagent les écrivaines britanniques du XIXe siècle prénommées Charlotte, Emily et Anne ?",
+      "answer": "Brontë -> Emily Bronte, auteur du bouquin Les Hauts de Hurlevents, classique de litté anglaise, Charlotte Bronte a écrit Jane Eyre, classique de la littérature anglaise aussi mais le truc intéressant avec ces soeurs, c'est le tableau peint par leur frère, il les a peint toutes les 3 et si on regarde bien, sur le tableau il y a une colonne au milieu et c'est son portrait à lui, presque transparent qui apparait dessus"
+    },
+    {
+      "question": "Quelle plante de nom scientifique cyanus segetus constitue le surnom donné aux joueurs de l’équipe de France de football espoirs ?",
+      "answer": "Bleuet -> L'équipe principale -> Les Bleus, l'équipe jeune -> Les Bleuets"
+    },
+    {
+      "question": "Fondée sous le nom de Comuto, quelle application française d'origine est une plateforme communautaire permettant d'organiser des covoiturages ?",
+      "answer": "BlaBlaCar -> Toi aussi vise les 5 étoiles de moyenne sur Blablacar comme Kerwan (Bientôt 19 avis au compteur)"
+    },
+    {
+      "question": "Quel télé crochet français, aux célèbres fauteuils rouges est associée à la phrase \"Je vous veux dans mon équipe\" ?",
+      "answer": "The Voice "
+    },
+    {
+      "question": "Dans la cathédrale de quelle ville de la Marne furent sacrés la majorité des rois de France ?",
+      "answer": "Reims -> R comme Reims, comme Rois, -> Clovis, Charles VII (époque Jeanne d'Arc), Charles X"
+    },
+    {
+      "question": "Située au-dessus du derme, quel nom porte la couche de la peau la plus externe ?",
+      "answer": "Epiderme -> 'epi->'sur, épiderme -> sur la peau, comme 'épitaphe' -> Sur la sépulture"
+    },
+    {
+      "question": "Quel pays possède les villes de La Plata, Rosario et Mendoza, toutes parmi les plus grandes du pays ?",
+      "answer": "Argentine"
+    },
+    {
+      "question": "Quel dirigeant est associé à \"Day\" dans le titre d'une chanson de Simple Minds ? Cette chanson sortie en 1989 est un soutien à cet homme alors emprisonné, est parue quelques mois avec sa libération.",
+      "answer": "Mandela Day"
+    },
+    {
+      "question": "Quelle est cette plante de la famille des amaranthacées largement utilisée pour la production de sucre ?",
+      "answer": "Betterave"
+    },
+    {
+      "question": "Quel personnage de la commedia dell'arte est cité dans une expression désignant un secret connu de tous mais dont la connaissance n'est pas partagée ?",
+      "answer": "Secret de Polichinelle"
+    }
+  ]
+},
+    {
   "date": "01 septembre 2026",
   "questions": [
     {
