@@ -3,7 +3,7 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 
-API = "https://api.latabledessavoirs.fr/leaderboards/season/8/facile/search"
+API = "https://api.latabledessavoirs.fr/leaderboards/season/9/facile/search"
 
 PLAYERS = [
     "Elisa10",
