@@ -33,15 +33,15 @@
     },
     {
       "question": "Quel dirigeant est associé à \"Day\" dans le titre d'une chanson de Simple Minds ? Cette chanson sortie en 1989 est un soutien à cet homme alors emprisonné, est parue quelques mois avec sa libération.",
-      "answer": "Mandela Day"
+      "answer": "Mandela Day -> 1989, Mandela  libéré en 1990, élu en 1994 en Afrique du Sud"
     },
     {
       "question": "Quelle est cette plante de la famille des amaranthacées largement utilisée pour la production de sucre ?",
-      "answer": "Betterave"
+      "answer": "Betterave, on râpe la racine pour prélever le sucre, Fr premier producteur mondial de sucre de betterave"
     },
     {
       "question": "Quel personnage de la commedia dell'arte est cité dans une expression désignant un secret connu de tous mais dont la connaissance n'est pas partagée ?",
-      "answer": "Secret de Polichinelle"
+      "answer": "Secret de Polichinelle, personnages connus de la comedia dell'arte -> Arlequin, Scaramouche (théâtre populaire italien du XVIe)"
     }
   ]
 },
