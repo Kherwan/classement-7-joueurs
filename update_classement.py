@@ -24,7 +24,7 @@ def fetch_player(username):
         }
     )
 
-    with urllib.request.urlopen(request, timeout=20) as response:
+    with urllib.request.urlopen(request, timeout=30) as response:
         data = json.loads(response.read().decode("utf-8"))
 
     exact = next(
@@ -39,7 +39,9 @@ def fetch_player(username):
     player = exact or (data[0] if data else None)
 
     if not player:
-        raise RuntimeError(f"Joueur introuvable : {username}")
+        raise RuntimeError(
+            f"Joueur introuvable : {username}"
+        )
 
     return {
         "username": player.get("username", username),
@@ -63,15 +65,22 @@ def main():
 
         players.append(player)
 
-    players.sort(key=lambda player: player["rank"])
+    players.sort(
+        key=lambda player: player["rank"]
+    )
 
     result = {
-        "season": 8,
+        "season": 9,
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "players": players
     }
 
-    with open("classement.json", "w", encoding="utf-8") as file:
+    with open(
+        "classement.json",
+        "w",
+        encoding="utf-8"
+    ) as file:
+
         json.dump(
             result,
             file,
@@ -81,8 +90,13 @@ def main():
 
     print("Classement mis à jour avec succès.")
 
-    # Affiche le JSON dans les logs GitHub Actions
-    print(json.dumps(result, ensure_ascii=False, indent=2))
+    print(
+        json.dumps(
+            result,
+            ensure_ascii=False,
+            indent=2
+        )
+    )
 
 
 if __name__ == "__main__":
