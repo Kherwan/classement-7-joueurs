@@ -9,6 +9,7 @@ PLAYERS = [
     "Elisa10",
     "Kerwan",
     "Lroux",
+    "MarieB",
 ]
 
 print("Pseudos recherchés :", PLAYERS)
