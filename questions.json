@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "03 Septembre 2026",
+  "questions": [
+    {
+      "question": "De quel pays est originaire Edvard Munch, célèbre notamment pour son tableau \"Le Cri\" ?",
+      "answer": "Norvège, dans Le Cri, c'est le fjord d'Oslo en arrière plan, on prononce Munk d'ailleurs et pas Munche"
+    },
+    {
+      "question": "De quel pays est originaire Jakob Ingebrigtsen, septuple champion d'Europe et double champion olympique sur 1500 et 5000 mètres ?",
+      "answer": "Norvège, il n'a que 25 ans, ses deux frères sont également athlètes pro"
+    },
+    {
+      "question": "Quel type de guerrier est associé au terme de \"Fruit\" dans le nom d'un jeu vidéo mobile consistant à découper des fruits ?",
+      "answer": "Ninja (Fruit Ninja)"
+    },
+    {
+      "question": "Quel prénom est porté par la mère des Dalton dans la bande dessinée Lucky Luke créée par le belge Morris ?",
+      "answer": "Ma Dalton -> Ma comme Maman"
+    },
+    {
+      "question": "Le 18 avril 1906, quelle grande ville côtière des Etats-Unis est détruite par un important un tremblement de terre ?",
+      "answer": "San Francisco, environ 3000 morts, San Francisco était énorme, un peu the place to be avec la ruée vers l'or, plus de 400k habitants, près de 300k habitants vont se retrouver sans toit suite à ce séisme. Il se produit le long de la faille de San Francisco. Cf la chanson : 'moi aussi je me suis construit sur une faille, je me sens proche de L.A' idéal pour les situers, les deux sont en Californie"
+    },
+    {
+      "question": "Quel astronaute faisait partie de la mission Apollo 11 avec Michael Collins et Neil Armstrong ? Il a été le deuxième homme à poser le pied sur la Lune.",
+      "answer": "Edwin \"Buzz\" Aldrin, pour se souvenir : c'est Buzz Aldrin qui a inspiré l'astronaute de fiction 'Buzz l'éclair' qu'on retrouve dans Toy Story."
+    },
+    {
+      "question": "Quelle île appartenant au Portugal et ayant Funchal pour capitale a laissé son nom à un vin et à une sauce ?",
+      "answer": "Madère, fait amusant : l'aéroport est l'un des plus dangereux au monde. Son nom est l'aéroport Cristiano Ronaldo car CR7 vient de là."
+    },
+    {
+      "question": "Quelle chanteuse très largement à la période disco a eu des succès avec les titres \"Never Can Say Goodbye\" et surtout \"I Will Survive\" ?",
+      "answer": "Gloria Gaynor -> I Will Survive lalalalalalla, quand on gagne en 98 et aussi la vidéo youtube avec Jésus qui court."
+    },
+    {
+      "question": "Quel nom générique désigne la dent creuse des serpents venimeux, leur servant à injecter le venin ?",
+      "answer": "Crochet -> Creuse -> CR -> CRochet"
+    },
+    {
+      "question": "Quel ancien président de la république française a un fils producteur de hip-hop et compositeur dont le pseudonyme est Mosey ?",
+      "answer": "Nicolas Sarkozy -> MoseY -> SarkozY. A ses débuts, les gens ignoraient que c'était le fils de Sarko. Après, il n'a jamais vraiment 'percé' auprès du grand public, qu'on s'entende."
+    }
+  ]
+},
+    {
   "date": "02 Septembre 2026",
   "questions": [
     {
