@@ -1,176 +1,259 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Questions des jours précédents — Table des Savoirs</title>
 
-    <title>Questions des jours précédents</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            margin: 0;
-            padding: 20px;
-            color: #222;
-        }
+<style>
+  :root {
+    --ink:        #1c2b20;
+    --ink-soft:   #26392c;
+    --paper:      #f2ead4;
+    --paper-dim:  #e7dcb9;
+    --line:       #cdbd8f;
+    --text:       #2a2013;
+    --text-dim:   #6b5f47;
+    --brass:      #a9762f;
+    --brass-dark: #7c5722;
+  }
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-        }
+  * { box-sizing: border-box; }
 
-        h1 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
+  body {
+    margin: 0;
+    padding: 56px 20px 90px;
+    background: var(--ink);
+    background-image:
+      radial-gradient(circle at 15% 10%, var(--ink-soft), transparent 55%);
+    color: var(--text);
+    font-family: "Source Serif 4", Georgia, serif;
+  }
 
-        .back {
-            display: inline-block;
-            margin-bottom: 20px;
-            text-decoration: none;
-            color: #0066cc;
-        }
+  .page {
+    max-width: 700px;
+    margin: 0 auto;
+  }
 
-        .day {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
+  .back {
+    display: inline-block;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    color: var(--paper-dim);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    margin-bottom: 40px;
+  }
 
-        .day h2 {
-            margin-top: 0;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-        }
+  .back:hover {
+    border-bottom-color: var(--paper-dim);
+  }
 
-        .question {
-            border-bottom: 1px solid #eee;
-            padding: 18px 0;
-        }
+  .masthead {
+    text-align: left;
+    margin-bottom: 48px;
+    color: var(--paper);
+  }
 
-        .question:last-child {
-            border-bottom: none;
-        }
+  .masthead h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 1.05;
+    margin: 0 0 10px;
+  }
 
-        .number {
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
+  .masthead p {
+    margin: 0;
+    max-width: 46ch;
+    color: var(--paper-dim);
+    font-size: 16px;
+    line-height: 1.5;
+  }
 
-        .answer {
-            margin-top: 10px;
-            font-weight: bold;
-            background: #eef8ee;
-            padding: 10px;
-            border-radius: 8px;
-        }
+  .status {
+    color: var(--paper-dim);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 14px;
+  }
 
-        .loading {
-            text-align: center;
-            padding: 30px;
-        }
+  .error {
+    background: #3a2420;
+    color: #f2d9d0;
+    padding: 16px 18px;
+    border-left: 3px solid #b25c48;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 14px;
+  }
 
-        .error {
-            background: #ffecec;
-            padding: 15px;
-            border-radius: 8px;
-        }
-    </style>
+  /* --- Fiches d'archive --- */
+
+  .archive {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+
+  .day-card {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .day-tab {
+    flex: 0 0 108px;
+    background: var(--brass);
+    color: var(--ink);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 1.35;
+    padding: 14px 12px;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .day-body {
+    flex: 1;
+    background: var(--paper);
+    border-radius: 0 3px 3px 0;
+    padding: 22px 26px 8px;
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.18);
+  }
+
+  .entry {
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .entry:first-child {
+    border-top: none;
+    padding-top: 4px;
+  }
+
+  .q {
+    margin: 0 0 8px;
+    font-size: 16.5px;
+    line-height: 1.5;
+  }
+
+  .q-index {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    color: var(--brass-dark);
+    margin-right: 8px;
+    vertical-align: 2px;
+  }
+
+  .a {
+    margin: 0;
+    padding-left: 4px;
+    border-left: 2px solid var(--brass);
+    padding-left: 12px;
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--text);
+  }
+
+  .a-mark {
+    font-style: italic;
+    color: var(--brass-dark);
+    margin-right: 6px;
+  }
+
+  @media (max-width: 560px) {
+    body { padding: 40px 14px 70px; }
+    .masthead h1 { font-size: 33px; }
+    .day-card { flex-direction: column; }
+    .day-tab {
+      flex: none;
+      border-radius: 3px 3px 0 0;
+      align-items: center;
+    }
+    .day-body {
+      border-radius: 0 0 3px 3px;
+    }
+  }
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="page">
 
-    <a class="back" href="index.html">
-        ← Retour au classement
-    </a>
+  <a class="back" href="index.html">&larr; Retour au classement</a>
 
-    <h1>📚 Questions des jours précédents</h1>
+  <div class="masthead">
+    <h1>Archives</h1>
+    <p>Les questions et réponses des jours précédents, Table des Savoirs.</p>
+  </div>
 
-    <div id="content" class="loading">
-        Chargement...
-    </div>
+  <div id="content" class="status">Chargement…</div>
 
 </div>
 
 <script>
 
 fetch("questions.json")
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("Impossible de charger questions.json");
-        }
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Impossible de charger questions.json");
+    }
+    return response.json();
+  })
+  .then(data => {
 
-        return response.json();
-    })
+    const content = document.getElementById("content");
+    content.className = "archive";
+    content.innerHTML = "";
 
-    .then(data => {
+    data.days.forEach(day => {
 
-        const content = document.getElementById("content");
+      const card = document.createElement("div");
+      card.className = "day-card";
 
-        content.innerHTML = "";
+      const tab = document.createElement("div");
+      tab.className = "day-tab";
+      tab.textContent = day.date;
 
-        data.days.forEach(day => {
+      const body = document.createElement("div");
+      body.className = "day-body";
 
-            const dayElement = document.createElement("div");
-            dayElement.className = "day";
+      day.questions.forEach((item, index) => {
 
-            const title = document.createElement("h2");
-            title.textContent = "📅 " + day.date;
+        const entry = document.createElement("div");
+        entry.className = "entry";
 
-            dayElement.appendChild(title);
-
-            day.questions.forEach((item, index) => {
-
-                const questionElement =
-                    document.createElement("div");
-
-                questionElement.className = "question";
-
-                questionElement.innerHTML = `
-                    <div class="number">
-                        Question ${index + 1}
-                    </div>
-
-                    <div>
-                        ${escapeHtml(item.question)}
-                    </div>
-
-                    <div class="answer">
-                        ✅ Réponse : ${escapeHtml(item.answer)}
-                    </div>
-                `;
-
-                dayElement.appendChild(questionElement);
-            });
-
-            content.appendChild(dayElement);
-        });
-
-    })
-
-    .catch(error => {
-
-        document.getElementById("content").innerHTML = `
-            <div class="error">
-                ❌ ${error.message}
-            </div>
+        entry.innerHTML = `
+          <p class="q"><span class="q-index">${String(index + 1).padStart(2, "0")}</span>${escapeHtml(item.question)}</p>
+          <p class="a"><span class="a-mark">Réponse</span>${escapeHtml(item.answer)}</p>
         `;
 
+        body.appendChild(entry);
+      });
+
+      card.appendChild(tab);
+      card.appendChild(body);
+      content.appendChild(card);
     });
 
+  })
+  .catch(error => {
+    const content = document.getElementById("content");
+    content.className = "";
+    content.innerHTML = `<div class="error">Erreur : ${error.message}</div>`;
+  });
 
 function escapeHtml(text) {
-
-    const div = document.createElement("div");
-
-    div.textContent = text;
-
-    return div.innerHTML;
+  const div = document.createElement("div");
+  div.textContent = text;
+  return div.innerHTML;
 }
 
 </script>
