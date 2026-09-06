@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "05 Septembre 2026",
+  "questions": [
+    {
+      "question": "Dans Les Aventures de Tintin, quel personnage se prénomme Archibald ?",
+      "answer": "Capitaine Haddock -> Archibald Haddock, Tryphon Tournesol, Bianca Castafiore, le mec qui gère le château de Moulinsart est Nestor"
+    },
+    {
+      "question": "Dans quel sport s'est illustrée Laura Flessel, devenue double championne olympique avant de devenir ministre des Sports ?",
+      "answer": "Escrime, jsp comment expliquer mais Flessel ça m'évoque trop l'escrime, peut être 'flESsel' -> EScrime"
+    },
+    {
+      "question": "Quel logiciel de présentation fait partie de la suite Office de Microsoft depuis 1990 ?",
+      "answer": "PowerPoint"
+    },
+    {
+      "question": "Surnommé Patmol et incarné par Gary Oldman, quel nom porte le parrain de Harry Potter dans la saga, ayant fait sa première apparition dans Le Prisonnier d'Azkaban ?",
+      "answer": "Sirius Black -> connu comme étant le premier évade de la prison d'Azkaban"
+    },
+    {
+      "question": "Quel économiste britannique, acteur majeur de la conférence de Bretton-Woods, est l'auteur de \"Théorie générale de l'emploi, de l'intérêt et de la monnaie\" ? Il est souvent considéré comme un des plus grands économistes du XXe siècle.",
+      "answer": "John Maynard Keynes, principaux économistes à connaître : XVIIIe : Adam Smith, XIXe : Karl Marx (hot take), XXe : Keynes, XXIe : Kerwan prime en 2e année de prépa lol"
+    },
+    {
+      "question": "Quel élément d’assemblage permettant de maintenir ensemble deux pièces de bois porte le même nom qu'une articulation du corps humain ?",
+      "answer": "Cheville"
+    },
+    {
+      "question": "Quelle ville, n'étant pourtant pas la plus peuplée, fut choisie pour sa position centrale en 1923 pour devenir la capitale de la Turquie ?",
+      "answer": "Ankara et pas Istanbul (anciennement : Byzance puis Constantinople), cf chute de l'empire ottoman en 1453, Ankara capitale politique : 'Istanbul est grande mais Ankara commande'"
+    },
+    {
+      "question": "Quel prénom porté par le chanteur italien Ramazzotti est aussi celui d'un dieu grec, équivalent du Cupidon romain ?",
+      "answer": "Eros -> divinité de l'amour -> érotique, / Eros Ramazzotti : La cosa mas bella, joli son"
+    },
+    {
+      "question": "Quel nom de cinq lettres désigne l'habitat d'une colonie d'abeilles ?",
+      "answer": "Ruche -> Dans ma ruche Guizmo"
+    },
+    {
+      "question": "Quelle onomatopée désignant une explosion est également un synonyme familier (et relativement vieilli) de fête ?",
+      "answer": "Boum"
+    }
+  ]
+},
+    {
   "date": "04 Septembre 2026",
   "questions": [
     {
