@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "07 septembre 2026",
+  "questions": [
+    {
+      "question": "Quel peintre néerlandais est l'auteur entre 1887 et 1889 d'une série de tableaux intitulée \"Les Tournesols\" ?",
+      "answer": "Vincent van Gogh -> Auvers sur Oise, bcp de tournesols"
+    },
+    {
+      "question": "Dans quel ETAT des USA se déroule une célèbre course de 500 miles, sur un circuit basé dans la ville de Speedway depuis 1911 ?",
+      "answer": "Indiana -> Les 500 Miles d'Indianapolis (Indianapolis, capitale de l'Indiana), polis -> la cité donc la cité de l'Indiana"
+    },
+    {
+      "question": "? / 100 pts tiboinshape",
+      "answer": "Tibo InShape -> DAAAAAMN LA TEAM SHAPE"
+    },
+    {
+      "question": "À quelle marque alimentaire sont associées les publicités avec trois vieilles dames disant Pirate ?",
+      "answer": "Tipiak -> 'Pirates, ils nous ont volé notre recette'"
+    },
+    {
+      "question": Quel était le prénom de la fille du pape Alexandre VI, nommée Borgia ? Elle a marqué son esprit comme protectrice des arts et des lettres?",
+      "answer": "Lucrèce, on estime qu'il aurait eu entre 6 et 8 enfants"
+    },
+    {
+      "question": "Ayant découvert la B1, quel terme fut créé par le biochimiste polonais Kazimierz Funk pour désigner une substance du corps humain ?",
+      "answer": "Vitamine, c'était au début du XXe -> 1912"
+    },
+    {
+      "question": "Quelle montagne, surnommée le Géant de Provence, est le point culminant du département du Vaucluse ? Cette montagne est fréquemment gravie pendant le Tour de France.",
+      "answer": "Mont Ventoux -> Vaucluse sommet. Doit son nom au fait qu'il y a énormément de vent quand on le monte. J'en sais quelque chose. "
+    },
+    {
+      "question": "? / 100 pts swift",
+      "answer": "Olivia Rodrigo, artiste de l'année 2021 (The Time) et femme de l'année 2022 (Billboard)"
+    },
+    {
+      "question": "Quels animaux sont étudiés dans le cadre de l'ichtyologie ? (terme générique attendu)",
+      "answer": "Poissons -> Ichtyo poisson en grec"
+    },
+    {
+      "question": "Par quel mot familier, dérivé du nom d’une chaussure d’intérieur, désigne-t-on une personne casanière ?",
+      "answer": "Pantouflard-> Pantoufle, pantouflard"
+    }
+  ]
+},
+    {
   "date": "06 Septembre 2026",
   "questions": [
     {
