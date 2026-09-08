@@ -1,5 +1,49 @@
 {
-  "days":[
+  "days":[{
+  "date": "08 Septembre 2026",
+  "questions": [
+    {
+      "question": "A quoi est associé le Crime dans un roman de 1866 écrit par Fiodor Dostoievski mettant en scène Rasklonikov ?",
+      "answer": "Châtiment (Crime et Châtiment) -> Héros : Raskolnikov"
+    },
+    {
+      "question": "Au volley-ball, quelle action consiste en un mouvement défensif ayant pour but d'empêcher que le ballon n'arrive dans son camp ?",
+      "answer": "Bloc | Contre"
+    },
+    {
+      "question": "Quelle lettre de l'alphabet désigne ce type de connecteur USB ?",
+      "answer": "USB-C"
+    },
+    {
+      "question": "Quels prénoms portent les deux jeunes garçons, recueillis par la famille Drummond dans une série diffusée entre 1978 et 1986 avec Gary Coleman et Todd Bridges ?",
+      "answer": "Arnold et Willy -> Les trois acteurs qui les ont incarné ont tous les 3 eu des embrouilles avec la justice. 2 enfants noirs et pauvres qui arrivent dans une vie de riches."
+    },
+    {
+      "question": "Quel président des Etats-Unis a présenté, en janvier 1918, son programme des Quatorze Points, présentant ses solutions pour à la fois mettre fin à la Première Guerre mondiale et reconstruire l'Europe ? Les initiales de son prénom et de son nom sont identiques.",
+      "answer": "Woodrow Wilson -> 28e président des USA. A l'origine de la SDN, il reçoit le Prix Nobel de la Paix. Les USA ne feront jamais partie de la SDN..."
+    },
+    {
+      "question": "Quel appareil permet de mesurer la quantité de pluie tombée dans un endroit donné ?",
+      "answer": "Pluviomètre -> Pluvio -> Pluie. Fait penser à Pluviôse, 5e mois du calendrier républicain (équivalent fin janvier début février)"
+    },
+    {
+      "question": "Quel continent constitue le nom de l'hymne national du Kosovo ?",
+      "answer": "Europe, capitale Kosovo : Pristina"
+    },
+    {
+      "question": "Quelle chanson du groupe norvégien a-ha est célèbre pour son clip mêlant animation rotoscopique et scènes filmées ?",
+      "answer": "Take on me -> Chanson la plus connue du groupe, chanson de fou. "
+    },
+    {
+      "question": "En arboriculture, quel nom donne-t-on à l'armature sur laquelle est fixée une jeune plante, lui permettant de pousser correctement et de résister au vent ?",
+      "answer": "Tuteur, un tuteur dans le langage courant c'est celui qui sert de soutien, qui te guide vers le droit chemin"
+    },
+    {
+      "question": "De quel pays est originaire la bière appelée Guinness ? La brasserie est basée dans la capitale depuis 1759.",
+      "answer": "Irlande -> "
+    }
+  ]
+},
     {
   "date": "07 septembre 2026",
   "questions": [
