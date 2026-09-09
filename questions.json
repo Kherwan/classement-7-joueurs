@@ -1,5 +1,52 @@
 {
-  "days":[{
+  "days":[
+    {
+  "date": "09 Septembre 2026",
+  "questions": [
+    {
+      "question": "Dans quelle ville est située la statue monumentale du Christ Rédempteur, en haut du Corcovado ?",
+      "answer": "Rio de Janeiro -> cf J0 2016"
+    },
+    {
+      "question": "Quelle course à la voile transatlantique en solitaire se court tous les quatre ans depuis 1978 entre Saint-Malo et Pointe-à-Pitre ?",
+      "answer": "Route du Rhum -> Prochaine édition novembre 2026"
+    },
+    {
+      "question": "A partir de combien d'abonnés sur sa chaîne YouTube peut-on recevoir un \"Golden Button\" de la part de YouTube ?",
+      "answer": "1 million, 100 000 abonnés -> Silver button, 10 M -> Diamond, 100M -> Custom"
+    },
+    {
+      "question": "De quelle ville est originaire \"Quentin\" dans le film humoristique \"Tais-toi\" avec notamment Jean Reno ?",
+      "answer": "Quentin de Montargis"
+    },
+    {
+      "question": "Taillé par Obélix dans la bande dessinée Astérix, quel nom désigne une pierre dressée constituée d'un seul bloc ?",
+      "answer": "Menhir cf Carnac en Bretagne, l'alignement des mnehirs"
+    },
+    {
+      "question": "Ayant eu pour premier exemplaire le Canard d'Henri Fabre, quel nom désigne un avion capable de se poser sur l'eau ?",
+      "answer": "Hydravion -> Hydro -> L'eau."
+    },
+    {
+      "question": "Quelle région française est la plus grande en superficie ?",
+      "answer": "Nouvelle-Aquitaine et non la Guyane, Guyane : 83 000 km² vs Nouvelle Aquitaine 84 000 km²"
+    },
+    {
+      "question": "Quel mystique russe et proche de la famille royale impériale a laissé son nom à un titre du groupe Boney M. ?",
+      "answer": "Rasputin -> Oh, oh Rasputin, aussi chanteurs de Daddy Coooooool"
+    },
+    {
+      "question": "Quel instrument de musique a laissé son nom à la plus grande espèce de tortue existante ?",
+      "answer": "Tortue luth -> car à la forme d'un luth. Mnémo : très menacée, elle LUTH pour s'en sortir"
+    },
+    {
+      "question": "Quel est le nom de famille des deux soeurs prénommées Caroline et Stéphanie, à l'origine de l'invention d'une célèbre tarte ?",
+      "answer": "Tatin. C'est Dark Vador qui rentre dans une boulangerie. La boulangère lui demande ce qu'il veut. Il répond : Pain, pain, pain, tarte tatin, tarte tatin. *rires*"
+    }
+  ]
+},
+    
+    {
   "date": "08 Septembre 2026",
   "questions": [
     {
