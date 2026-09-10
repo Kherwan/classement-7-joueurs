@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "10 Septembre 2026",
+  "questions": [
+    {
+      "question": "Combien de personnages sont représentés sur le tableau de Léonard de Vinci intitulé \"La Cène\" ?",
+      "answer": "13 -> Les 12 apôtres et Jésus"
+    },
+    {
+      "question": "Au golf, quel nom donne-t-on au club à face plate utilisé sur le green pour faire rouler la balle jusqu'au trou ?",
+      "answer": "Putter : principaux clubs de golds : Driver / Fer / Putter (de celui utilisé de plus loin à celui utilisé au plus proche du trou)"
+    },
+    {
+      "question": "Dans le sigle FAI, désignant des fournisseurs d'accès, que signifie la lettre I (i) ?",
+      "answer": "Internet (Fournisseur d'accès à internet) : Orange, Free, Bouygues"
+    },
+    {
+      "question": "Quels frères jumeaux décédés à seulement quelques jours d'intervalle ont présenté l'émission Temps X de 1979 à 1987 ?",
+      "answer": "Igor et Grichka Bogdanoff"
+    },
+    {
+      "question": "Quelle guerre meurtrière a opposé, de 1861 à 1865, les États du Nord (l'Union) dirigés par Abraham Lincoln aux États du Sud (la Confédération) favorables à l'esclavage ?",
+      "answer": "Guerre de Sécession -> fin de l'esclavage aux USA"
+    },
+    {
+      "question": "Quel scientifique suédois à qui l'on doit l'invention de la dynamite a décidé via sa fondation de créer un prix à son nom après son décès ?",
+      "answer": "Alfred Nobel -> Nobel -> TNT & Suède"
+    },
+    {
+      "question": "De quel pays l'Erythrée a-t-elle obtenu son indépendance en 1993 ?",
+      "answer": "Ethiopie -> Ethiopie et Erythrée, ça commence pareil. Guerre d'indépendance pendant 30 ans : 1961-1991."
+    },
+    {
+      "question": "Quelle déesse de la mythologie romaine a laissé son nom à un titre des Shocking Blue, plus tard repris par le groupe féminin Bananarama ?",
+      "answer": "Venus -> déesses romaines principales (Junon : reine des déesses, protectrice du mariage et des femmes mariées / Vénus : Amour, beauté, fertilité / Minerve (sagesse, stratégie, guerre, arts)"
+    },
+    {
+      "question": "Quel fruit d'un arbre ayant pour nom scientifique prunus armeniaca a des variétés dites orangé, bergeron, et rouge du Roussillon ?",
+      "answer": "Abricot -> prunus = pas seulement les prunes attention. Prunus = abricotier, amandier, prunier, pêcher, cerisier"
+    },
+    {
+      "question": "Quel est l'infinitif du verbe dans la locution verbale \"ci-gît\" ? Ce verbe signifie être étendu.",
+      "answer": "Gésir. Ci-gît -> gisant -> Gésir. Pas simple"
+    }
+  ]
+},
+    {
   "date": "09 Septembre 2026",
   "questions": [
     {
