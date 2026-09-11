@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "11 Septembre 2026",
+  "questions": [
+    {
+      "question": "Dans quel pays est située la plus haute statue du monde, haute de 240 mètres et représentant Sardar Vallabhbhai Patel, et nommée Statue de l'Unité ?",
+      "answer": "Inde"
+    },
+    {
+      "question": "Quel adjectif de nationalité est associée à la \"planchette\" dans l'autre nom de la technique de projection utilisée au judo appelée Tomoe-nage ?",
+      "answer": "Planchette japonaise; judo signifie 'voie de la souplesse'"
+    },
+    {
+      "question": "Quelle application permettant l'identification musicale de titres possède ce logo ?",
+      "answer": "Shazam"
+    },
+    {
+      "question": "Quel prénom est porté par l'acteur nommé Leklou, ayant reçu le César du meilleur acteur pour Le Roman de Jim, et ayant également joué dans BAC Nord et L'Amour ouf ?",
+      "answer": "Karim Leklou, il a joué dans la série Hippocrate, cf Hippocrate le médecin grec, cf Serment d'Hippocrate. Les vrais savent 'dans la rue pas de serment d'Hippocrate, que des sermons d'hypocrites'"
+    },
+    {
+      "question": "Quel djihadiste né à Riyad et tué par les forces spéciales étasuniennes en 2011 est considéré comme le principal responsable des attentats du 11 septembre 2001, ayant eu lieu il y a 25 ans jour pour jour et ayant vu mourir 2977 personnes ?",
+      "answer": "Oussama Ben Laden"
+    },
+    {
+      "question": "Quelle unité, symbolisée hPa, sert en météorologie à mesurer la pression atmosphérique ?",
+      "answer": "Hectopascal ->du nom de Blaise Pascal"
+    },
+    {
+      "question": "Dans quel pays se trouvent les plus hautes tours jumelles du monde, les tours Petronas ? Construite par César Pelli, elles mesurent 452 mètres de haut.",
+      "answer": "Malaisie -> Les tours Petronas sont situées à Kuala Lumpur, la capitale est Putrajaya mais je crois que les deux sont acceptées, elles ont une passerelle pour passer de l'une à l'autre au 41e et 42e étage"
+    },
+    {
+      "question": "Quel continent constitue le nom du groupe suédois notamment interprète du titre \"The Final Countdown\" ?",
+      "answer": "Europe"
+    },
+    {
+      "question": "Quelle antilope à tête chevaline vivant en Afrique est célèbre pour les importantes migrations qu'elle effectue ?",
+      "answer": "Gnou, on le trouve principalement dans le sud de l'Afrique"
+    },
+    {
+      "question": "Quel jeu de société a Uncle Pennybags pour mascotte ?",
+      "answer": "Monopoly -> Il ne porte pas de monocle. C'est un effet Mandela. Effet Mandela : fait que beaucoup de personnes partagent le même faux souvenir, ex : Le bout de la queue de Pikachu n'est pas noire,  Dark Vador ne dit pas 'Luke, je suis ton père' mais 'Non, je suis ton père', Neslon Mandela n'est pas mort dans les années 80 mais en 2013 "
+    }
+  ]
+},
+    {
   "date": "10 Septembre 2026",
   "questions": [
     {
