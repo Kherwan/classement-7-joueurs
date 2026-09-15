@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "15 Septembre 2026",
+  "questions": [
+    {
+      "question": "Combien y a-t-il d'années de solitude dans le titre d'un livre écrit par l'écrivain colombien Gabriel Garcia Marquez retraçant l'histoire de la famille Buendia dans le village fictif de Macondo ?",
+      "answer": "Cent ans de solitude. PN littérature 1982. INcipit très célèbre : 'Bien des années plus tard, face au peloton d'exécution, le colonel Aureliano Buendía devait se rappeler ce lointain après-midi au cours duquel son père l'emmena faire connaissance avec la glace.'"
+    },
+    {
+      "question": "Dans quelle ville évolue la franchise de NBA des Bulls ? Ils ont remporté 6 titres nationaux dans les années 1990.",
+      "answer": "Chicago"
+    },
+    {
+      "question": "De quelle série de jeux vidéo le héros principal est-il Geralt de Riv ? Le premier opus sorti en 2007 est suivi de ceux sous-titrés \"Assassins of Kings\" et \"Wild Hunt\".",
+      "answer": "The Witcher -> Geralt de Riv. Aussi adapté en série. "
+    },
+    {
+      "question": "Quel film de Justine Triet avec Sandra Hüller et Swann Arlaud a reçu la Palme d'Or à Cannes en 2023 ?",
+      "answer": "Anatomie d'une chute"
+    },
+    {
+      "question": "Quelle ville de l'Aisne est associée à une bataille de 486 à la suite de laquelle l'évêque Remi aurait demandé un vase qu'un soldat aurait brisé ?",
+      "answer": "Soissons. L'histoire : dans l'idée Clovis a pillé une église vers Reims; L'évêque a demandé à ce qu'on lui redonne le butin. Clovis a dit ok et a volu tout rendre en l'état; Il y a un soldat un peu impulsif qui s'y est opposé et qui a cassé le vase de Soissons. Quelques mois plus tard, il revoit ce soldat, le fait tomber et le brise en deux en disant 'Souviens-toi du vase de Soissons'"
+    },
+    {
+      "question": "Quelle étoile de la constellation du Centaure doit son nom latin au fait qu'elle est la plus proche du Soleil ?",
+      "answer": "Proxima du Centaure -> Proximitié -> Proxima"
+    },
+    {
+      "question": "Avec Saint-Brieuc et Saint-Etienne, citez une des deux autres préfectures françaises à figurer le nom d’un saint ?",
+      "answer": "Saint-Denis (La Réunion), la préfecture de la Seinne Saint Denis est Bobigny, il y avait Saint-Lô dans la Manche également"
+    },
+    {
+      "question": "Quel type d'étendue d'eau est le nom de famille de \"Frank\", chanteur étasunien des titres \"Pink + White\", \"Nights\" et \"Thinkin bout you\" ?",
+      "answer": "Ocean (Frank Ocean)"
+    },
+    {
+      "question": "Quel verbe désigne à la fois le fait de pousser son cri pour un manchot, pour un pingouin et pour un âne ?",
+      "answer": "Braire"
+    },
+    {
+      "question": "Quelle année constitue la première année du XXIe siècle ?",
+      "answer": "2001 -> Un siècle c'est 100 ans. L'an 1 est la 1re année du premier siècle. L'an 2 est la 2e année du premier siècle. L'an 99 est la 99e année du premier siècle. L'an 100 est la 100e (et dernière) année du premier siècle. L'an 101 est la 1re année du deuxième siècle.Par contre 2000 rentre bien dans la première année des années 2000. (2000-2009)"
+    }
+  ]
+},
+    {
   "date": "11 Septembre 2026",
   "questions": [
     {
