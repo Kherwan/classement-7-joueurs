@@ -45,6 +45,143 @@
     }
   ]
 },
+
+    {
+  "date": "14 Septembre 2026",
+  "questions": [
+    {
+      "question": "Selon le titre d’un livre de 2014 de Maïlys de Kérangal, que faut-il réparer ?",
+      "answer": "Réparer les vivants"
+    },
+    {
+      "question": "Sur quel Grand Tour cycliste Delio Rodriguez détient-il le record du nombre de victoires d'étapes avec 39 ?",
+      "answer": "Tour d'Espagne -> Rodriguez -> nom à consonnance hispanique"
+    },
+    {
+      "question": "Quel navigateur internet développé en 2015 par Jon Stephenson von Tetzchner porte le nom d'un célèbre compositeur surnommé le Prêtre roux ?",
+      "answer": "Vivaldi -> Surnommé "el pretre rosso""
+    },
+    {
+      "question": "Quel prénom français est porté à la fois par le canard Picsou chez Disney et par l'un des rois mages ?",
+      "answer": "Balthazar -> Gaspard, Melchior et Balthazar. "
+    },
+    {
+      "question": "Sous quel nom est plus connu Lev Davidovitch Bronstein, soviétique ayant été assassiné pendant son exil à Mexico en 1940 ? Il est l'un des fondateurs principaux de l'Armée rouge.",
+      "answer": "Léon Trotski -> Lev -> Léon. Ne peut pas être Staline car est mort en 1953"
+    },
+    {
+      "question": "Quelle personne a été la première à recevoir deux Prix Nobel dans deux catégories différentes, en l'occurrence en 1903 et 1911 ?",
+      "answer": "Marie Curie"
+    },
+    {
+      "question": "De quel pays est-ce le drapeau ?",
+      "answer": "Nouvelle-Zélande -> Plus d'étoiles sur celui de l'Australie. Wapital Nouvellle Zléance : Wellington"
+    },
+    {
+      "question": "Quelle arme est associée aux \"Yeux\" dans le titre d'une chanson de Marc Lavoine datant de 1985 ?",
+      "answer": "Revolver (Elle a les yeux revolver)"
+    },
+    {
+      "question": "Quelle plante mellifère a d'importants champs en Provence ?",
+      "answer": "Lavande"
+    },
+    {
+      "question": "Quel terme de cinq lettres désigne la partie avant d'un bateau ?",
+      "answer": "Proue vs la poupe"
+    }
+  ]
+},
+
+  {
+  "date": "13 Septembre 2026",
+  "questions": [
+    {
+      "question": "Parfois appelé yarmoulke, quel nom hébraïque désigne la calotte portée traditionnellement par les Juifs ?",
+      "answer": "Kippa cf chanson 'je me sens au-dessus des autres comme une Kippa' - Damso"
+    },
+    {
+      "question": "En quelle année eut lieu l'épisode la grève du bus de Knysna, au cours de laquelle les joueurs de l'équipe de France de football ont refusé de descendre du bus lors de la coupe du monde ?",
+      "answer": "2010 -> CDM tous les 4 piges. "
+    },
+    {
+      "question": "Sur le logo d'Amazon, quelles sont les deux lettres reliées par la flèche ?",
+      "answer": "A et Z -> Idée derrière : ils maitrisent de l'achat à la livraison de A à Z"
+    },
+    {
+      "question": "Quel jeune garçon vivant dans un village africain imaginaire a été créé pour une trilogie de Michel Ocelot ?",
+      "answer": "Kirikou"
+    },
+    {
+      "question": "Qui détient le record du plus long règne de l'histoire britannique ?",
+      "answer": "Elisabeth II"
+    },
+    {
+      "question": "Quelle science étudie les vibrations de l'écorce terrestre et les séismes ?",
+      "answer": "Sismologie -> Sismographe : outil pour mesurer l'intensité des séismes, échelle : échelle de Richter"
+    },
+    {
+      "question": "Quelle préfecture française est très souvent surnommée la \"Ville Rose\" du fait de la couleur caractéristique des briques utilisées dans son centre-ville ?",
+      "answer": "Toulouse cf Rose Festival Bigflo et Oli"
+    },
+    {
+      "question": "Quel mot redoublé constitue le titre de la chanson la plus célèbre de la française Desireless, commençant par les mots \"Au dessus des vieux volcans\" ?",
+      "answer": "Voyage voyage"
+    },
+    {
+      "question": "Quel nom familier désignant un chien bâtard a laissé son nom à un film de 1965 réalisé par Gérard Oury mettant en scène Bourvil et Louis de Funès ?",
+      "answer": "Le Corniaud"
+    },
+    {
+      "question": "A quel animal associe-t-on des larmes hypocrites, dans une manifestation émotionnelle fausse ayant pour but de tromper ?",
+      "answer": "Larmes de crocodile"
+    }
+  ]
+},
+    {
+  "date": "12 Septembre 2026",
+  "questions": [
+    {
+      "question": "A quoi est associé \"Le Bruit\" dans le nom d'un roman de William Faulkner datant de 1929 ?",
+      "answer": "La Fureur (Le Bruit et la Fureur)"
+    },
+    {
+      "question": "De son vrai nom Roussimoff, quel prénom portait ce catcheur professionnel français surnommé \"Le Géant\" ?",
+      "answer": "André le Géant -> 2m18 pour 245kg"
+    },
+    {
+      "question": "Quelle fonction qui existait sur MSN Messenger permettant de secouer la fenêtre de chat d'un contact et de faire un bruit ?",
+      "answer": "Wizz"
+    },
+    {
+      "question": "Quelle chaîne de télévision franco-allemande occupe le canal numéro 7 de la TNT ?",
+      "answer": "ARTE -> Association Relative à la Télévision Européenne"
+    },
+    {
+      "question": "Quelle lettre de l'alphabet désigne la voiture de la marque Ford étant la première automobile produite en série ?",
+      "answer": "Ford T, cf Henry Ford citation : 'N'importe quel client peut avoir sa voiture de la couleur qu'il veut, pourvu qu'elle soit noire'"
+    },
+    {
+      "question": "Que signifie la lettre M dans le sigle I.R.M désignant un type d'imagerie médicale ?",
+      "answer": "Magnétique (Imagerie par résonance magnétique)"
+    },
+    {
+      "question": "Patronyme d’un ophtalmologiste français prénommé José-Alain, quel nom porte la région de l'Afrique marquant la transition entre le domaine saharien au nord et les savanes du domaine soudanien ?",
+      "answer": "Sahel"
+    },
+    {
+      "question": "Dans quelle capitale asiatique le chanteur Murray Head dit-il passer \"One night in ______\" dans ce qui constitue son titre le plus célèbre ?",
+      "answer": "Bangkok (One Night in Bangkok)"
+    },
+    {
+      "question": "Quelle plante du genre Artemisia, portant un nom issu du grec signifiant «sans plaisir» en raison de son goût amer, a été utilisée pour préparer la boisson surnommée Fée Verte ?",
+      "answer": "Absinthe -> Abs -> Privé de, sans. Fée verte du fait de sa couleur "
+    },
+    {
+      "question": "Quel saint fêté traditionnellement le 6 décembre, notamment dans l'Est de la France, est le saint patron des enfants ?",
+      "answer": "Saint Nicolas"
+    }
+  ]
+},
     {
   "date": "11 Septembre 2026",
   "questions": [
