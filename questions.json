@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "16 Septembre 2026",
+  "questions": [
+    {
+      "question": "A quel philosophe et écrivain de la Renaissance doit-on la phrase \"Sur le plus beau trône du monde, on n'est jamais assis que sur son cul\" issue de ses célèbres Essais ?",
+      "answer": "Michel de Montaigne (1533-1592) -> Les Essais de Montaigne"
+    },
+    {
+      "question": "Dans quel sport d'équipe a évolué Uljana Semjonova, souffrant d'acromégalie, et ayant joué avec l'équipe d'URSS où elle remporte deux titres olympiques et trois championnats du monde avant d'obtenir la nationalité lettone ? Elle est décédée début 2026.",
+      "answer": "Basket-ball. Acromégalie : trouble hormonal qui se traduit par une augmentation anormale de la taille des pieds et des mains et une déformation du visage"
+    },
+    {
+      "question": "A quel jeu peut-on jouer sur les applications lichess et chesscom qui font partie des applications les plus téléchargées au monde ?",
+      "answer": "Echecs"
+    },
+    {
+      "question": "Quel jour de la semaine est également le nom d'un personnage de la famille Addams ?",
+      "answer": "Mercredi cf la série Mercredi de Tim Burton, centrée sur le personnage de Mercredi Addams"
+    },
+    {
+      "question": "Quel homme d'état est depuis 1994 le président de la Biélorussie ?",
+      "answer": "Alexandre Loukachenko -> Dirige depuis 1994"
+    },
+    {
+      "question": "Combien y a-t-il de secondes dans 59 minutes ?",
+      "answer": "3540 secondes -> Une heure c'est 3600 secondes. (6*6)"
+    },
+    {
+      "question": "Quel animal fantastique est représenté sur le drapeau du Pays de Galles ?",
+      "answer": "Dragon -> Dragon Rouge représente les Bretons insulaires et le blanc les Anglo-Saxons, le premier est sensé repousser le second"
+    },
+    {
+      "question": "Avec qui le rappeur Gringe formait-il le duo des Casseurs Flowters ? Ils sont à l'origine des titres Inachevés et Des histoires à raconter notamment.",
+      "answer": "Orelsan -> Cf Nom inspiré des méchants de Maman j'ai raté l'avion. "
+    },
+    {
+      "question": "Quel serpent porte le même nom qu'un accessoire en fourrure ou en plumes se portant autour du cou ?",
+      "answer": "Boa"
+    },
+    {
+      "question": "Quel animal domestique constitue le nom d'une sauce typique des Antilles parfois appelée sauce créole ?",
+      "answer": "Sauce chien"
+    }
+  ]
+},
+    {
   "date": "15 Septembre 2026",
   "questions": [
     {
