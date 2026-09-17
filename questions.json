@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "17 Septembre 2026",
+  "questions": [
+    {
+      "question": "Quel prénom est à la fois le titre d'un livre de James Joyce retraçant une journée de Leopold Bloom et celui d'un héros de la mythologie grecque ?",
+      "answer": "Ulysse, Bloom est le nom du personnage principal du roman Ulysse de James Joyce. Le 16 juin en Irlande est le BLoomday, où on célèbre la vie de James Joyce. Ulysse : héros grec, roi d'Ithaque, père de Télémaque, en couple avec Pénélope. Il est au centre de l'Odyssée. "
+    },
+    {
+      "question": "Quelle équipe de football évoluant au stade de l’Abbé Deschamps fut entraînée par Guy Roux ?",
+      "answer": "AJ Auxerre -> Entraineur quasi sans interruptionde 1961 à 2005. Il est entraineur joueur au départ. Et au fûr à mesure il fait monter le club. il remporte un titre de Champion de France et 4 Coupe de France (record pour un entraineur (à égalité avec d'autres)."
+    },
+    {
+      "question": "Quel dramaturge anglais est désigné par la lettre S dans le SPL, un langage de programmation créé en 2001 ?",
+      "answer": "Shakespeare Programming Language -> Le code source de ces programmes ressemble à une pièce de théâtre"
+    },
+    {
+      "question": "Quelle chanteuse est parodiée dans le film Aline, réalisé par Valérie Lemercier dans lequel elle interprète Aline Dieu, et pour lequel elle a reçu le César de la meilleure actrice en 2022 ?",
+      "answer": "Céline Dion -> Ressemblance entre le nom Céline Dion et ALine Dieu"
+    },
+    {
+      "question": "Quelle race de chien a laissé son nom à l'opération militaire de juillet 1943 dans laquelle les troupes alliées britanniques, étasuniennes, françaises et canadiennes débarquèrent en Sicile ? Cet épisode fut important dans la Seconde Guerre mondiale car il a permis d'ouvrir de nouveau un second front en Europe.",
+      "answer": "Opération Husky -> Objectif s'emparer de la Méditerranée (2'r' 1't' comme dans 'terre') et menacer le couple Mussolini x Hitler"
+    },
+    {
+      "question": "Quel était le prénom du scientifique Volta, à qui l'on doit l'invention de la pile électrique en 1800 et ayant laissé son nom à l'unité de tension électrique ?",
+      "answer": "Alessandro -> Alessandro Volta -> Volt"
+    },
+    {
+      "question": "Quel pays abrite le Nunavut, territoire existant depuis 1999 et fournissant aux Inuits un gouvernement autonome ?",
+      "answer": "Canada -> territoire le plus gros et le plus septentrional du Canada"
+    },
+    {
+      "question": "Quel type de danseuse encourageant des équipes sportives a laissé son nom au plus grand succès d'OMI en 2015 ?",
+      "answer": "Cheerleader -> Banger ça, j'avais oublié"
+    },
+    {
+      "question": "Quels oiseaux, les plus grands représentants de la famille des anatidés ont été mis en scène dans un ballet sur une musique de Tchaikosvky composée entre 1875 et 1876 ?",
+      "answer": "Cygnes (Le Lac des Cygnes)"
+    },
+    {
+      "question": "Quel nom est commun à une période de cinq ans ainsi qu'à un type de luminaire ?",
+      "answer": "Lustre -> Un siècle c'est 20 Lustres, cf période dans l'Antiquité romaine"
+    }
+  ]
+},
+    {
   "date": "16 Septembre 2026",
   "questions": [
     {
