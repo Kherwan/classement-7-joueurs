@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "18 Septembre 2026",
+  "questions": [
+    {
+      "question": "Sous quel pseudonyme est plus connu l'écrivain français Henri Beyle, auteur notamment La Chartreuse de Parme ? Il a choisi comme pseudonyme le nom d'une ville allemande.",
+      "answer": "Stendhal -> Le Rouge & le Noir et La Chartreuse de PArme, cf Baptiston livre étudié en prépa. Rouge et le Noir à savoir : héros : Julien Sorel. "
+    },
+    {
+      "question": "Avec l'arraché, quel autre mouvement est évalué en haltérophilie ?",
+      "answer": "Épaulé-jeté"
+    },
+    {
+      "question": "Quel personnage apparu dans le jeu Donkey Kong Country est le neveu et fidèle acolyte de Donkey Kong ?",
+      "answer": "Diddy Kong -> Cf P.Diddy, le surnom a très mal vieilli"
+    },
+    {
+      "question": "Dans la bande dessinée créée par Morris, quel nom porte le cheval décrit comme le cheval le plus rapide de l'ouest, appartenant à Lucky Luke ?",
+      "answer": "Jolly Jumper"
+    },
+    {
+      "question": "Quel nom porte ce monument mégalithique datant d'entre 3000 et 1100 avant notre ère et situé proche de Salisbury dans le sud de l'Angleterre ?",
+      "answer": "Stonehenge -> Stone : pierre en anglais. Monument très surcôté amha. "
+    },
+    {
+      "question": "Quel terme issu de l'anglais désigne l'étude des objets volants non identifiés ?",
+      "answer": "Ufologie -> U.F.O = Ovni en français. Unidentified Flying Object"
+    },
+    {
+      "question": "Quel pays européen possède à sa tête Guillaume V, portant le titre de Grand-Duc ?",
+      "answer": "Luxembourg -> Le Grand Duché du Luxembourg"
+    },
+    {
+      "question": "Quel titre évoquant un rugissement est le nom d'un des plus grands succès de la chanteuse Katy Perry ?",
+      "answer": "Roar -> rugissement en anglais"
+    },
+    {
+      "question": "A quel animal associe-t-on le nom d'ail dans l'autre nom de l'ail sauvage ou ail des bois ?",
+      "answer": "Ours (Ail des Ours) -> saucisson à l'ail des ours : trop bon"
+    },
+    {
+      "question": "Quel terme, synonyme de \"prison à vie\", qualifie la peine d'emprisonnement a priori définitive d'un criminel ?",
+      "answer": "Perpétuité -> Il a pris perpet"
+    }
+  ]
+},
+    {
   "date": "17 Septembre 2026",
   "questions": [
     {
