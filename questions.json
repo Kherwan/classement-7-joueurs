@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "21 Septembre 2026",
+  "questions": [
+    {
+      "question": "Quel professeur spécialiste en physique nucléaire est associé à Francis Blake dans le titre d'une série de bande dessinée créée par Edgar P. Jacobs ?",
+      "answer": "Philip Mortimer (Blake et Mortimer"
+    },
+    {
+      "question": "Sous quel surnom le basketteur né en 1959 sous le nom de Earvin Johnson Jr. est-il généralement connu ? Il a évolué pendant toute sa carrière professionnelle aux Lakers de Los Angeles.",
+      "answer": "Magic Johnson -> Il a arrêté sa carrière après avoir annoncé avoir le sida"
+    },
+    {
+      "question": "Quelle multinationale met en relation des particuliers cherchant à se loger avec des entreprises hôtelières et autres proposant des logements ?",
+      "answer": "Airbnb"
+    },
+    {
+      "question": "Quelle année est associée à \"L'Odyssée de l'Espace\" dans le titre d'un film de Stanley Kubrick ? Le titre est \"____ : L'Odyssée de l'Espace\".",
+      "answer": "2001, L'Odyssée de L'Espace"
+    },
+    {
+      "question": "Quelle capitale européenne a fait l'objet d'un blocus soviétique entre juin 1948 et mai 1949 ? Les forces occidentales ont ravitaillé la ville via un pont aérien.",
+      "answer": "Berlin"
+    },
+    {
+      "question": "Quelle unité symbolisée par la lettre q correspond à 100 kilogrammes ?",
+      "answer": "Quintal"
+    },
+    {
+      "question": "Quel pays asiatique a pour ville la plus peuplée Alep, qui compte presque autant d'âmes que la capitale Damas ?",
+      "answer": "Syrie, Simona Halep ça commence comme Syrie et Alep"
+    },
+    {
+      "question": "Quelle année du XXIe siècle est mise en avant dans le titre d'une chanson de Pierre Bachelet ? Le titre est \"En l'an ____\".",
+      "answer": "En l'an 2001"
+    },
+    {
+      "question": "Représenté par Tabaqui dans le Livre de la Jungle, quel canidé d'Afrique possède une espèce dite \"à chabraques\" ?",
+      "answer": "Chacal -> 'je suis un chacaaaal t'avais raisoooooon'"
+    },
+    {
+      "question": "Quelle petite ouverture pratiquée dans une porte, permettant de voir sans trahir sa présence tire son origine d'un personnage biblique ?",
+      "answer": "Judas -> Trahir "
+    }
+  ]
+},
+    {
   "date": "18 Septembre 2026",
   "questions": [
     {
