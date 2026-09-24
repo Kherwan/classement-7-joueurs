@@ -9,11 +9,11 @@
     },
     {
       "question": "De quel pays sont originaires les footballeurs Teemu Pukki, meilleur buteur moderne de la sélection ; Sami Hyypiä, ancien capitaine de Liverpool ; et Jari Litmanen, considéré comme le plus grand joueur de l'histoire du pays ?",
-      "answer": "Finlande"
+      "answer": "Finlande -> Litmanene, nom en "en" souvent Finlande"
     },
     {
       "question": "Quel studio de développement de jeux vidéo est à l'origine des jeux Warcraft, World of Warcraft Overwatch et Diablo ?",
-      "answer": "Blizzard Entertainement"
+      "answer": "Blizzard Entertainement -> Filiale d'Activision Blizzard -> Call of Duty, initialement Blizzard appartenait à Vivendi"
     },
     {
       "question": "Quel nombre est associé au préom de Ben , héros d'une série d'animation et possédant l'Omnitrix à son poignet, une montre le transformant en une variété d'extraterrestres ?",
@@ -21,11 +21,11 @@
     },
     {
       "question": "De quel pays Toussaint Louverture, né esclave, a-t-il participé à l'indépendance en 1804 ?",
-      "answer": "Haïti"
+      "answer": "Haïti, esclave affranchi"
     },
     {
       "question": "Quelle unité dont le nom dérive de la graine du caroubier est utilisée pour exprimer des masses en gemmologie ?",
-      "answer": "Carat"
+      "answer": "Carat, à ne pas confondre avec le carat des bijoutiers désignant la pureté d'un métal dans certains pays"
     },
     {
       "question": "Avec quel pays l'Argentine partage-t-elle la Terre de Feu ?",
@@ -37,11 +37,11 @@
     },
     {
       "question": "De quels animaux s'occupe normalement un cornac ? Ce métier est relativement courant en Asie du Sud-Est ?",
-      "answer": "Elephant"
+      "answer": "Elephant -> Cf Asie du Sud Est : inde"
     },
     {
       "question": "Quelle crêpe épaisse tire son nom des mots anglais signifiant \"poêle\" et \"gâteau\" ?",
-      "answer": "Pancake"
+      "answer": "Pancake -> Pan = poêle, cake = gâteau"
     }
   ]
 },
@@ -53,23 +53,23 @@
   "questions": [
     {
       "question": "Quel terme générique désigne une religion comme l'islam, le judaïsme ou le christianisme qui ne reconnaît qu'un seul Dieu ?",
-      "answer": "Monothéisme"
+      "answer": "Monothéisme -> Mono : seul, unique, theos : dieu, vs polythéisme : Poly = plusieurs"
     },
     {
       "question": "Quelle nageuse française a remporté l'or olympique sur 400 mètres nage libre aux Jeux Olympiques d'Athènes en 2004 ?",
-      "answer": "Laure Manaudou"
+      "answer": "Laure Manaudou, à l'âge de 17 ans"
     },
     {
       "question": "Que signifie la lettre J dans le sigle PNJ, qui dans un jeu désigne un personnage contrôlé par le jeu directement ?",
-      "answer": "Joueur (Personnage non joueur"
+      "answer": "Joueur (Personnage non joueur)"
     },
     {
       "question": "Dans le dessin animé créé par Walter Lantz, quelle espèce d'oiseau est Woody ?",
-      "answer": "Pic vert"
+      "answer": "Pic vert -> Woody Woodpecker"
     },
     {
       "question": "Quelle ville, étant devenu la capitale de la France Libre pendant la Seconde Guerre mondiale, était la capitale de l'Afrique équatoriale française et l'actuelle capitale de la république du Congo ?",
-      "answer": "Brazzaville"
+      "answer": "Brazzaville vs République Démocratique du Congo (RDC : Kinshasa)"
     },
     {
       "question": "Quel nom désigne à la fois un sujet d'une expérience scientifique et un petit rongeur ?",
@@ -77,11 +77,11 @@
     },
     {
       "question": "Quel pays abrite les états du Jalisco, du Guerrero, de Chihuahua et de Tabasco ?",
-      "answer": "Mexique"
+      "answer": "Mexique -> Chihuahua : le nom de l'espèce de chien vient de là, c'est le chien le plus petit au monde"
     },
     {
       "question": "Quel slammeur français est notamment à l'origine de l'album Mesdames, dans lequel il a interprété de nombreux duos avec des femmes ?",
-      "answer": "Grand Corps Malade"
+      "answer": "Grand Corps Malade -> Slam = GCM"
     },
     {
       "question": "Quelle plante de la famille des cannabacées est cultivée pour ses inflorescences que l'on utilise pour aromatiser la bière ?",
