@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "25 Septembre 2026",
+  "questions": [
+    {
+      "question": "Dans la mythologie égyptienne, combien de génies formaient l'Ogdoade d'Hermopolis ?",
+      "answer": "Huit ->OG ressemble à octo donc à huit"
+    },
+    {
+      "question": "Quel est le prénom du basketteur français nommé Wembanyama, nommé capitaine de l'équipe de France ?",
+      "answer": "Victor"
+    },
+    {
+      "question": "Quel nom désigne un réseau informatique privé utilisé par les employés d'une entreprise, utilisant les mêmes protocoles qu'internet ?",
+      "answer": "Intranet -> Internet mais à l'intérieur, intra"
+    },
+    {
+      "question": "Dans la série d'animation Les Fous du Volant, quel personnage apparaît toujours en duo aux côtés de Satanas ?",
+      "answer": "Diabolo"
+    },
+    {
+      "question": "Quel palais situé dans le 7e arrondissement de Paris abrite depuis 1879 l'Assemblée nationale française ?",
+      "answer": "Palais Bourbon"
+    },
+    {
+      "question": "Quel terme désigne le résultat d'une division ?",
+      "answer": "Quotient-> Dividence divisé par dénominateur est égal au quotient"
+    },
+    {
+      "question": "Quel pays, dont le nom signifie littéralement \"pays de glace\" abrite le phare des Þridrangar, considéré comme le plus isolé au monde ? (à droite sur l'image)",
+      "answer": "Islande, en anglais ICELANDE -> Ice = glace et land = pays/terre/sol"
+    },
+    {
+      "question": "Quelle chanson de The Weeknd est la plus écoutée de tous les temps sur Spotify avec 5,3 milliards d'écoutes ?",
+      "answer": "Blinding Lights"
+    },
+    {
+      "question": "Quelle variété de prune possède des variétés de Metz et de Nancy et est très cultivée en Lorraine ?",
+      "answer": "Mirabelle, autres variétés connues -> Quetsche (Alsace) et Reine-Claude"
+    },
+    {
+      "question": "Combien faut-il parcourir de \"Bornes\" selon le nom d'un jeu édité par Dujardin à partir de 1954 ?",
+      "answer": "1000 Bornes"
+    }
+  ]
+},
+    {
   "date": "23 Septembre 2026",
   "questions": [
     {
