@@ -1,26 +1,26 @@
 {
   "season": 9,
-  "updated_at": "2026-09-28T17:57:54.219520+00:00",
+  "updated_at": "2026-09-29T16:20:38.199064+00:00",
   "players": [
     {
       "username": "Kerwan",
-      "score": 9004,
-      "rank": 1696
+      "score": 9152,
+      "rank": 1951
     },
     {
       "username": "Elisa10",
-      "score": 6191,
-      "rank": 6631
+      "score": 6389,
+      "rank": 6731
     },
     {
       "username": "Lroux",
-      "score": 5921,
-      "rank": 7259
+      "score": 6325,
+      "rank": 6868
     },
     {
       "username": "Hugovdal11",
       "score": 2583,
-      "rank": 14775
+      "rank": 15074
     }
   ]
 }
