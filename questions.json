@@ -1,6 +1,96 @@
 {
   "days":[
     {
+  "date": "28 septembre",
+  "questions": [
+    {
+      "question": "Quel type de chanteuse lyrique est dite \"Chauve\" dans le nom d'une pièce de théâtre d'Eugène Ionesco parue en 1952 ?",
+      "answer": "La Cantatrice chauve"
+    },
+    {
+      "question": "À la pétanque, quel nom désigne la phase d'une partie entre le lancer du cochonnet et le moment où les joueurs n’ont plus de boules à jouer, l'équivalent d'une manche ?",
+      "answer": "Mène"
+    },
+    {
+      "question": "Quel nombre est associé à la console Xbox commercialisée en 2005 et concurrente principale de la PlayStation 3 ?",
+      "answer": "Xbox 360"
+    },
+    {
+      "question": "Quel homme célèbre a été interprété par Ben Kingsley dans un film biographique de Richard Attenborough de 1982 ?",
+      "answer": "Gandhi"
+    },
+    {
+      "question": "De quel personnage historique Theodor Morell, médecin reconnu pour ses traitements non conventionnels et de l'ordre de la charlatanerie, était-il le médecin personnel ?",
+      "answer": "Adolf Hitler"
+    },
+    {
+      "question": "Quel célèbre scientifique a navigué sur les mers au XIXe siècle à bord du bateau appelé HMS Beagle, dont le capitaine était Robert FitzRoy ? Il a notamment travaillé sur les îles Galapagos.",
+      "answer": "Charles Darwin"
+    },
+    {
+      "question": "Quel pays abrite les Länder de Styrie, Carinthie et du Tyrol ?",
+      "answer": "Autriche"
+    },
+    {
+      "question": "Quel chanteur d'opérettes né à Irun est associé aux oeuvres de Francis Lopez dont Mexico, L'amour est un bouquet de violettes ou La Belle de Cadix ?",
+      "answer": "Luis Mariano"
+    },
+    {
+      "question": "Quelle chaîne de montagne d'Amérique du Sud est associé au terme de \"concombre\" dans l'autre nom de la plante appelée caigua ?",
+      "answer": "Andes (Concombre des Andes)"
+    },
+    {
+      "question": "De quelle langue provient le mot \"scampi\" désignant la langoustine et également un plat à base de crustacés sautées à l'huile d'olive, à l'ail et au vin blanc ?",
+      "answer": "Italien"
+    }
+  ]
+},
+    {
+  "date": "27 septembre",
+  "questions": [
+    {
+      "question": "Quel dieu de la mythologie est, fils de Poséidon et d'Amphitrite, un dieu marin ayant laissé son nom au père d'Ariel dans La Petite Sirène ? Il porte le même nom qu'un amphibien.",
+      "answer": "Triton -> Aussi le nom d'une marque connue de casque de gamer"
+    },
+    {
+      "question": "Quelle ville a accueilli en 1896 les premiers Jeux olympiques de l'ère moderne ?",
+      "answer": "Athènes"
+    },
+    {
+      "question": "Sous quel sigle est connu le système d'évaluation européen des jeux vidéo pour aider les consommateurs à s'informer sur le type de jeu et l'âge minimum conseillé ?",
+      "answer": "PEGI (Pan European Game Information"
+    },
+    {
+      "question": "Quelle est la religion de Victor Pivert, personnage incarné par Louis de Funès dans le film Les Aventures de Rabbi Jacob ?",
+      "answer": "Catholicisme -> piègeux, film tourné autour du judaïsme"
+    },
+    {
+      "question": "Représenté sur le billet de 2 dollars américain, quel président de 1801 à 1809 fut le 3ème des USA ? Il fut aussi le principal rédacteur de la déclaration d'Indépendance du pays.",
+      "answer": "Thomas Jefferson -> Les Américains affirment 'vénérer Washington, aimer Lincoln et se rappeler Jefferson'"
+    },
+    {
+      "question": "Que signifie la lettre S dans le sigle HAS désignant une haute autorité ayant pour but de se prononcer sur l'efficacité thérapeutique des produits en France ?",
+      "answer": "Santé (Haute Autorité de Santé)"
+    },
+    {
+      "question": "Dans quelle préfecture française la Loire rejoint-elle l'Erdre ? Il s'agit de la dernière préfecture traversée par la Loire.",
+      "answer": "Nantes -> La Chapelle sur Erdre"
+    },
+    {
+      "question": "De quel pays est originaire le chanteur Tulus, à l'origine des titres Teh Hijau et Monokrom et né en 1987 dans la région du Sumatra-occidental ?",
+      "answer": "Indonésie -> Sumatra"
+    },
+    {
+      "question": "Quel mot désigne la femelle du lièvre ?",
+      "answer": "Hase"
+    },
+    {
+      "question": "Quel outil du jardinier est associé, dans une expression, au fait de se faire éconduire ?",
+      "answer": "Râteau (Se prendre un râteau)"
+    }
+  ]
+},
+    {
   "date": "26 septembre 2026",
   "questions": [
     {
