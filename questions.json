@@ -1,7 +1,52 @@
 {
   "days":[
+    {
+  "date": "25 septembre 2026",
+  "questions": [
+    {
+      "question": "Quel roman écrit par Margaret Mitchell et adapté au cinéma en 1939 raconte l'histoire d'amour de Scarlett O'Hara et Rhett Butler pendant la Guerre de Sécession ?",
+      "answer": "Autant en emporte le vent -> Guerre de Sécession -> Margaret Mitchell, classique, reviens souvent, à savoir"
+    },
+    {
+      "question": "Quel nom donne-t-on à l'objet servant à frapper la balle au baseball ?",
+      "answer": "Batte"
+    },
+    {
+      "question": "Quel acronyme anglais a plusieurs explications de son sigle, pouvant être traduites en français par \"rire à gorge déployée\" ou \"beaucoup de rires\" ?",
+      "answer": "LOL -> Laughing out loud -> Littéralement riant très fort"
+    },
+    {
+      "question": "Quel prénom porte le héros de bande dessinée créé par Zep, reconnaissable à sa mèche jaune ?",
+      "answer": "Titeuf -> ZEP"
+    },
+    {
+      "question": "Quelle ville abritait le plus grand ghetto juif lors de la Seconde Guerre mondiale ? Fondé en 1940, il a accueilli jusqu'à 460 000 personnes.",
+      "answer": "Varsovie -> Nekfeu 'que dire à ton voisin qui a perdu ses grands-parents dans le ghetto de Varsovie'"
+    },
+    {
+      "question": "Quelle partie d'un oeuf est appelée scientifiquement albumen ?",
+      "answer": "Blanc d'oeuf, vs jaune d'oeuf qui est vitellus"
+    },
+    {
+      "question": "Quel pays est avec environ 1,47 milliard d'habitants, le plus peuplé du monde ?",
+      "answer": "Inde -> Chine 1,41Milliards, Chine a été freinée car politique du malthusianisme, cf Thomas Malthus"
+    },
+    {
+      "question": "Quel prénom est partagé par la meneuse des Pussycat Dolls nommée Scherzinger et l'interprète de \"Téléphone-moi\" nommée Croisille ?",
+      "answer": "Nicole"
+    },
+    {
+      "question": "Quelle anagramme du nom d'un animal domestique désigne également la petite cabane lui servant d'abri ?",
+      "answer": "Niche"
+    },
+    {
+      "question": "Quelle boisson est associée à la ville indienne de Darjeeling, étant l'une des variétés les plus réputées au monde ?",
+      "answer": "Thé"
+    }
+  ]
+},
     { 
-  "date": "25 Septembre 2026",
+  "date": "24 Septembre 2026",
   "questions": [
     {
       "question": "Dans la mythologie égyptienne, combien de génies formaient l'Ogdoade d'Hermopolis ?",
