@@ -17,7 +17,7 @@
     },
     {
       "question": "Quel homme célèbre a été interprété par Ben Kingsley dans un film biographique de Richard Attenborough de 1982 ?",
-      "answer": "Gandhi"
+      "answer": "Gandhi -> Ben Kingsley, le film s'appelle Gandhi et dure 3h11"
     },
     {
       "question": "De quel personnage historique Theodor Morell, médecin reconnu pour ses traitements non conventionnels et de l'ordre de la charlatanerie, était-il le médecin personnel ?",
@@ -25,11 +25,11 @@
     },
     {
       "question": "Quel célèbre scientifique a navigué sur les mers au XIXe siècle à bord du bateau appelé HMS Beagle, dont le capitaine était Robert FitzRoy ? Il a notamment travaillé sur les îles Galapagos.",
-      "answer": "Charles Darwin"
+      "answer": "Charles Darwin -> HMS Beagle + Galapagos : plein d'espèces d'animaux différents"
     },
     {
       "question": "Quel pays abrite les Länder de Styrie, Carinthie et du Tyrol ?",
-      "answer": "Autriche"
+      "answer": "Autriche -> Tyroll "
     },
     {
       "question": "Quel chanteur d'opérettes né à Irun est associé aux oeuvres de Francis Lopez dont Mexico, L'amour est un bouquet de violettes ou La Belle de Cadix ?",
@@ -41,7 +41,7 @@
     },
     {
       "question": "De quelle langue provient le mot \"scampi\" désignant la langoustine et également un plat à base de crustacés sautées à l'huile d'olive, à l'ail et au vin blanc ?",
-      "answer": "Italien"
+      "answer": "Italien, les scampis sont souvent accompagnées de porto "
     }
   ]
 },
