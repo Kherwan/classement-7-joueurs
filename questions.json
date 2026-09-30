@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "30 Septembre 2026",
+  "questions": [
+    {
+      "question": "Quelle année correspond au titre d'un livre dystopique mettant notamment en scène Winston Smith et Big Brother ?",
+      "answer": "1984 -> Roman de Geoerge Orwell, un classique"
+    },
+    {
+      "question": "Quel commentateur de football s'est écrié en 1998 après la victoire de la France en coupe du monde : \"Je crois qu'après avoir vu ça, on peut mourir tranquilles ! Enfin, le plus tard possible, mais on peut.\"",
+      "answer": "Thierry Roland - il a aussi dit ça : 'Il n'y a rien qui ne ressemble plus à un Coréen qu'un autre Coréen, surtout habillé en footballeur, d'autant qu'ils mesurent tous 1,70 m, 1,75 m, et qu'ils sont tous bruns sauf le gardien.' il est mort en 2012"
+    },
+    {
+      "question": "Quel nom désignant un petit instrument de musique est également le nom de la monnaie fictive utilisée dans le jeu vidéo Animal Crossing ?",
+      "answer": "Clochette, monsieur Nook, les émotions"
+    },
+    {
+      "question": "Quelle actrice a reçu 5 Césars de la meilleure actrice pour ses rôles dans Possession, L'été meurtrier, Camille Claudel, La Reine Margot et La Journée de la Jupe ?",
+      "answer": "Isabelle Adjani"
+    },
+    {
+      "question": "Quel prénom est porté par l'actuelle reine des belges, épouse du roi Philippe ?",
+      "answer": "Mathilde"
+    },
+    {
+      "question": "Quel doigt de la main est aussi une unité anglo-saxonne équivalant à 2,54 centimètres ?",
+      "answer": "Pouce, rien à voir mais bon de rappeler qu'un filet de tennis mesure 0,914m, soit 3 pieds, donc un peu à voir quand même"
+    },
+    {
+      "question": "Quelle région autonome espagnole s'étend au nord-ouest du pays et compte pour villes principales La Corogne, Vigo et Saint-Jacques de Compostelle ?",
+      "answer": "Galice"
+    },
+    {
+      "question": "Parce qu'il est à Bénouville dans le Calvados, quel aptonyme est le nom de famille du chanteur interprète de \"Michèle\", \"Voici les clés\" et \"La ballade des gens heureux\" ?",
+      "answer": "Lenorman (Gérard Lenorman) -> Aptonyme : fait d'avoir un nom qui a un sens quand on le rapporte à la personne qui le porte"
+    },
+    {
+      "question": "Quel légume de la famille des brassicacées est à la base du caldo verde portugais ?",
+      "answer": "Chou"
+    },
+    {
+      "question": "Dans quel pays est situé le \"Château\" dans une expression française désignant quelque chose d'impossible ou d'irréalisable ?",
+      "answer": "Château en Espagne-> Zazie : j'achète un château en Espaaaagne"
+    }
+  ]
+},
+    {
   "date": "29 septembre",
   "questions": [
     {
