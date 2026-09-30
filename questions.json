@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "26 septembre 2026",
+  "questions": [
+    {
+      "question": "Quelle ville est, avec Gomorrhe, l'autre ville légendaire de la Bible, détruite par une pluie de feu et de soufre divine en raison de la corruption de ses habitants ?",
+      "answer": " Sodome, cf George Brassens : C'étaient pas des amis de luxe /Des petits Castor et Pollux /Des gens de Sodome et Gomorrhe Sodome et Gomorrhe C'étaient pas des amis choisis Par Montaigne et La Boétie Sur le ventre ils se tapaient fort Les copains d'abord'"
+    },
+    {
+      "question": "Dans quel sport Simon Gauzy a-t-il remporté une médaille de bronze par équipes aux Jeux olympiques de Paris 2024 ? Il était en équipes avec deux sportifs prénommés Félix et Alexis.",
+      "answer": "Tennis de table -> Les frères Lebrun : Félix et Alexis"
+    },
+    {
+      "question": "Par opposition à HDD , quel sigle de trois lettres désigne un type de disque statique à semi-conducteurs, beaucoup plus rapides que leurs prédecesseurs ?",
+      "answer": "SSD"
+    },
+    {
+      "question": "Qui est associé au Bon et à la Brute dans le nom d'un film réalisé par Sergio Leone ?",
+      "answer": "Le Truand (Le Bon, la Brute et le Truand"
+    },
+    {
+      "question": "Quelle figure du pacifisme, journaliste castrais de naissance, fut assassiné à la veille de la Première Guerre mondiale, au Café du Croissant, par un certain Raoul Villain ?",
+      "answer": "Jean Jaurès"
+    },
+    {
+      "question": "Quel osselet de l'oreille moyenne, a pour nom latin \"incus\" et possède une taille intermédiaire entre les deux autres ?",
+      "answer": "Enclume -> étrier > enclume > marteau"
+    },
+    {
+      "question": "Quel état des Etats-Unis abritant le Grand Canyon a pour capitale la ville de Phoenix ?",
+      "answer": "Arizona -> Phoenix, Arizona"
+    },
+    {
+      "question": "Quel chanteur étasunien engagé surtout actif dans les années 60 est célèbre pour ses chansons \"Blowin' in the wind\", \"Like a rolling stone\" et \"Knockin' on Heaven's door\" ?",
+      "answer": "Bob Dylan -> Like a Rolling stone et Knockin on Heaven's door, ses plus grands classqiues. Knockin on Heaven's door, littéralement frappé à la porte du Paradis, reprise par les Guns N Roses, très belle reprise mais pas autant que la reprise de volée de Zizou face à Leverkusen en 2005 pour décrocher la LDC avec le Real, bref"
+    },
+    {
+      "question": "Quelle plante, originaire du Mexique sert notamment à la fabrication de la tequila ?",
+      "answer": "Agave -> Sirop D'Agave"
+    },
+    {
+      "question": "Quelle lettre initiale du nom de famille de son premier mari Agnès Troublé a-t-elle associé à son prénom pour créer sa marque de prêt-à-porter ?",
+      "answer": "B (Agnès.b)"
+    }
+  ]
+},
+    {
   "date": "25 septembre 2026",
   "questions": [
     {
