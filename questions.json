@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "29 septembre",
+  "questions": [
+    {
+      "question": "Quel nom désigne un pratiquant de la religion appelée islam ?",
+      "answer": "Musulman"
+    },
+    {
+      "question": "A l'origine, dans quelle ville se terminait le rallye automobile créé par Thierry Sabine en 1979 au départ de Paris ?",
+      "answer": "Dakar -> PAris-Dakar."
+    },
+    {
+      "question": "Quelle pierre précieuse est également le nom d'un langage de programmation dont voici le logo ?",
+      "answer": "Ruby -> Rubis"
+    },
+    {
+      "question": "Comment s'appelle le druide du village d'Astérix ? Il a notamment été interprété par Claude Rich dans le film Mission Cléopâtre.",
+      "answer": "Panoramix"
+    },
+    {
+      "question": "Quelle région française est également le nom d'un célèbre paquebot transatlantique français lancé en 1932 et incéndié dix ans plus tard ? Réduit à l''état d'épave, il est détruit en 1947.",
+      "answer": "Normandie -> Le Normandie, considéré comme l'un des 'boat' lol, bateau of all time. Il a pris feu à New York dans un incident apparemment accidentel mais certaines théories disant que ce n'était aps accidentel emergèrent ensuite."
+    },
+    {
+      "question": "? / 100 pts fémur",
+      "answer": "Fémur -> 45 à 50cm, situé au niveau de la cuisse, l'os le plus long du bras est l'humérus"
+    },
+    {
+      "question": "Quel pays européen est enclavé dans les Pyrénées, entre la France et l'Espagne ?",
+      "answer": "Andorre"
+    },
+    {
+      "question": "Quel point cardinal a laissé son nom à une chanson de Nino Ferrer commençant par 'C'est un endroit qui ressemble à la Louisiane, à l'Italie' ?",
+      "answer": "Le Sud, on diraiiiiit le Suuuuud, le temps dure longteeeeemps"
+    },
+    {
+      "question": "Quel mot désigne le mâle de la chèvre ?",
+      "answer": "Bouc -> penser à Papa, Chèvre Goat et Jeep sous bouc"
+    },
+    {
+      "question": "Combien de tiroirs compte le meuble de type chiffonnier, haut et étroit, appelé semainier ?",
+      "answer": "7 -> Semaine : 7 jours"
+    }
+  ]
+},
+    {
   "date": "28 septembre",
   "questions": [
     {
