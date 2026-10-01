@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "1er Octobre",
+  "questions": [
+    {
+      "question": "Quel peintre néerlandais, mort à Auvers-sur-Oise, est notamment célèbre pour s'être mutilé l'oreille ?",
+      "answer": "Vincent van Gogh -> bah ouiiii Auvers-sur-Oise, chez la copine Vérooooo"
+    },
+    {
+      "question": "De quel handicap souffrent les participants à l'équivalent des Jeux olympiques appelé Deaflympics ?",
+      "answer": "Surdité -> Deaf veut dire sourd en anglais"
+    },
+    {
+      "question": "Quel nom donné aux perturbateurs ou provocateurs sur les réseaux sociaux provient du nom de créatures de la mythologie nordique ?",
+      "answer": "Troll"
+    },
+    {
+      "question": "Quelle série de films dont l’épisode en 2025 s’intitule The Final Reckoning met en scène le personnage d’Ethan Hunt interprété par Tom Cruise ?",
+      "answer": "Mission Impossible -> Tom Cruise : Mission Impossible"
+    },
+    {
+      "question": "Quel pays a officiellement changé son nom en Myanmar en 1989 ?",
+      "answer": "Birmanie -> BirmYanmar"
+    },
+    {
+      "question": "Quel alliage composé de fer et d’une faible dose de carbone, réputé pour ses propriétés de dureté, est nommé « steel » chez les anglophones ?",
+      "answer": "Acier -> les vélos de course sont soit totalement en carbone pour les riches soit en acier donc en fer et en faible quantité de carbone pour les moins riches "
+    },
+    {
+      "question": "Quelle reine britannique a laissé son nom à la capitale historique de Hong Kong ?",
+      "answer": "Victoria -> Reine Victoria + capitale HK"
+    },
+    {
+      "question": "Quel groupe composé de Taboo, Will I Am et Fergie a sorti les titres 'I gotta feeling', 'Just can't get enough' et 'Meet me halfway' ",
+      "answer": "Black Eyed Peas -> Ils ont tellement de classique, c'est une folie -> Auteurs de Pump It pour la Bande originale de taxi 3"
+    },
+    {
+      "question": "Quel arbre possédant une espèce dite du Liban appartient à la famille des fagacées et peut également être dit rouvre ou kermès, en plus de produire des glands ?",
+      "answer": "Chêne"
+    },
+    {
+      "question": "Quel gâteau tire son nom du fait que ses ingrédients, la farine, le sucre, le beurre et les oeufs y sont représentés en quantités égales ?",
+      "answer": "Quatre-quarts -> Quatre fois 1/4"
+    }
+  ]
+},
+    {
   "date": "30 Septembre 2026",
   "questions": [
     {
