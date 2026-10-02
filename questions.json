@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "2 octobre 2026",
+  "questions": [
+    {
+      "question": "Sur quelle île se trouve Hauteville House, abritant l'actuel \"musée Victor Hugo\" et dans laquelle l'écrivain vécut pendant les quatorze dernières années de son exil ?",
+      "answer": "Guernesey -> Hauteville, aprce que plus haute que Jersey"
+    },
+    {
+      "question": "Sous quelle barrière chronométrique symbolique l'étasunien Jim Hines est-il le premier à être descendu sur 100 mètres lors de la \"Night of Speed\" en 1968 ?",
+      "answer": "10 secondes"
+    },
+    {
+      "question": "Quel est le nom de champignon anthropomorphe apparaissant dans les jeux Mario et créé en 1985 ?",
+      "answer": "Toad"
+    },
+    {
+      "question": "Selon le titre d'un film réalisé par Judd Appatow, à quel âge le personnage incarné par Steve Carrell est-il toujours puceau ?",
+      "answer": "40 ans, toujours puceau"
+    },
+    {
+      "question": "Quel nom de pape a pris Robert Francis Prevost lorsqu'il est devenu pape l'année dernière ? (Prénom + Numéro)",
+      "answer": "Léon XIV -> Comme le Roi Soleil, je vous avais dit que ça tomberait"
+    },
+    {
+      "question": "Quel petit os triangulaire formant la partie antérieure du genou est appelé patella dans la nouvelle nomenclature ?",
+      "answer": "Rotule -> Os Genoux, merci Léa"
+    },
+    {
+      "question": "Quelle ville française est désignée par la périphrase \"La Cité des Papes\" du fait qu'elle abrite le Palais des Papes ?",
+      "answer": "Avignon"
+    },
+    {
+      "question": "Quel titre de noblesse est également le pseudonyme du chanteur des titres \"Kiss\" et \"Purple Rain\" surnommé le Kid de Minneapolis ?",
+      "answer": "Prince (1958-2016)"
+    },
+    {
+      "question": "Quel animal est, selon une des légendes, le dernier à être monté sur l'Arché de Noé, annonçant la fin du Déluge, c'est pour cela qu'il est devenu depuis lors symbole de la paix ?",
+      "answer": "Colombe -> peace"
+    },
+    {
+      "question": "Quelle couleur est associée au mois d'octobre dans le nom du mois de campagne annuel de prévention contre le cancer du sein ?",
+      "answer": "Octobre rose"
+    }
+  ]
+},
+    {
   "date": "1er Octobre",
   "questions": [
     {
