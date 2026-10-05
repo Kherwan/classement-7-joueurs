@@ -3,7 +3,11 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 
-API = "https://api.latabledessavoirs.fr/leaderboards/season/10/facile/search"
+SEASON = 10
+API = (
+    f"https://api.latabledessavoirs.fr"
+    f"/leaderboards/season/{SEASON}/facile/search"
+) 
 
 PLAYERS = [
     "Elisa10",
@@ -71,7 +75,7 @@ def main():
     )
 
     result = {
-        "season": 9,
+        "season": SEASON,
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "players": players
     }
