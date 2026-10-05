@@ -57,27 +57,38 @@ def fetch_player(username):
 def main():
     players = []
 
-    for username in PLAYERS:
-        print(f"Recherche de {username}...")
+    missing_players = []
 
-        player = fetch_player(username)
+for username in PLAYERS:
+    print(f"Recherche de {username}...")
+    player = fetch_player(username)
 
-        if player["score"] is None or player["rank"] is None:
-            raise RuntimeError(
-                f"Données invalides pour {username}: {player}"
-            )
+    if player is None:
+        missing_players.append(username)
+        continue
 
-        players.append(player)
+    if player["score"] is None or player["rank"] is None:
+        raise RuntimeError(
+            f"Données invalides pour {username}: {player}"
+        )
+
+    players.append(player)
+
+if not players:
+    raise RuntimeError(
+        "Aucun joueur trouvé : le classement existant est conservé."
+    )
 
     players.sort(
         key=lambda player: player["rank"]
     )
 
     result = {
-        "season": SEASON,
-        "updated_at": datetime.now(timezone.utc).isoformat(),
-        "players": players
-    }
+    "season": 10,
+    "updated_at": datetime.now(timezone.utc).isoformat(),
+    "players": players,
+    "missing_players": missing_players,
+}
 
     with open(
         "classement.json",
