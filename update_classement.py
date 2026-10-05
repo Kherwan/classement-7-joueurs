@@ -41,12 +41,11 @@ def fetch_player(username):
         None
     )
 
-    player = exact or (data[0] if data else None)
+    player = exact
 
-    if not player:
-        raise RuntimeError(
-            f"Joueur introuvable : {username}"
-        )
+    if player is None:
+    print(f"ATTENTION : joueur introuvable : {username}")
+    return None
 
     return {
         "username": player.get("username", username),
