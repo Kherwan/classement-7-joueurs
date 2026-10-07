@@ -14,6 +14,7 @@ PLAYERS = [
     "Kerwan",
     "Lroux",
     "hugovdal11",
+    "EsteJLT",
 ]
 
 
