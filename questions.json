@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "6 octobre 2026",
+  "questions": [
+    {
+      "question": "Quel philosophe français, figure de proue de l'existentialisme a refusé le Prix Nobel de littérature en 1964 ?",
+      "answer": "Jean-Paul Sartre -> Comme il dit si bien 'l'enfer c'est les rillettes', Jean Pual Sarthe"
+    },
+    {
+      "question": "Quel pays est représenté en compétition par Iga Świątek, joueuse ayant remporté 6 titres du Grand Chelem dont quatre Roland-Garros ?",
+      "answer": "Pologne -> Prononcé 'Sviantek' un truc comme ça'"
+    },
+    {
+      "question": "Etant habité par les hyliens et ayant eu pour capitale Célesbourg puis Fort de Guet, quel royaume est apparu dès le premier jeu vidéo The Legend of Zelda ?",
+      "answer": "Hyrule"
+    },
+    {
+      "question": "Quelle émission célèbre pour ses vachettes était originellement présentée par Léon Zitrone et Guy Lux ? Un retour de l'émission sans les vachettes a eu lieu en 2025.",
+      "answer": "Intervilles -> cf Rosa la vachette lors d'intervilles prime"
+    },
+    {
+      "question": "Dans quel pays se situe le Machu Picchu, étant l'une des plus grandes réalisations de l'empire inca au XVe siècle ?",
+      "answer": "Pérou -> Dédica à Maxou Pichtu"
+    },
+    {
+      "question": "Par opposition à la tachycardie, quel terme générique désigne un ralentissement du rythme cardiaque ?",
+      "answer": "Bradycardie cf Tom Brady le sportif, T comme Tachychardie vs Brady comme bradychardie"
+    },
+    {
+      "question": "Quel pays a pour endonyme Al Djazaïr ? Un endonyme est la manière dont les habitants à l'intérieur du pays peuvent désigner celui-ci.",
+      "answer": "Algérie -> ressemble un peu dans la prononication à 'Al Djazair'"
+    },
+    {
+      "question": "Quel nom de couleur, en anglais, est le nom de famille de James, chanteur auteur des titres \"Living in America\", \"I got you (I feel good)\" et \"It's a man's, man's world\" ?",
+      "answer": "Brown (James Brown)-> Couleur marron"
+    },
+    {
+      "question": "Quel animal constitue exclusivement l'ordre des lépidoptères ? On cherche un terme générique désignant la forme adulte de cet animal.",
+      "answer": "Papillon -> lepis = écailles et pteron = ailes"
+    },
+    {
+      "question": "Quel jeu de société d'origine chinoise utilise 28 pièces allant d'un double-zéro à un double-six ?",
+      "answer": "Dominos -> double zéro et double six, quand çça concerne pas un agent secret ça concerne souvent les dominos"
+    }
+  ]
+},
+    {
   "date": "5 octobre 2026",
   "questions": [
     {
