@@ -1,6 +1,52 @@
 {
   "days":[
     {
+  "date": "7 octobre 2026",
+  "questions": [
+    {
+      "question": "Quel tableau de 1937 réalisé par Pablo Picasso évoque le bombardement d'une ville basque espagnole ?",
+      "answer": "Guernica -> Guer->GUERRE"
+    },
+    {
+      "question": "Dans quel sport la française Clarisse Agbegnenou est-elle triple championne olympique ? Elle fut également porte-drapeau pour les Jeux de Tokyo.",
+      "answer": "Judo"
+    },
+    {
+      "question": "Quel acronyme anglais de quatre lettres signifie \"dès que possible\" ?",
+      "answer": "ASAP (As soon as possible)"
+    },
+    {
+      "question": "A quel réalisateur espagnol doit-on les films \"Tout sur ma mère\", \"Talons aiguilles\" et \"Femmes au bord de la crise de nerf\" ?",
+      "answer": "Pedro Almodovar -> Aussi réal de Volver"
+    },
+    {
+      "question": "Qui John Wilkes Booth a-t-il assassiné dans le théâtre Ford le 14 avril 1865 ?",
+      "answer": "Abraham Lincoln, un des 4 présidents américains assassinés dans l'histoire avec Garfield, Mckinley et Kennedy "
+    },
+    {
+      "question": "Quelle échelle de la vitesse moyenne du vent sur une durée de dix minutes utilisée dans les milieux maritimes tire son nom d'un amiral britannique prénommé Francis qui l'a créée en 1805 ?",
+      "answer": "Échelle de Beaufort"
+    },
+    {
+      "question": "Quel fleuve dont le nom en français est celui d'un sentiment marque une partie de la frontière entre la Chine et la Russie ?",
+      "answer": "Amour -> Fleuve Amour"
+    },
+    {
+      "question": "Quelle chanteuse est surtout connue pour ses titres \"I will Always love you\", reprise de Dolly Parton, et \"I wanna dance with somebody\" ? Cette chanteuse a été retrouvée morte à 48 ans en 2012.",
+      "answer": "Whitney Houston -> Cf Cauet : 'et Whitney Houston elle fait plus caca' dans la parodie de 'Tacata' nommée 'pacaca' "
+    },
+    {
+      "question": "Quelle plante poussant naturellement sur le pourtour méditerranéen tire son nom du latin signifiant \"rosée de mer\" ?",
+      "answer": "Romarin ROsée de Mer -> ROsée de MARIN"
+    },
+    {
+      "question": "Dans quelle ville française les restaurants traditionnels sont-ils appelés bouchons ?",
+      "answer": "Lyon -> bouchons lyonnais, capitale de la gastronomie"
+    }
+  ]
+},
+    
+    {
   "date": "6 octobre 2026",
   "questions": [
     {
