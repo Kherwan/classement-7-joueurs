@@ -1,6 +1,137 @@
 {
   "days":[
     {
+  "date": "12 octobre 2026",
+  "questions": [
+    {
+      "question": "Dans quel sport les néo-zélandais Dan Carter, Richie McCaw et Beauden Barrett se sont-ils illustrés ?",
+      "answer": "Rugby -> Dan Carter légende des All Blacks"
+    },
+    {
+      "question": "Sous quel nom désigne-t-on cette équipe constituant des antagonistes dans la saga Pokémon ?",
+      "answer": "Team Rocket"
+    },
+    {
+      "question": "Quel mot est cité dans deux films de Hayao Miyazaki, où il est dit \"Dans le ciel\" et \"ambulant\" ?",
+      "answer": "Le Château"
+    },
+    {
+      "question": "Dans quel pays actuel se situe majoritairement la province romaine de Lusitanie ? C'est dans cette province que se déroule majoritairement le dernier album d'Astérix.",
+      "answer": "Portugal"
+    },
+    {
+      "question": "? / 100 pts Axiale",
+      "answer": "Symétrie axiale"
+    },
+    {
+      "question": "De quel département la ville de Chambéry est-elle la préfecture ? Cette ville abrite notamment la fontaine des éléphants.",
+      "answer": "Savoie"
+    },
+    {
+      "question": "Quelle chanteuse née en 1999, s'étant fait connaître en jouant dans des séries sur Disney Channel, a connu le succès avec le titre \"Espresso\" ?",
+      "answer": "Sabrina Carpenter"
+    },
+    {
+      "question": "Quel nom désigne le cri rauque et puissant poussé par le cerf ou le daim lors de la saison des amours, allant généralemnt de mi-septembre à mi-octobre ?",
+      "answer": "Brame"
+    },
+    {
+      "question": "Quel est le seul panneau routier en France à être de forme octogonale ?",
+      "answer": "STOP"
+    }
+  ]
+},
+    {
+  "date": "11 octobre 2026",
+  "questions": [
+    {
+      "question": "Quel prénom partagent les compositeurs nommés Strauss, père et fils, l'un célèbre pour sa marche de Radetzky et l'autre pour son Beau Danube Bleu ?",
+      "answer": "Johann Strauss"
+    },
+    {
+      "question": "Quelle équipe nationale l'équipe de France de football a-t-elle affronté en finale de la coupe du monde de football en 2018 ? Elle a remporté le match 4 buts à 2.",
+      "answer": "Croatie"
+    },
+    {
+      "question": "Que signifie le F dans le sigle français FAQ, directement adapté du sigle anglais pour \"Frequently Asked Questions\" ?",
+      "answer": "Foire (Foire aux questions"
+    },
+    {
+      "question": "Quel est le nom de cette grenouille, marionnette apparue dans le Muppet Show en 1955 ?",
+      "answer": "Kermit -> Kermit la grenouille et pas Kermit Erasmus"
+    },
+    {
+      "question": "Sous quel nom la ville de Byzance, actuelle Istanbul, a-t-elle été connue pendant plus d'un millénaire ? Elle fut nommée en l'honneur d'un empereur romain.",
+      "answer": "Constantinople / Byeance / Istanbul, un N pour Istanbul et pas un M, habitants sont les Stambouliotes"
+    },
+    {
+      "question": "Quelle couleur désigne également les globules appelés leucocytes ?",
+      "answer": "Globules blancs vs globules rouges :érythropoïèse "
+    },
+    {
+      "question": "Sur quel continent se situe le Suriname ? Ce pays, ancienne colonie néerlandaise, a pour capitale la ville de Paramaribo.",
+      "answer": "Amérique (du Sud"
+    },
+    {
+      "question": "Quel prénom est partagé par les chanteurs nommés Ferry, leader du groupe Roxy Music, Molko du groupe Placebo, et Adams, auteur de \"(Everything I Do) I Do It For You\", \"Heaven\" et \"Summer of '69\" notamment ?",
+      "answer": "Bryan, where is Bryan? At the head of Placebo lol"
+    },
+    {
+      "question": "Quelle plante dont le nom vient du latin signifiant \"mille trous\" appartient au genre \"hypericum\" et est reconaissable à ses vives fleurs jaunes ?",
+      "answer": "Millepertuis -> 1000 trous -> 1000Pertuis"
+    },
+    {
+      "question": "Quelle couleur complémentaire du rouge est utilisée en synthèse soustractive dans l'imprimerie et dans la photographie ?",
+      "answer": "Cyan"
+    }
+  ]
+},
+    {
+  "date": "10 octobre 2026",
+  "questions": [
+    {
+      "question": "Quel jour, le plus saint et le plus solennel de l'année juive, est également connu sous le nom de Jour du Grand Pardon ? Il s'agit de la principale fête religieuse juive.",
+      "answer": "Yom Kippour, autres fêtes célèbres : Rosh Hashana pour le Nouvel An, Pessah à Pâques, Hanouka pour la fête des Lumières, Pourim pour délivrance du peuple juif"
+    },
+    {
+      "question": "Dans quel sport le français Nicolas Batum a-t-il été professionnel ? Il a notamment été l'auteur d'un contre décisif en 2024, en demi-finale des Jeux olympiques et s'est illustré dans 177 matchs de l'équipe de France, avant de prendre sa retraite en 2026.",
+      "answer": "Basket-ball, le contre de 2024, le sport qu'on aime, trop les émotions"
+    },
+    {
+      "question": "Quel nom de poisson est associé au terme de plante dans le nom de ces plantes carnivores présentes dans l'univers Mario ?",
+      "answer": "Planta Piranha"
+    },
+    {
+      "question": "Par quel animal est représenté Robin des Bois dans le classique d'animation de Disney en 1973 ?",
+      "answer": "Renard"
+    },
+    {
+      "question": "Quel président de la cinquième république française est resté le plus longtemps à la tête du pays, avec 14 années, soit deux septennats consécutifs, entre 1981 et 1995 ?",
+      "answer": "François Mitterrand"
+    },
+    {
+      "question": "Quelle invention due à René Laënnec permet d'amplifier le son du rythme cardiaque pendant une auscultation ?",
+      "answer": "Stéthoscope"
+    },
+    {
+      "question": "Quel fleuve rejoint la Dordogne pour former l'estuaire de la Gironde ?",
+      "answer": "Garonne"
+    },
+    {
+      "question": "Quel nom de ville, constituant le titre le plus connu du groupe Bastille, est celui d'une ville ensevelie par l'éruption du Vésuve en 79 ?",
+      "answer": "Pompeii -> bonne musique"
+    },
+    {
+      "question": "Quel mot composé désigne l'espèce de hibou européenne moins grande que le grand-duc et moins petite que le petit-duc ?",
+      "answer": "Moyen-duc"
+    },
+    {
+      "question": "Quel numéro est associé au mot \"Zone\" dans le nom d'une base militaire ultra-secrète célèbre des USA située à 133 kilomètres au nord-ouest de Las Vegas ?",
+      "answer": "Zone 51 cf tentative d'envahissement de la Zone 51"
+    }
+  ]
+},
+    {
   "date": "9 octobre 2026",
   "questions": [
     {
