@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "9 octobre 2026",
+  "questions": [
+    {
+      "question": "Quelle est la matière du chapeau appartenant à Luffy dans le manga One Piece d'Eiichirō Oda ?",
+      "answer": "Chapeau de paille"
+    },
+    {
+      "question": "De quel pays est originaire Nasser al-Khelaïfi, président de beIN et du Paris Saint-Germain ?",
+      "answer": "Qatar"
+    },
+    {
+      "question": "Que signifie le sigle DM, très utilisé pour qualifier la messagerie privée sur les réseaux sociaux ?",
+      "answer": "Direct Message"
+    },
+    {
+      "question": "Quel super-héros est incarné au cinéma par Tom Holland depuis le film \"Homecoming\" en 2017 ?",
+      "answer": "Spider-Man"
+    },
+    {
+      "question": "Quel était le numéro du dernier roi de France à avoir porté le prénom Louis ?",
+      "answer": "Louis XVIII (18) -> Essayer le plus de numéro possible et voir à partir duquel c'est chelou, Louis XIX ça sonne bizarre"
+    },
+    {
+      "question": "Comme sur une bicyclette, quel mot masculin désigne la petite roue dentée entraînée par une chaîne ? C'est également en mécanique un disque d'acier crénelé que l'on trouve dans les engrenages.",
+      "answer": "Pignon -> Comme François"
+    },
+    {
+      "question": "Dans quelle ville autrichienne célèbre à l'époque pour ses mines de sel est né le musicien Wolfgang Amadeus Mozart le 27 janvier 1756 ?",
+      "answer": "Salzbourg attention pas Vienne"
+    },
+    {
+      "question": "Dans une chanson sous-titrée \"T.G.I.F\" parue sur l'album Teenage Dream en 2010, la soirée de quel jour de la semaine Katy Perry raconte-t-elle ?",
+      "answer": "Friday / Vendredi (Last Friday Night"
+    },
+    {
+      "question": "Quel mot masculin désigne, en botanique, la graine comestible du pin parasol ?",
+      "answer": "Pignon -> Pin -> Pignon"
+    },
+    {
+      "question": "Pour quelle langue les katakana et les hiraganas sont-ils les deux syllabaires utilisés ?",
+      "answer": "Japonais"
+    }
+  ]
+},
+    {
   "date": "7 octobre 2026",
   "questions": [
     {
