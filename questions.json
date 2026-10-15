@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "14 octobre 2026",
+  "questions": [
+    {
+      "question": "Au nombre de 9, quelles filles de Mnémosyne étaient les représentantes des arts dans la mythologie grecque ? On comptait parmi elle notamment Terpsichore, Clio et Euterpe.",
+      "answer": "Muses"
+    },
+    {
+      "question": "Quel pilote de MotoGP italien est associé au nombre 46 ? Il l'a arboré pendant toute sa carrière et a même fondé l'écurie VR46, mentionnant ses initiales et ce nombre.",
+      "answer": "Valentino Rossi -> icône du Moto GP, légende avec Marc Marquez"
+    },
+    {
+      "question": "Quel mot anglais est désigné par la lettre \"N\" dans le sigle RNG utilisé pour parler d'un événement soumis à l'aléatoire ?",
+      "answer": "Number (Random Number Generator)"
+    },
+    {
+      "question": "Qui est associé au Bon et à la Brute dans le titre d'un western de 1966 de Sergio Leone ?",
+      "answer": "Le Truand (Le Bon, la Brute et le Truand"
+    },
+    {
+      "question": "De quelle ville Gaston Defferre fut-il maire de 1953 à 1986, en parallèle de ses différents postes dans les gouvernements français ?",
+      "answer": "Marseille -> cf loi 1982 décentralisation"
+    },
+    {
+      "question": "Quel animal a laissé son nom à ce type de pince, organe de connexion électrique rapide et provisoire ?",
+      "answer": "Pince crocodile"
+    },
+    {
+      "question": "Combien les USA comptent-ils d'état ? Le dernier entré est Hawaï en 1959.",
+      "answer": "50"
+    },
+    {
+      "question": "Quel prénom partagent les chanteurs Barzotti, auteur de \"Je ne t'écrirai plus\", MC Solaar, et Nougaro, chanteur très largement associé à la ville de Toulouse ?",
+      "answer": "Claude -> MC Solaar = MC Claude + Da Vinci Claude"
+    },
+    {
+      "question": "Sur quel continent vit exclusivement, à l'état naturel et à l'origine, le jaguar ?",
+      "answer": "Amérique"
+    },
+    {
+      "question": "Quel mot emprunté à l'alémanique signifiant \"casquette\" désigne ce type de couvre-chef militaire ?",
+      "answer": "Képi"
+    }
+  ]
+},
+    {
   "date": "13 octobre 2026",
   "questions": [
     {
