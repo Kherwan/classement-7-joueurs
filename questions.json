@@ -1,6 +1,51 @@
 {
   "days":[
     {
+  "date": "13 octobre 2026",
+  "questions": [
+    {
+      "question": "Quel célèbre écrivain français est associé à la madeleine ainsi qu'à un questionnaire d'identification ?",
+      "answer": "Marcel Proust -> La madeleine de Proust, qu'il trempe dans le coffee chez sa grande daronne"
+    },
+    {
+      "question": "Dans quel sport de combat se sont illustrés Estelle Mossely et Tony Yoka, tous deux champions olympiques à Rio en 2016 à quelques jours d'écart ?",
+      "answer": "Boxe"
+    },
+    {
+      "question": "Quel adjectif qualifie le \"pavé\" dans le nom de cette partie du clavier permettant d'entrer des chiffres ?",
+      "answer": "Pavé numérique"
+    },
+    {
+      "question": "Quel nom de trois lettres est porté par une hyène affamée, compagne de Sharko dans un dessin animé et, dans une série de bande dessinée d'Alain Saint-Ogan, le compagnon de Puce ?",
+      "answer": "Zig"
+    },
+    {
+      "question": "Quel ministre de la guerre prénommé André a laissé son nom à une ligne de fortifications construite par la France le long de ses frontières avec la Belgique, le Luxembourg, l'Allemagne, la Suisse et l'Italie entre 1928 et 1940 ?",
+      "answer": "André Maginot -> La ligne Maginot"
+    },
+    {
+      "question": "De quel pays est originaire Christian Barnard, premier chirurgien à réussir en 1967 une transplantation cardiaque à partir d'un coeur humain ?",
+      "answer": "Afrique du Sud"
+    },
+    {
+      "question": "A quel pays appartenait Macao avant de devenir en 1999 une région administrative à statut particulier de la Chine ?",
+      "answer": "Portugal"
+    },
+    {
+      "question": "Quel mot allemand signifiant \"guerre éclair\" est associé à \"Bop\" dans le titre du plus gros succès des Ramones ?",
+      "answer": "Blitzkrieg (Blitzkrieg Bop) -> Aux échecs : une partie en 3 min de chaque côté est également appelée une Blietzkrieg, ça vient de là"
+    },
+    {
+      "question": "Quelle espèce de plantes à fleurs, souvent utilisé comme herbe aromatique, est dit \"sauce\" en opposition aux plantes dites \"tin\" et rose\" n'étant pas comesibles ?",
+      "answer": "Laurier-sauce"
+    },
+    {
+      "question": "Quel sigle de trois lettres, étant également le nom d'une série diffusée sur France 3, désigne un officier de police judicaire ?",
+      "answer": "OPJ"
+    }
+  ]
+},
+    {
   "date": "12 octobre 2026",
   "questions": [
     {
