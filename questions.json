@@ -1,5 +1,231 @@
 {
-  "days":[{
+  "days":[
+    {
+  "date": "20 octobre 2026",
+  "questions": [
+    {
+      "question": "Quel nom porte l'alter-ego du docteur Jekyll, personnage inventé par Robert Louis Stevenson en 1886 ?",
+      "answer": "Mister Hyde"
+    },
+    {
+      "question": "Dans quel sport Céline Dumerc, longtemps capitaine de l'équipe de France, détient-elle avec 262 matchs joués, le record de sélections en équipe de France, hommes et femmes confondus ?",
+      "answer": "Basket-ball -> Céline Dumerc prime, goat"
+    },
+    {
+      "question": "Sur de nombreux sites notamment YouTube, par quel pictogramme est représentée la fonctionnalité d'alertes par notifications ?",
+      "answer": "Cloche"
+    },
+    {
+      "question": "Quel est le nom de ce personnage, créé à l'origine par James Matthew Barrie et apparu dans le dessin animé Peter Pan de Disney en 1953 ?",
+      "answer": "Fée Clochette"
+    },
+    {
+      "question": "Quelle ville française est surnommée la cité corsaire du fait d'avoir été la patrie de nombreux marins dont Robert Surcouf, peut-être le plus célèbre d'entre eux ?",
+      "answer": "Saint-Malo"
+    },
+    {
+      "question": "Quel outil peut être dit à chantourner, sauteuse ou égoïne ?",
+      "answer": "Scie"
+    },
+    {
+      "question": "Quelle grande gare parisienne desservant l'ouest de la France voit son nom associé à celui de Fulgence Bienvenüe dans le nom d'une station de métro ?",
+      "answer": "Montparnasse -> Montparnasse-Bienvenüe l'arrêt sur la 6, c'est l'ingénieur qui a conçu le métro de Paname"
+    },
+    {
+      "question": "Qu'est-ce qui est associé au \"sex and sun\" selon le titre d'une chanson de Serge Gainsbourg ?",
+      "answer": "Sea (Sea, Sex and Sun)"
+    },
+    {
+      "question": "Quels animaux sont élevés dans le cadre de l'ostréiculture ?",
+      "answer": "Huîtres"
+    },
+    {
+      "question": "Au Mont Saint-Michel, quelle est la spécialité culinaire de la Mère Poulard ?",
+      "answer": "Omelette -> L'omelette de la Mère Poulard, un classique, ouais, 36e le classique quand même"
+    }
+  ]
+},
+    {
+  "date": "19 octobre 2026",
+  "questions": [
+    {
+      "question": "Apparu pour la première fois dans Une étude en rouge en 1887, quel détective a été créé par Arthur Conan Doyle ?",
+      "answer": "Sherlock Holmes"
+    },
+    {
+      "question": "Quel prénom porté par le tennisman belge nommé Bergs vient du surnom du footballeur français Zinedine Zidane ?",
+      "answer": "Zizou (Zizou Bergs)"
+    },
+    {
+      "question": "À l'origine, à combien de caractères était limité un tweet ?",
+      "answer": "140 caractères, puis 280 puis illimité auj je crois"
+    },
+    {
+      "question": "Quel célèbre écrivain fut incarné par André Marcon dans le film \"J'accuse\" sorti en 2019 ?",
+      "answer": "Émile Zola"
+    },
+    {
+      "question": "Dans quel pays une guerre civile éclata-t-elle en 1936 après la victoire du Frente Popular mené par Manuel Azaña, qui fut d'ailleurs président de la Seconde République de ce pays jusqu'en 1939 ?",
+      "answer": "Espagne -> 36-39 et avènement de Franco au pouvoir"
+    },
+    {
+      "question": "Quel élément chimique de numéro atomique 54, tire son nom d'un mot grec signifiant \"étranger\" ? Il s'agit d'un gaz rare utilisé dans le domaine médical et dans les flashs lumineux notamment.",
+      "answer": "Xénon -> 'vitres teintées, phares xenon'"
+    },
+    {
+      "question": "Combien la ville de Paris compte-t-elle d'arrondissements ?",
+      "answer": "20"
+    },
+    {
+      "question": "A quel film sont associées les chansons composées par Bruno Coulais nommées \"Cerf-volant\", \"Vois sur ton chemin\" et \"Caresse sur l'océan\" ?",
+      "answer": "Les Choristes"
+    },
+    {
+      "question": "Quelle race de chat originaire de Turquie tire son nom de l'ancienne appellation de la capitale du pays ?",
+      "answer": "Angora turc -> Chat angora"
+    },
+    {
+      "question": "Quel mot français, désignant la rémunération du travail, provient étymologiquement du sel, qui était utilisé comme monnaie dans l'Antiquité ?",
+      "answer": "Salaire -> Sel -> Salaire"
+    }
+  ]
+},
+    {
+  "date": "18 octobre 2026",
+  "questions": [
+    {
+      "question": "Quel prénom partagent le peintre symboliste nommé Moreau et le peintre chef de file du courant réaliste nommé Courbet ?",
+      "answer": "Gustave"
+    },
+    {
+      "question": "Lui ayant laissé son nom, quel sculpteur français a créé le \"Bouclier\" remis à l'équipe de rugby remportant le Top 14 en France ?",
+      "answer": "Charles Brennus -> Bouclier de Brennus"
+    },
+    {
+      "question": "Quel titre d'une chanson de 2011 de Rebecca Black étant devenu une des premières vidéos virales de YouTube, contient les paroles \"Yesterday was Thursday\" ?",
+      "answer": "Friday"
+    },
+    {
+      "question": "Quel acteur fut révélé par son rôle dans le film Chien de la casse avant de tourner dans Yannick de Quentin Dupieux ?",
+      "answer": "Raphaël Quenard"
+    },
+    {
+      "question": "Dans quelle péninsule européenne eut lieu un conflit entre 1853 et 1856 opposant une coalition franco-britannico-ottomane à l'empire russe ?",
+      "answer": "Guerre de Crimée"
+    },
+    {
+      "question": "Quel appareil permet de mesurer la vitesse ou la pression du vent ? Le nom de cet appareil est tiré des mots grecs signifiant \"vent\" et \"mesure\".",
+      "answer": "Anémomètre"
+    },
+    {
+      "question": "De quel pays est originaire quelque chose ou quelqu'un qualifié d'helvétique ?",
+      "answer": "Suisse -> Cf héros helvétique Guillaume Tell 2j plus tôt"
+    },
+    {
+      "question": "Quel célèbre peintre espagnol a laissé son nom a un titre des rappeurs Bigflo et Oli sur leur album Karma ?",
+      "answer": "Picasso"
+    },
+    {
+      "question": "Quel est cet animal, reconnaissable à son unique bosse sur le dos ?",
+      "answer": "Dromadaire"
+    },
+    {
+      "question": "Dans quelle ville se situe le MUCEM, le musée des civilisations de l'Europe et de la Méditerranée ?",
+      "answer": "Marseille -> MUsée des Civilisation de l'Europe et de la Méditerannée"
+    }
+  ]
+},
+    {
+  "date": "17 octobre 2026",
+  "questions": [
+    {
+      "question": "Quel personnage de la mythologie grecque, fils de Dédale, périt pour s'être trop approché du Soleil avec des ailes de cire qui fondirent en s'en approchant ?",
+      "answer": "Icare"
+    },
+    {
+      "question": "Quel célèbre boxeur, surnommé le bombardier marocain, est décédé lors d'un accident d'avion en 1949 fut également l'amant de la chanteuse Edith Piaf ?",
+      "answer": "Marcel Cerdan"
+    },
+    {
+      "question": "De quelle ville réelle des USA est très largement inspirée Los Santos, ville fictive dans laquelle se déroule l'action de Grand Theft Auto V ?",
+      "answer": "Los Angeles -> Los -> Los"
+    },
+    {
+      "question": "Quel nom de famille partagent les sœurs Kylie et Kendall, ainsi que leurs parents Kris et Caitlyn ?",
+      "answer": "Jenner -> 'tu seras ma Kendall Jenneeeeeer, on se parlera pendant des heuuuuuuuuures'"
+    },
+    {
+      "question": "Dans quel pays le palais Huis ten Bosch, nom signifiant littéralement \"Maison de la forêt\" sert-il de résidence officielle au roi Willem-Alexander ?",
+      "answer": "Pays-Bas"
+    },
+    {
+      "question": "Quel type de précipitations, caractéristique de l'équinoxe de printemps au mois de mars, est souvent une averse brève et intense, accompagnée de vent ?",
+      "answer": "Giboulée -> giboulées de mars"
+    },
+    {
+      "question": "Quel château, ancienne prison, citée notamment dans \"Le Comte de Monte-Cristo\" est situé juste en face de la ville de Marseille ?",
+      "answer": "Château d'If"
+    },
+    {
+      "question": "Dans quelle ville faut-il laisser les gondoles selon le titre d'une chanson de Sheila et Ringo datant de 1973 ?",
+      "answer": "Les gondoles à Venise -> Laisse les gondoooles à Veniiiiise, le printemps sur la Tamiiiiise"
+    },
+    {
+      "question": "Quel fruit souvent confondu avec le pamplemousse n'en a pourtant ni la peau épaisse ni les pépins ?",
+      "answer": "Pomélo"
+    },
+    {
+      "question": "Quel mot issu du russe signifiant \"qui bout tout seul\" désigne un ustensile traditionnel utilisé pour faire bouillir l'eau et préparer le thé en Russie ?",
+      "answer": "Samovar"
+    }
+  ]
+},
+    {
+  "date": "16 octobre 2026",
+  "questions": [
+    {
+      "question": "Quel opéra de Gioacchino Rossini, notamment célèbre pour son \"Ouverture\", met en scène un héros helvétique ?",
+      "answer": "Guillaume Tell -> héros helvétique = héros suisse = Guillaume Tell"
+    },
+    {
+      "question": "Pour quel pays jouait Salif Keïta, ayant été le premier à recevoir la récompense du Ballon d'or africain en 1970 ?",
+      "answer": "Mali"
+    },
+    {
+      "question": "Quel nom de pain originaire de Pologne, typique de la cuisine juive, est associé à \"Studio\" dans le nom d'un collectif de comédie sur internet appartenant à Canal+ ?",
+      "answer": "Bagel (Studio Bagel)"
+    },
+    {
+      "question": "Quelle saga de films d'action met en scène le personnage de Dominic Toretto incarné par Vin Diesel ?",
+      "answer": "Fast and Furious"
+    },
+    {
+      "question": "Sous quel surnom connaît-on davantage Marguerite de Valois, reine de France de 1589 à 1599 et première épouse du roi Henri IV ?",
+      "answer": "La Reine Margot -> MArguerite ->Margot"
+    },
+    {
+      "question": "En mathématiques quel terme désigne le résultat d'une multiplication ?",
+      "answer": "Produit"
+    },
+    {
+      "question": "À quel continent est rattaché le sultanat de Brunei ?",
+      "answer": "Asie"
+    },
+    {
+      "question": "Quel prénom composé est celui porté par le compositeur nommé Bach, auteur du \"Clavier bien tempéré\" et des \"Concertos Brandebourgeois\" ?",
+      "answer": "Johann Sebastian | Jean-Sébastien"
+    },
+    {
+      "question": "Quel chien peut être dit tibétain, de Pont-Audemer, picard, français et surtout breton ?",
+      "answer": "Epagneul"
+    },
+    {
+      "question": "Que signifie la lettre C dans l'acronyme SMIC, sachant que les trois premières lettres signifient \"Salaire Minimum Interprofessionnel\" ?",
+      "answer": "Croissance (Salaire Minimum Interprofessionnel de Croissance"
+    }
+  ]
+},
+    {
   "date": "15 octobre 2026",
   "questions": [
     {
