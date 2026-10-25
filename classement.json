@@ -1,31 +1,31 @@
 {
   "season": 10,
-  "updated_at": "2026-10-24T13:50:35.725571+00:00",
+  "updated_at": "2026-10-25T14:07:00.244642+00:00",
   "players": [
     {
       "username": "Kerwan",
       "score": 7620,
-      "rank": 1444
+      "rank": 1831
     },
     {
       "username": "Lroux",
-      "score": 5223,
-      "rank": 6653
+      "score": 5513,
+      "rank": 6353
     },
     {
       "username": "EsteJLT",
-      "score": 4505,
-      "rank": 8569
+      "score": 5094,
+      "rank": 7438
     },
     {
       "username": "Elisa10",
       "score": 3264,
-      "rank": 11803
+      "rank": 12010
     },
     {
       "username": "LeJeep",
-      "score": 1587,
-      "rank": 16296
+      "score": 1677,
+      "rank": 16147
     }
   ],
   "missing_players": [
